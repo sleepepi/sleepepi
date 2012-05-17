@@ -2,4 +2,15 @@
 
 This server hosts the Task Tracker Demo site available at https://tasktracker.partners.org.
 
+=== 31 Technology
 
+  Nginx                   1.0.15
+  Ruby Version Manager    1.12.3
+  Ruby                    1.9.3p125 (2012-02-16 revision 34643) [x86_64-linux]
+  Passenger               3.0.12
+
+=== 32 Rails Applications
+
+==== Task Tracker
+
+Proxy Path (root): /

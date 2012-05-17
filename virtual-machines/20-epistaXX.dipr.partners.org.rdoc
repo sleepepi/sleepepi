@@ -6,32 +6,41 @@ Currently the naming convention is not being followed, as <b>conifer.dipr.partne
 
 Each application is available under the /edge/ root of sleepepi.dipr.partners.org.
 
-=== 11 Sleep Portal
+=== 21 Technology
+
+  Nginx                   1.0.15
+  Ruby Version Manager    1.10.2
+  Ruby                    1.9.3p125 (2012-02-16 revision 34643) [x86_64-linux]
+  Passenger               3.0.12
+
+=== 22 Rails Applications
+
+==== Sleep Portal
 
 Proxy Path: /edge/hybrid
 
 
-=== 12 Task Tracker
+==== Task Tracker
 
 Proxy Path: /edge/notes
 
 
-=== 13 CHAT Publications
+==== CHAT Publications
 
 Proxy Path: /edge/review
 
 
-=== 14 Screen
+==== Screen
 
 Proxy Path: /edge/screen
 
 
-=== 15 Training Grant Manager
+==== Training Grant Manager
 
 Proxy Path: /edge/training_grant
 
 
-=== 16 Reading Center Interface
+==== Reading Center Interface
 
 Proxy Path: /edge/reading
 
