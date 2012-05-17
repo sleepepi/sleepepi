@@ -1,4 +1,27 @@
 = sleepepi proxy configuration and server setup
-========
 
 Documentation providing architecture overview of sleepepi
+
+== Network Architecture
+
+  `-- sleepepi.partners.org
+      `-- sleepepi.dipr.partners.org          1GB     CentOS release 5.7 (Final)
+          |-- conifer.dipr.partners.org       512GB   CentOS release 5.8 (Final)
+          |-- ...
+          |-- epipro01.dipr.partners.org      1GB
+          |-- epipro02.dipr.partners.org      1GB     CentOS release 5.8 (Final)
+          |-- ...
+          `-- epiproXX.dipr.partners.org      ...     ...
+  `-- tasktracker.partners.org
+      `-- tasktracker.dipr.partners.org       1GB     CentOS release 6.2 (Final)
+
+
+== Server Responsibilities
+
+Primary Frontend Server - {sleepepi.dipr.partners.org}[https://github.com/remomueller/sleepepi/tree/master/virtual-machines/00-sleepepi.dipr.partners.org.rdoc]
+
+Production Application Servers - {epiproXX.dipr.partners.org}[https://github.com/remomueller/sleepepi/tree/master/virtual-machines/10-epiproXX.dipr.partners.org.rdoc]
+
+Staging Application Servers - {conifer.dipr.partners.org}[https://github.com/remomueller/sleepepi/tree/master/virtual-machines/20-epistaXX.dipr.partners.org.rdoc]
+
+Demo Server - {tasktracker.dipr.partners.org}[https://github.com/remomueller/sleepepi/tree/master/virtual-machines/30-tasktracker.dipr.partners.org.rdoc]

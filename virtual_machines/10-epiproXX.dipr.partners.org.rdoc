@@ -1,0 +1,35 @@
+== 10 epiproXX.dipr.partners.org configuration
+
+Each <b>epiproXX</b> machine is configured identically and is used to host the following Rails applications (in order of application creation date).
+
+The only exception to this is that <b>epipro01</b> runs cron jobs for Rails rake tasks (ex: such as the daily email rake task for Task Tracker).
+
+
+=== 11 Sleep Portal
+
+Proxy Path: /hybrid
+
+
+=== 12 Task Tracker
+
+Proxy Path: /notes
+
+
+=== 13 CHAT Publications
+
+Proxy Path: /review
+
+
+=== 14 Screen
+
+Proxy Path: /screen
+
+
+=== 15 Training Grant Manager
+
+Proxy Path: /training_grant
+
+
+=== 16 Reading Center Interface
+
+Proxy Path: /reading
