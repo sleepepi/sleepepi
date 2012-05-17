@@ -1,4 +1,0 @@
-sleepepi
-========
-
-RDOC documentation
