@@ -6,8 +6,8 @@ Both WordPress and the Alliance Sleep Questionnaire are PHP web applications.
 
 === 01 Technology
 
-  Apache 2.2.3
-  PHP 5.2.10
+  Apache    2.2.3
+  PHP       5.2.10
 
 === 09 Todo
 
