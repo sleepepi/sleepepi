@@ -8,38 +8,3 @@
 
   mkdir ~/code
   mkdir ~/code/source
-
-
-
-
-== 90 Miscellaneous
-
-=== Checking and setting the hostname
-
-*epipro01* had the wrong hostname, _localhost_, after being rebooted.
-
-To check the hostname type:
-
-  hostname
-
-Which should return:
-
-  epiproXX.dipr.partners.org
-
-To set the hostname type:
-
-  sudo hostname epiproXX.dipr.partners.org
-
-If this does not work type:
-
-  sudo vi /etc/sysconfig/network
-
-And change the line that says:
-
-  HOSTNAME=./set_hostname.sh: line 14: dialog: command not found
-
-To
-
-  HOSTNAME=epiproXX.dipr.partners.org
-
-
