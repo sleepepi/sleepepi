@@ -51,3 +51,12 @@ Start Nginx Manually
 Make sure Nginx is set to start automatically on restart
 
   sudo chkconfig nginx on
+
+=== 940 Yum Install Issues
+
+If you get <tt>warning: rpmts_HdrFromFdno: Header V3 RSA/SHA256 Signature, key ID 0608b895: NOKEY</tt> when running, then you need to update your GPG keys:
+
+  sudo rpm --import https://fedoraproject.org/static/0608B895.txt
+  sudo rpm --import http://packages.atrpms.net/RPM-GPG-KEY.atrpms
+
+After this, running the <tt>sudo yum install</tt> should work correctly
