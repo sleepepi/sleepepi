@@ -14,6 +14,11 @@ Similar rails applications that are load balanced across multiple servers requir
 
 If these files are not identical, users will have issues with their cookies being reset during multiple requests to their servers.
 
+You can do a secure copy to copy files from <b>epipro01.dipr.partners.org</b>
+
+  scp username@epipro01.dipr.partners.org:/usr/local/production/notes/config/initializers/devise.rb /usr/local/production/notes/config/intializers/devise.rb
+  scp username@epipro01.dipr.partners.org:/usr/local/production/notes/config/initializers/omniauth.rb /usr/local/production/notes/config/intializers/omniauth.rb
+  scp username@epipro01.dipr.partners.org:/usr/local/production/notes/config/initializers/secret_token.rb /usr/local/production/notes/config/intializers/secret_token.rb
 
 === 920 Problematic Rails Server
 
