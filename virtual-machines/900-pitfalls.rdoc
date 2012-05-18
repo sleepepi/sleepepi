@@ -14,11 +14,11 @@ Similar rails applications that are load balanced across multiple servers requir
 
 If these files are not identical, users will have issues with their cookies being reset during multiple requests to their servers.
 
-You can do a secure copy to copy files from <b>epipro01.dipr.partners.org</b>, make sure you change <i>notes</i> to the correct rails application!
+You can do a secure copy to copy files from <b>epipro01.dipr.partners.org</b>, make sure you change <i>rails_app</i> to the correct rails application!
 
-  scp username@epipro01.dipr.partners.org:/usr/local/production/<i>notes</i>/config/initializers/devise.rb /usr/local/production/<i>notes</i>/config/intializers/devise.rb
-  scp username@epipro01.dipr.partners.org:/usr/local/production/<i>notes</i>/config/initializers/omniauth.rb /usr/local/production/<i>notes</i>/config/intializers/omniauth.rb
-  scp username@epipro01.dipr.partners.org:/usr/local/production/<i>notes</i>/config/initializers/secret_token.rb /usr/local/production/<i>notes</i>/config/intializers/secret_token.rb
+  scp username@epipro01.dipr.partners.org:/usr/local/production/rails_app/config/initializers/devise.rb /usr/local/production/rails_app/config/intializers/devise.rb
+  scp username@epipro01.dipr.partners.org:/usr/local/production/rails_app/config/initializers/omniauth.rb /usr/local/production/rails_app/config/intializers/omniauth.rb
+  scp username@epipro01.dipr.partners.org:/usr/local/production/rails_app/config/initializers/secret_token.rb /usr/local/production/rails_app/config/intializers/secret_token.rb
 
 === 920 Problematic Rails Server
 
