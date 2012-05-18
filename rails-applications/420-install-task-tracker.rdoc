@@ -6,8 +6,6 @@
 
 === 422 Downloading source from Git
 
-On *epiproXX*
-
   cd /usr/local/production
   git clone git://github.com/remomueller/notes.git
 
