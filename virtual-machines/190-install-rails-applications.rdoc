@@ -13,6 +13,10 @@
 
   sudo yum install mysql mysql-devel
 
+=== Installing libraries to allow compilation of nokogiri gem
+
+  sudo yum install libxml libxml-devel libxslt libxslt-devel
+
 === Install individual Ruby on Rails Applications
 
 * {Sleep Portal}[https://github.com/remomueller/sleepepi/tree/master/virtual-machines/410-install-sleep-portal.rdoc]
