@@ -99,7 +99,7 @@ On *sleepepi*
 
 Login in to sleepepi:
 
-  ssh rsm31@sleepepi.dipr.partners.org
+  ssh username@sleepepi.dipr.partners.org
 
 Edit <tt>sudo vi /etc/httpd/conf.d/proxy.conf</tt>
 
