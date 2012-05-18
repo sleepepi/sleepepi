@@ -1,1 +1,102 @@
 == 410 Install Sleep Portal
+
+=== 411 Prerequisites
+
+{Production VM Server Setup}[https://github.com/remomueller/sleepepi/tree/master/virtual-machines/100-epiproXX.dipr.partners.org.rdoc]
+
+=== 412 Downloading source from Git
+
+  cd /usr/local/production
+  git clone git://github.com/remomueller/hybrid.git
+
+NOTE: If you get <tt>fatal: could not create work tree dir 'hybrid'.: Permission denied</tt> that means you forgot to run:
+
+  sudo chgrp rvm /usr/local/production
+  sudo chmod 775 /usr/local/production
+
+=== 413 Initialize database and files
+
+  cd /usr/local/production/hybrid
+
+NOTE: If you get <tt>Do you wish to trust this .rvmrc file? (/usr/local/production/hybrid/.rvmrc)</tt> then type <tt>yes</tt>
+
+  bundle install
+
+NOTE: If mysql2 fails to compile, you forgot the step <tt>sudo yum install mysql mysql-devel</tt>
+
+  ruby lib/initial_setup.rb
+
+    Database User:      hybrid
+    Database Password:  <not in documentation>
+    Database Socket:    <hit enter>
+    Database Host:      mysql.dipr.partners.org
+
+    SMTP Address:       rics.bwh.harvard.edu
+    SMTP Port:          <hit enter>
+    SMTP Domain:        <hit enter>
+    SMTP User Name:     sleepepi@rics.bwh.harvard.edu
+    SMTP Password:      <not in documentation>
+
+    Default App Name:   <hit enter>
+    Site URL:           https://sleepepi.partners.org/hybrid
+
+  bundle exec rake db:migrate RAILS_ENV=production
+
+  bundle exec rake assets:precompile
+
+  mkdir tmp
+
+  touch tmp/restart.txt
+
+=== 414 Update Nginx Configuration
+
+==== Create symbolic link
+
+  sudo ln -s /usr/local/production/hybrid/public /var/www/html/hybrid
+
+==== Update configuration file
+
+Edit <tt>sudo vi /usr/local/nginx/conf/nginx.conf</tt>
+
+Insert the following in below the line that says <tt>passenger_enabled on;</tt>
+
+  passenger_base_uri /hybrid;
+
+Restart Nginx
+
+  sudo service nginx restart
+
+=== 415 Update Apache Proxy Balancer on sleepepi
+
+On *sleepepi*
+
+Login in to sleepepi:
+
+  ssh rsm31@sleepepi.dipr.partners.org
+
+Edit <tt>sudo vi /etc/httpd/conf.d/proxy.conf</tt>
+
+Search for the line that says:
+
+  <Proxy balancer://hybrid>
+    BalancerMember https://epipro01.dipr.partners.org/hybrid
+    BalancerMember https://epipro02.dipr.partners.org/hybrid
+    # ...Add new CentOS VMs here
+  </Proxy>
+
+Add the following line after the last <tt>BalancerMember</tt> and before the closing <tt></Proxy></tt> tag:
+
+  BalancerMember https://epiproXX.dipr.partners.org/hybrid
+
+Restart Apache on sleepepi
+
+  sudo service httpd restart
+
+=== 416 Update to Latest Stable version of Sleep Portal
+
+On *epiproXX*
+
+  cd /usr/local/production/hybrid
+  git pull; bundle update; bundle exec rake db:migrate RAILS_ENV=production; bundle exec rake assets:precompile; touch tmp/restart.txt
+
+That's all!

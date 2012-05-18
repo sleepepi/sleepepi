@@ -1,1 +1,90 @@
 == 440 Install Screen
+
+=== 441 Prerequisites
+
+{CentOS Production Server Setup}[link:files/Initializing%20CentOS%20Production%20Servers_rdoc.html]
+
+=== 442 Downloading source from Git
+
+On *epiproXX*
+
+  cd /usr/local/production
+  git clone git://github.com/remomueller/screen.git
+
+NOTE: If you get <tt>fatal: could not create work tree dir 'screen'.: Permission denied</tt> that means you forgot to run:
+
+  sudo chgrp rvm /usr/local/production
+  sudo chmod 775 /usr/local/production
+
+=== 443 Initialize database and files
+
+  cd /usr/local/production/screen
+
+NOTE: If you get <tt>Do you wish to trust this .rvmrc file? (/usr/local/production/screen/.rvmrc)</tt> then type <tt>yes</tt>
+
+  bundle install
+
+NOTE: If mysql2 fails to compile, you forgot the step <tt>sudo yum install mysql mysql-devel</tt>
+
+  ruby lib/initial_setup.rb
+
+    Database User:      screen
+    Database Password:  <not in documentation>
+    Database Socket:    <hit enter>
+    Database Host:      mysql.dipr.partners.org
+
+    SMTP Address:       rics.bwh.harvard.edu
+    SMTP Port:          <hit enter>
+    SMTP Domain:        <hit enter>
+    SMTP User Name:     sleepepi@rics.bwh.harvard.edu
+    SMTP Password:      <not in documentation>
+
+    Default App Name:   <hit enter>
+    Site URL:           https://sleepepi.partners.org/screen
+
+  bundle exec rake db:migrate RAILS_ENV=production
+
+  bundle exec rake assets:precompile
+
+  mkdir tmp
+
+  touch tmp/restart.txt
+
+NOTE: The contents of the following files will need to be copied from *epipro01* since they are not in version control and contain pseudo-randomly generated strings
+
+  `-- /usr/local/production/screen/config/initializers/
+      |-- devise.rb
+      |-- omniauth.rb
+      `-- secret_token.rb
+
+
+=== 444 Update Nginx Configuration
+
+==== Create symbolic link
+
+  sudo ln -s /usr/local/production/screen/public /var/www/html/screen
+
+==== Update configuration file
+
+Edit <tt>sudo vi /usr/local/nginx/conf/nginx.conf</tt>
+
+Insert the following in below the line that says <tt>passenger_enabled on;</tt>
+
+  passenger_base_uri /screen;
+
+Restart Nginx
+
+  sudo service nginx restart
+
+=== 445 Update Apache Proxy Balancer on sleepepi
+
+<b>Screen is not available through the sleepepi router!</b>
+
+=== 446 Update to Latest Stable version of Screen
+
+On *epiproXX*
+
+  cd /usr/local/production/screen
+  git pull; bundle update; bundle exec rake db:migrate RAILS_ENV=production; bundle exec rake assets:precompile; touch tmp/restart.txt
+
+That's all!

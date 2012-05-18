@@ -1,1 +1,112 @@
 == 420 Install Task Tracker
+
+=== 421 Prerequisites
+
+{CentOS Production Server Setup}[link:files/Initializing%20CentOS%20Production%20Servers_rdoc.html]
+
+=== 422 Downloading source from Git
+
+On *epiproXX*
+
+  cd /usr/local/production
+  git clone git://github.com/remomueller/notes.git
+
+NOTE: If you get <tt>fatal: could not create work tree dir 'notes'.: Permission denied</tt> that means you forgot to run:
+
+  sudo chgrp rvm /usr/local/production
+  sudo chmod 775 /usr/local/production
+
+=== 423 Initialize database and files
+
+  cd /usr/local/production/notes
+
+NOTE: If you get <tt>Do you wish to trust this .rvmrc file? (/usr/local/production/notes/.rvmrc)</tt> then type <tt>yes</tt>
+
+  bundle install
+
+NOTE: If mysql2 fails to compile, you forgot the step <tt>sudo yum install mysql mysql-devel</tt>
+
+  ruby lib/initial_setup.rb
+
+    Database User:      notes
+    Database Password:  <not in documentation>
+    Database Socket:    <hit enter>
+    Database Host:      mysql.dipr.partners.org
+
+    SMTP Address:       rics.bwh.harvard.edu
+    SMTP Port:          <hit enter>
+    SMTP Domain:        <hit enter>
+    SMTP User Name:     sleepepi@rics.bwh.harvard.edu
+    SMTP Password:      <not in documentation>
+
+    Default App Name:   <hit enter>
+    Site URL:           https://sleepepi.partners.org/notes
+
+  bundle exec rake db:migrate RAILS_ENV=production
+
+  bundle exec rake assets:precompile
+
+  mkdir tmp
+
+  touch tmp/restart.txt
+
+NOTE: The contents of the following files will need to be copied from *epipro01* since they are not in version control and contain pseudo-randomly generated strings
+
+  `-- /usr/local/production/notes/config/initializers/
+      |-- devise.rb
+      |-- omniauth.rb
+      `-- secret_token.rb
+
+
+=== 424 Update Nginx Configuration
+
+==== Create symbolic link
+
+  sudo ln -s /usr/local/production/notes/public /var/www/html/notes
+
+==== Update configuration file
+
+Edit <tt>sudo vi /usr/local/nginx/conf/nginx.conf</tt>
+
+Insert the following in below the line that says <tt>passenger_enabled on;</tt>
+
+  passenger_base_uri /notes;
+
+Restart Nginx
+
+  sudo service nginx restart
+
+=== 425 Update Apache Proxy Balancer on sleepepi
+
+On *sleepepi*
+
+Login in to sleepepi:
+
+  ssh rsm31@sleepepi.dipr.partners.org
+
+Edit /etc/httpd/conf.d/proxy.conf
+
+Search for the line that says:
+
+  <Proxy balancer://notes>
+    BalancerMember https://epipro01.dipr.partners.org/notes
+    BalancerMember https://epipro02.dipr.partners.org/notes
+    # ...Add new CentOS VMs here
+  </Proxy>
+
+Add the following line after the last <tt>BalancerMember</tt> and before the closing <tt></Proxy></tt> tag:
+
+  BalancerMember https://epiproXX.dipr.partners.org/notes
+
+Restart Apache on sleepepi
+
+  sudo service httpd restart
+
+=== 426 Update to Latest Stable version of Task Tracker
+
+On *epiproXX*
+
+  cd /usr/local/production/notes
+  git pull; bundle update; bundle exec rake db:migrate RAILS_ENV=production; bundle exec rake assets:precompile; touch tmp/restart.txt
+
+That's all!

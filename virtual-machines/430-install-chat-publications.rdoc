@@ -1,1 +1,102 @@
 == 430 Install CHAT Publications
+
+=== 431 Prerequisites
+
+{CentOS Production Server Setup}[link:files/Initializing%20CentOS%20Production%20Servers_rdoc.html]
+
+=== 432 Downloading source from Git
+
+  cd /usr/local/production
+  git clone git://github.com/remomueller/review.git
+
+NOTE: If you get <tt>fatal: could not create work tree dir 'review'.: Permission denied</tt> that means you forgot to run:
+
+  sudo chgrp rvm /usr/local/production
+  sudo chmod 775 /usr/local/production
+
+=== 433 Initialize database and files
+
+  cd /usr/local/production/review
+
+NOTE: If you get <tt>Do you wish to trust this .rvmrc file? (/usr/local/production/review/.rvmrc)</tt> then type <tt>yes</tt>
+
+  bundle install
+
+NOTE: If mysql2 fails to compile, you forgot the step <tt>sudo yum install mysql mysql-devel</tt>
+
+  ruby lib/initial_setup.rb
+
+    Database User:      review
+    Database Password:  <not in documentation>
+    Database Socket:    <hit enter>
+    Database Host:      mysql.dipr.partners.org
+
+    SMTP Address:       rics.bwh.harvard.edu
+    SMTP Port:          <hit enter>
+    SMTP Domain:        <hit enter>
+    SMTP User Name:     sleepepi@rics.bwh.harvard.edu
+    SMTP Password:      <not in documentation>
+
+    Default App Name:   <hit enter>
+    Site URL:           https://sleepepi.partners.org/review
+
+  bundle exec rake db:migrate RAILS_ENV=production
+
+  bundle exec rake assets:precompile
+
+  mkdir tmp
+
+  touch tmp/restart.txt
+
+=== 434 Update Nginx Configuration
+
+==== Create symbolic link
+
+  sudo ln -s /usr/local/production/review/public /var/www/html/review
+
+==== Update configuration file
+
+Edit <tt>sudo vi /usr/local/nginx/conf/nginx.conf</tt>
+
+Insert the following in below the line that says <tt>passenger_enabled on;</tt>
+
+  passenger_base_uri /review;
+
+Restart Nginx
+
+  sudo service nginx restart
+
+=== 435 Update Apache Proxy Balancer on sleepepi
+
+On *sleepepi*
+
+Login in to sleepepi:
+
+  ssh rsm31@sleepepi.dipr.partners.org
+
+Edit /etc/httpd/conf.d/proxy.conf
+
+Search for the line that says:
+
+  <Proxy balancer://review>
+    BalancerMember https://epipro01.dipr.partners.org/review
+    BalancerMember https://epipro02.dipr.partners.org/review
+    # ...Add new CentOS VMs here
+  </Proxy>
+
+Add the following line after the last <tt>BalancerMember</tt> and before the closing <tt></Proxy></tt> tag:
+
+  BalancerMember https://epiproXX.dipr.partners.org/review
+
+Restart Apache on sleepepi
+
+  sudo service httpd restart
+
+=== 436 Update to Latest Stable version of CHAT Publications
+
+On *epiproXX*
+
+  cd /usr/local/production/review
+  git pull; bundle update; bundle exec rake db:migrate RAILS_ENV=production; bundle exec rake assets:precompile; touch tmp/restart.txt
+
+That's all!
