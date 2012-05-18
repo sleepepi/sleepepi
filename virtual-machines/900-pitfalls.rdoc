@@ -1,0 +1,53 @@
+== 900 Pitfalls
+
+This set of documents will list known pitfalls during the installation process.
+
+=== 910 Shared Rails Secret Tokens and Keys
+
+Similar rails applications that are load balanced across multiple servers require the following files to be identical:
+
+  <rails_root>/config/initializers/devise.rb
+
+  <rails_root>/config/initializers/secret_token.rb
+
+  <rails_root>/config/initializers/omniauth.rb
+
+If these files are not identical, users will have issues with their cookies being reset during multiple requests to their servers.
+
+
+=== 920 Problematic Rails Server
+
+Currently if a load-balanced server runs into memory issues, requests to this server may be slow, but won't fail.
+
+Try reboot on the offending server
+
+  sudo reboot
+
+If you are unable to SSH to the server, then another alternative is to temporarily comment out the load-balancer Apache file on <b>sleepepi.dipr.partners.org</b>
+
+<tt>sudo vi /etc/httpd/conf.d/proxy.conf</tt>
+
+  <Proxy balancer://notes>
+  #  BalancerMember https://epipro01.dipr.partners.org/notes  # Comment out the offending server
+    BalancerMember https://epipro02.dipr.partners.org/notes
+  </Proxy>
+
+<tt>sudo service httpd restart</tt>
+
+Remember to uncomment this line and restart the server on <b>sleepepi.dipr.partners.org</b> once the server is back up and running!
+
+
+=== 930 Nginx Will Not Start Automatically
+
+Make sure Apache is not running:
+
+  sudo chkconfig httpd off
+  sudo service httpd stop
+
+Start Nginx Manually
+
+  sudo service nginx start
+
+Make sure Nginx is set to start automatically on restart
+
+  sudo chkconfig nginx on
