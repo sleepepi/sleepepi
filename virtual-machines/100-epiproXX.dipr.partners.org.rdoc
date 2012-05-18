@@ -1,17 +1,17 @@
-== 10 epiproXX.dipr.partners.org configuration
+== 100 epiproXX.dipr.partners.org configuration
 
 Each <b>epiproXX</b> machine is configured identically and is used to host the following Rails applications (in order of application creation date).
 
 The only exception to this is that <b>epipro01</b> runs cron jobs for Rails rake tasks (ex: such as the daily email rake task for Task Tracker).
 
-=== 11 Technology
+=== 101 Technology
 
   Nginx                   1.0.15
   Ruby Version Manager    1.10.2
   Ruby                    1.9.3p125 (2012-02-16 revision 34643) [x86_64-linux]
   Passenger               3.0.12
 
-=== 12 Rails Applications
+=== 102 Rails Applications
 
 ==== Sleep Portal
 

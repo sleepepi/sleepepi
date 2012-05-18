@@ -1,4 +1,4 @@
-== 20 epistaXX.dipr.partners.org configuration
+== 200 epistaXX.dipr.partners.org configuration
 
 These servers are load balanced and run the <b>staging</b> environments for multiple Rails applications.
 
@@ -6,14 +6,14 @@ Currently the naming convention is not being followed, as <b>conifer.dipr.partne
 
 Each application is available under the /edge/ root of sleepepi.dipr.partners.org.
 
-=== 21 Technology
+=== 201 Technology
 
   Nginx                   1.0.15
   Ruby Version Manager    1.10.2
   Ruby                    1.9.3p125 (2012-02-16 revision 34643) [x86_64-linux]
   Passenger               3.0.12
 
-=== 22 Rails Applications
+=== 202 Rails Applications
 
 ==== Sleep Portal
 
