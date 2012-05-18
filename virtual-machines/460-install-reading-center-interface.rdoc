@@ -1,1 +1,114 @@
 == 460 Install Reading Center Interface
+
+=== 461 Prerequisites
+
+{Production VM Server Setup}[https://github.com/remomueller/sleepepi/tree/master/virtual-machines/100-epiproXX.dipr.partners.org.rdoc]
+
+=== 462 Downloading source from Git
+
+  cd /usr/local/production
+  git clone git://github.com/remomueller/reading.git
+
+NOTE: If you get <tt>fatal: could not create work tree dir 'reading'.: Permission denied</tt> that means you forgot to run:
+
+  sudo chgrp rvm /usr/local/production
+  sudo chmod 775 /usr/local/production
+
+=== 463 Initialize database and files
+
+  cd /usr/local/production/reading
+
+NOTE: If you get <tt>Do you wish to trust this .rvmrc file? (/usr/local/production/reading/.rvmrc)</tt> then type <tt>yes</tt>
+
+  bundle install
+
+NOTE: If mysql2 fails to compile, you forgot the step <tt>sudo yum install mysql mysql-devel</tt>
+
+  ruby lib/initial_setup.rb
+
+    Database User:      reading
+    Database Password:  <not in documentation>
+    Database Socket:    <hit enter>
+    Database Host:      mysql.dipr.partners.org
+
+    SMTP Address:       rics.bwh.harvard.edu
+    SMTP Port:          <hit enter>
+    SMTP Domain:        <hit enter>
+    SMTP User Name:     sleepepi@rics.bwh.harvard.edu
+    SMTP Password:      <not in documentation>
+
+    Default App Name:   <hit enter>
+    Site URL:           https://sleepepi.partners.org/reading
+
+  bundle exec rake db:migrate RAILS_ENV=production
+
+  bundle exec rake assets:precompile
+
+  mkdir tmp
+
+  touch tmp/restart.txt
+
+NOTE: The contents of the following files will need to be copied from *epipro01* since they are not in version control and contain pseudo-randomly generated strings
+
+  `-- /usr/local/production/reading/config/initializers/
+      |-- devise.rb
+      |-- omniauth.rb
+      `-- secret_token.rb
+
+  scp username@epipro01.dipr.partners.org:/usr/local/production/reading/config/initializers/devise.rb /usr/local/production/reading/config/intializers/devise.rb
+  scp username@epipro01.dipr.partners.org:/usr/local/production/reading/config/initializers/omniauth.rb /usr/local/production/reading/config/intializers/omniauth.rb
+  scp username@epipro01.dipr.partners.org:/usr/local/production/reading/config/initializers/secret_token.rb /usr/local/production/reading/config/intializers/secret_token.rb
+
+=== 464 Update Nginx Configuration
+
+==== Create symbolic link
+
+  sudo ln -s /usr/local/production/reading/public /var/www/html/reading
+
+==== Update configuration file
+
+Edit <tt>sudo vi /usr/local/nginx/conf/nginx.conf</tt>
+
+Insert the following in below the line that says <tt>passenger_enabled on;</tt>
+
+  passenger_base_uri /reading;
+
+Restart Nginx
+
+  sudo service nginx restart
+
+=== 465 Update Apache Proxy Balancer on sleepepi
+
+On *sleepepi*
+
+Login in to sleepepi:
+
+  ssh rsm31@sleepepi.dipr.partners.org
+
+Edit /etc/httpd/conf.d/proxy.conf
+
+Search for the line that says:
+
+  <Proxy balancer://reading>
+    BalancerMember https://epipro01.dipr.partners.org/reading
+    BalancerMember https://epipro02.dipr.partners.org/reading
+    # ...Add new CentOS VMs here
+  </Proxy>
+
+Add the following line after the last <tt>BalancerMember</tt> and before the closing <tt></Proxy></tt> tag:
+
+  BalancerMember https://epiproXX.dipr.partners.org/reading
+
+Restart Apache on sleepepi
+
+  sudo service httpd restart
+
+=== 466 Update to Latest Stable version of Reading Center Interface
+
+On *epiproXX*
+
+  cd /usr/local/production/reading
+  git pull; bundle update; bundle exec rake db:migrate RAILS_ENV=production; bundle exec rake assets:precompile; touch tmp/restart.txt
+
+That's all!
+

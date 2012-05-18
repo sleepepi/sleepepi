@@ -2,7 +2,7 @@
 
 === 431 Prerequisites
 
-{CentOS Production Server Setup}[link:files/Initializing%20CentOS%20Production%20Servers_rdoc.html]
+{Production VM Server Setup}[https://github.com/remomueller/sleepepi/tree/master/virtual-machines/100-epiproXX.dipr.partners.org.rdoc]
 
 === 432 Downloading source from Git
 
