@@ -48,6 +48,17 @@ NOTE: If mysql2 fails to compile, you forgot the step <tt>sudo yum install mysql
 
   touch tmp/restart.txt
 
+NOTE: The contents of the following files will need to be copied from *epipro01* since they are not in version control and contain pseudo-randomly generated strings
+
+  `-- /usr/local/production/review/config/initializers/
+      |-- devise.rb
+      |-- omniauth.rb
+      `-- secret_token.rb
+
+  scp username@epipro01.dipr.partners.org:/usr/local/production/review/config/initializers/devise.rb /usr/local/production/review/config/intializers/devise.rb
+  scp username@epipro01.dipr.partners.org:/usr/local/production/review/config/initializers/omniauth.rb /usr/local/production/review/config/intializers/omniauth.rb
+  scp username@epipro01.dipr.partners.org:/usr/local/production/review/config/initializers/secret_token.rb /usr/local/production/review/config/intializers/secret_token.rb
+
 === 434 Update Nginx Configuration
 
 ==== Create symbolic link
