@@ -2,7 +2,7 @@
 
 === 461 Prerequisites
 
-{Production VM Server Setup}[https://github.com/remomueller/sleepepi/tree/master/virtual-machines/100-epiproXX.dipr.partners.org.rdoc]
+{Production VM Server Setup}[https://github.com/sleepepi/sleepepi/tree/master/virtual-machines/100-epiproXX.dipr.partners.org.rdoc]
 
 === 462 Downloading source from Git
 
