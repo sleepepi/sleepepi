@@ -13,7 +13,7 @@ Verify Ruby version
 
   ruby -v
 
-  <i>ruby 1.9.3p125 (2012-02-16 revision 34643) [x86_64-linux]</i>
+  ruby 1.9.3p125 (2012-02-16 revision 34643) [x86_64-linux]
 
 === 142 Update Ruby Gems
 
