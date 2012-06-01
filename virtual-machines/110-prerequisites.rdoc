@@ -2,7 +2,7 @@
 
 === 111 Log in using SSH or Putty
 
-  ssh <i>username</i>@epiproXX.dipr.partners.org
+  ssh username@epiproXX.dipr.partners.org
 
 === 112 Create a Source Folder
 

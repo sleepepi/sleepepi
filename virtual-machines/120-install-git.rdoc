@@ -19,4 +19,4 @@ Verify Git version
 
   git --version
 
-  <i>git version 1.7.9</i>
+  git version 1.7.9
