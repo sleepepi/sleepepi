@@ -48,3 +48,7 @@ Edit <tt>sudo vi /usr/local/nginx/conf/nginx.conf</tt>
       # passenger_base_uri /rails_app2;
     }
   }
+
+=== Next Step
+
+{175 - Configure Nginx}[https://github.com/sleepepi/sleepepi/tree/master/virtual-machines/175-configure-nginx.rdoc]

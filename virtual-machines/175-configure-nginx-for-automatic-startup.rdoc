@@ -120,3 +120,8 @@ From http://articles.slicehost.com/2009/2/2/centos-adding-an-nginx-init-script
 === Mark Nginx Service for Automatic startup
 
 <tt>sudo /sbin/chkconfig nginx on</tt>
+
+=== Next Step
+
+{179 - Nginx Commands}[https://github.com/sleepepi/sleepepi/tree/master/virtual-machines/179-nginx-commands.rdoc]
+{180 - Install CoffeeScript}[https://github.com/sleepepi/sleepepi/tree/master/virtual-machines/180-install-coffeescript.rdoc]

@@ -26,3 +26,6 @@ restart
 
   kill -HUP $( cat /usr/local/nginx/logs/nginx.pid )
 
+=== Next Step
+
+{180 - Install CoffeeScript}[https://github.com/sleepepi/sleepepi/tree/master/virtual-machines/180-install-coffeescript.rdoc]
