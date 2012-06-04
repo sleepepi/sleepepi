@@ -51,4 +51,4 @@ Edit <tt>sudo vi /usr/local/nginx/conf/nginx.conf</tt>
 
 === Next Step
 
-{175 - Configure Nginx}[https://github.com/sleepepi/sleepepi/tree/master/virtual-machines/175-configure-nginx.rdoc]
+{175 - Configure Nginx}[https://github.com/sleepepi/sleepepi/blob/master/virtual-machines/175-configure-nginx-for-automatic-startup.rdoc]
