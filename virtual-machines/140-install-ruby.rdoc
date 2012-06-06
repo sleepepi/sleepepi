@@ -1,6 +1,5 @@
 == 140 Install Ruby
 
-
 === 141 Install Ruby using RVM
 
   rvm install 1.9.3-p194
