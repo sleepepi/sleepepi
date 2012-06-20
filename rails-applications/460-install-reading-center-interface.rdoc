@@ -85,7 +85,9 @@ Login in to sleepepi:
 
   ssh username@sleepepi.dipr.partners.org
 
-Edit /etc/httpd/conf.d/proxy.conf
+Edit proxy configuration file
+
+  sudo vi /etc/httpd/conf.d/proxy.conf
 
 Search for the line that says:
 
