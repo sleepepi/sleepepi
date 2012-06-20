@@ -6,7 +6,7 @@ Documentation providing architecture overview of sleepepi
 
   `-- sleepepi.partners.org
       `-- sleepepi.dipr.partners.org          1GB     CentOS release 5.7 (Final)
-          |-- conifer.dipr.partners.org       512GB   CentOS release 5.8 (Final)
+          |-- conifer.dipr.partners.org       512MB   CentOS release 5.8 (Final)
           |-- ...
           |-- epipro01.dipr.partners.org      1GB     CentOS release 5.8 (Final)
           |-- epipro02.dipr.partners.org      1GB     CentOS release 5.8 (Final)
