@@ -65,3 +65,29 @@ If you get <tt>warning: rpmts_HdrFromFdno: Header V3 RSA/SHA256 Signature, key I
   sudo rpm --import http://packages.atrpms.net/RPM-GPG-KEY.atrpms
 
 After this, running the <tt>sudo yum install</tt> should work correctly
+
+=== 950 PostgreSQL Gem Compilation Issues
+
+If you get the following error when compiling the pg gem:
+  Gem::Installer::ExtensionBuildError: ERROR: Failed to build gem native extension.
+
+  /usr/local/rvm/rubies/ruby-1.9.3-p194/bin/ruby extconf.rb
+  checking for pg_config... yes
+  Using config values from /usr/bin/pg_config
+  checking for libpq-fe.h... yes
+  checking for libpq/libpq-fs.h... yes
+  checking for pg_config_manual.h... yes
+  checking for PQconnectdb() in -lpq... yes
+  checking for PQconnectionUsedPassword()... no
+  Your PostgreSQL is too old. Either install an older version of this gem or upgrade your database.
+
+Then make sure PostgreSQL is installed and the version is 8.3 or later:
+
+<tt>psql --version</tt>
+
+If version is too low, run:
+
+<tt>sudo yum erase postgresql*</tt>
+
+And re-install a more recent PostgreSQL version by following {145 - Install PostgreSQL}[https://github.com/sleepepi/sleepepi/tree/master/virtual-machines/145-install-postgresql.rdoc]
+
