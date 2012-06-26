@@ -23,6 +23,14 @@ For CentOS 6:
 === Install PostgreSQL
     sudo yum install postgresql91-devel
 
+=== Add PostgreSQL to path
+
+  vi ~/.bash_profile
+
+Add before the <tt>export PATH</tt>
+
+  PATH=$PATH:/usr/pgsql-9.1/bin/
+
 === Verify PostgreSQL Version
     psql --version
 should return
