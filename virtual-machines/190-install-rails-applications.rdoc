@@ -25,3 +25,4 @@
 * {Screen}[https://github.com/sleepepi/sleepepi/tree/master/rails-applications/440-install-screen.rdoc]
 * {Training Grant}[https://github.com/sleepepi/sleepepi/tree/master/rails-applications/450-install-training-grant.rdoc]
 * {Reading Center Interface}[https://github.com/sleepepi/sleepepi/tree/master/rails-applications/460-install-reading-center-interface.rdoc]
+* {Rely}[https://github.com/sleepepi/sleepepi/tree/master/rails-applications/470-install-rely.rdoc]
