@@ -24,4 +24,4 @@ Verify Ruby version
 
 === Next Step
 
-{150 - Install Rails}[https://github.com/sleepepi/sleepepi/tree/master/virtual-machines/150-install-rails.rdoc]
+{145 - Install PostgreSQL}[https://github.com/sleepepi/sleepepi/tree/master/virtual-machines/145-install-postgresql.rdoc]

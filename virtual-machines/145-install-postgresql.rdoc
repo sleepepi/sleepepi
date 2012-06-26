@@ -27,3 +27,7 @@ For CentOS 6:
     psql --version
 should return
     psql (PostgreSQL) 9.1.4
+
+=== Next Step
+
+{150 - Install Rails}[https://github.com/sleepepi/sleepepi/tree/master/virtual-machines/150-install-rails.rdoc]
