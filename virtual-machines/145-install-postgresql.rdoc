@@ -31,6 +31,8 @@ Add before the <tt>export PATH</tt>
 
   PATH=$PATH:/usr/pgsql-9.1/bin/
 
+NOTE: Remember to reload your shell to have changes to PATH take effect
+
 === Verify PostgreSQL Version
     psql --version
 should return
