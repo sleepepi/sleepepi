@@ -20,7 +20,7 @@ Proxy Path: /hybrid
 
 ==== Task Tracker
 
-Proxy Path: /notes
+Proxy Path: /tasktracker
 
 
 ==== CHAT Publications

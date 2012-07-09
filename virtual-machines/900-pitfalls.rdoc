@@ -32,9 +32,9 @@ If you are unable to SSH to the server, then another alternative is to temporari
 
 <tt>sudo vi /etc/httpd/conf.d/proxy.conf</tt>
 
-  <Proxy balancer://notes>
-  #  BalancerMember https://epipro01.dipr.partners.org/notes  # Comment out the offending server
-    BalancerMember https://epipro02.dipr.partners.org/notes
+  <Proxy balancer://tasktracker>
+  #  BalancerMember https://epipro01.dipr.partners.org/tasktracker  # Comment out the offending server
+    BalancerMember https://epipro02.dipr.partners.org/tasktracker
   </Proxy>
 
 <tt>sudo service httpd restart</tt>

@@ -7,18 +7,18 @@
 === 422 Downloading source from Git
 
   cd /usr/local/production
-  git clone git://github.com/remomueller/notes.git
+  git clone git://github.com/remomueller/tasktracker.git
 
-NOTE: If you get <tt>fatal: could not create work tree dir 'notes'.: Permission denied</tt> that means you forgot to run:
+NOTE: If you get <tt>fatal: could not create work tree dir 'tasktracker'.: Permission denied</tt> that means you forgot to run:
 
   sudo chgrp rvm /usr/local/production
   sudo chmod 775 /usr/local/production
 
 === 423 Initialize database and files
 
-  cd /usr/local/production/notes
+  cd /usr/local/production/tasktracker
 
-NOTE: If you get <tt>Do you wish to trust this .rvmrc file? (/usr/local/production/notes/.rvmrc)</tt> then type <tt>yes</tt>
+NOTE: If you get <tt>Do you wish to trust this .rvmrc file? (/usr/local/production/tasktracker/.rvmrc)</tt> then type <tt>yes</tt>
 
   bundle install
 
@@ -38,7 +38,7 @@ NOTE: If mysql2 fails to compile, you forgot the step <tt>sudo yum install mysql
     SMTP Password:      <not in documentation>
 
     Default App Name:   <hit enter>
-    Site URL:           https://sleepepi.partners.org/notes
+    Site URL:           https://sleepepi.partners.org/tasktracker
 
   bundle exec rake db:migrate RAILS_ENV=production
 
@@ -50,20 +50,20 @@ NOTE: If mysql2 fails to compile, you forgot the step <tt>sudo yum install mysql
 
 NOTE: The contents of the following files will need to be copied from *epipro01* since they are not in version control and contain pseudo-randomly generated strings
 
-  `-- /usr/local/production/notes/config/initializers/
+  `-- /usr/local/production/tasktracker/config/initializers/
       |-- devise.rb
       |-- omniauth.rb
       `-- secret_token.rb
 
-  scp username@epipro01.dipr.partners.org:/usr/local/production/notes/config/initializers/devise.rb /usr/local/production/notes/config/intializers/devise.rb
-  scp username@epipro01.dipr.partners.org:/usr/local/production/notes/config/initializers/omniauth.rb /usr/local/production/notes/config/intializers/omniauth.rb
-  scp username@epipro01.dipr.partners.org:/usr/local/production/notes/config/initializers/secret_token.rb /usr/local/production/notes/config/intializers/secret_token.rb
+  scp username@epipro01.dipr.partners.org:/usr/local/production/tasktracker/config/initializers/devise.rb /usr/local/production/tasktracker/config/intializers/devise.rb
+  scp username@epipro01.dipr.partners.org:/usr/local/production/tasktracker/config/initializers/omniauth.rb /usr/local/production/tasktracker/config/intializers/omniauth.rb
+  scp username@epipro01.dipr.partners.org:/usr/local/production/tasktracker/config/initializers/secret_token.rb /usr/local/production/tasktracker/config/intializers/secret_token.rb
 
 === 424 Update Nginx Configuration
 
 ==== Create symbolic link
 
-  sudo ln -s /usr/local/production/notes/public /var/www/html/notes
+  sudo ln -s /usr/local/production/tasktracker/public /var/www/html/tasktracker
 
 ==== Update configuration file
 
@@ -71,7 +71,7 @@ Edit <tt>sudo vi /usr/local/nginx/conf/nginx.conf</tt>
 
 Insert the following in below the line that says <tt>passenger_enabled on;</tt>
 
-  passenger_base_uri /notes;
+  passenger_base_uri /tasktracker;
 
 Restart Nginx
 
@@ -89,15 +89,15 @@ Edit /etc/httpd/conf.d/proxy.conf
 
 Search for the line that says:
 
-  <Proxy balancer://notes>
-    BalancerMember https://epipro01.dipr.partners.org/notes
-    BalancerMember https://epipro02.dipr.partners.org/notes
+  <Proxy balancer://tasktracker>
+    BalancerMember https://epipro01.dipr.partners.org/tasktracker
+    BalancerMember https://epipro02.dipr.partners.org/tasktracker
     # ...Add new CentOS VMs here
   </Proxy>
 
 Add the following line after the last <tt>BalancerMember</tt> and before the closing <tt></Proxy></tt> tag:
 
-  BalancerMember https://epiproXX.dipr.partners.org/notes
+  BalancerMember https://epiproXX.dipr.partners.org/tasktracker
 
 Restart Apache on sleepepi
 
@@ -107,7 +107,7 @@ Restart Apache on sleepepi
 
 On *epiproXX*
 
-  cd /usr/local/production/notes
+  cd /usr/local/production/tasktracker
   git pull; bundle update; bundle exec rake db:migrate RAILS_ENV=production; bundle exec rake assets:precompile; touch tmp/restart.txt
 
 That's all!

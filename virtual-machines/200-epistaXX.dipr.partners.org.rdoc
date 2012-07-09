@@ -22,7 +22,7 @@ Proxy Path: /edge/hybrid
 
 ==== Task Tracker
 
-Proxy Path: /edge/notes
+Proxy Path: /edge/tasktracker
 
 
 ==== CHAT Publications
