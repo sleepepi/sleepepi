@@ -7,7 +7,7 @@
 === 412 Downloading source from Git
 
   cd /usr/local/production
-  git clone git://github.com/remomueller/hybrid.git
+  git clone git://github.com/sleepepi/hybrid.git
 
 NOTE: If you get <tt>fatal: could not create work tree dir 'hybrid'.: Permission denied</tt> that means you forgot to run:
 
