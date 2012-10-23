@@ -33,14 +33,15 @@ Proxy Path: /review
 Proxy Path: /screen
 
 
+==== Slice
+
+Proxy Path: /slice
+
+
 ==== Training Grant Manager
 
 Proxy Path: /training_grant
 
-
-==== Reading Center Interface
-
-Proxy Path: /reading
 
 === First Step
 

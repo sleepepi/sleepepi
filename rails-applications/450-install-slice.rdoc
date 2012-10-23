@@ -1,24 +1,24 @@
-== 460 Install Reading Center Interface
+== 450 Install Slice
 
-=== 461 Prerequisites
+=== 451 Prerequisites
 
 {Production VM Server Setup}[https://github.com/sleepepi/sleepepi/tree/master/virtual-machines/100-epiproXX.dipr.partners.org.rdoc]
 
-=== 462 Downloading source from Git
+=== 452 Downloading source from Git
 
   cd /usr/local/production
-  git clone git://github.com/remomueller/reading.git
+  git clone git://github.com/remomueller/slice.git
 
-NOTE: If you get <tt>fatal: could not create work tree dir 'reading'.: Permission denied</tt> that means you forgot to run:
+NOTE: If you get <tt>fatal: could not create work tree dir 'slice'.: Permission denied</tt> that means you forgot to run:
 
   sudo chgrp rvm /usr/local/production
   sudo chmod 775 /usr/local/production
 
-=== 463 Initialize database and files
+=== 453 Initialize database and files
 
-  cd /usr/local/production/reading
+  cd /usr/local/production/slice
 
-NOTE: If you get <tt>Do you wish to trust this .rvmrc file? (/usr/local/production/reading/.rvmrc)</tt> then type <tt>yes</tt>
+NOTE: If you get <tt>Do you wish to trust this .rvmrc file? (/usr/local/production/slice/.rvmrc)</tt> then type <tt>yes</tt>
 
   bundle install
 
@@ -26,7 +26,7 @@ NOTE: If mysql2 fails to compile, you forgot the step <tt>sudo yum install mysql
 
   ruby lib/initial_setup.rb
 
-    Database User:      reading
+    Database User:      slice
     Database Password:  <not in documentation>
     Database Socket:    <hit enter>
     Database Host:      mysql.dipr.partners.org
@@ -38,7 +38,7 @@ NOTE: If mysql2 fails to compile, you forgot the step <tt>sudo yum install mysql
     SMTP Password:      <not in documentation>
 
     Default App Name:   <hit enter>
-    Site URL:           https://sleepepi.partners.org/reading
+    Site URL:           https://sleepepi.partners.org/slice
 
   bundle exec rake db:migrate RAILS_ENV=production
 
@@ -50,20 +50,20 @@ NOTE: If mysql2 fails to compile, you forgot the step <tt>sudo yum install mysql
 
 NOTE: The contents of the following files will need to be copied from *epipro01* since they are not in version control and contain pseudo-randomly generated strings
 
-  `-- /usr/local/production/reading/config/initializers/
+  `-- /usr/local/production/slice/config/initializers/
       |-- devise.rb
       |-- omniauth.rb
       `-- secret_token.rb
 
-  scp username@epipro01.dipr.partners.org:/usr/local/production/reading/config/initializers/devise.rb /usr/local/production/reading/config/intializers/devise.rb
-  scp username@epipro01.dipr.partners.org:/usr/local/production/reading/config/initializers/omniauth.rb /usr/local/production/reading/config/intializers/omniauth.rb
-  scp username@epipro01.dipr.partners.org:/usr/local/production/reading/config/initializers/secret_token.rb /usr/local/production/reading/config/intializers/secret_token.rb
+  scp username@epipro01.dipr.partners.org:/usr/local/production/slice/config/initializers/devise.rb /usr/local/production/slice/config/intializers/devise.rb
+  scp username@epipro01.dipr.partners.org:/usr/local/production/slice/config/initializers/omniauth.rb /usr/local/production/slice/config/intializers/omniauth.rb
+  scp username@epipro01.dipr.partners.org:/usr/local/production/slice/config/initializers/secret_token.rb /usr/local/production/slice/config/intializers/secret_token.rb
 
-=== 464 Update Nginx Configuration
+=== 454 Update Nginx Configuration
 
 ==== Create symbolic link
 
-  sudo ln -s /usr/local/production/reading/public /var/www/html/reading
+  sudo ln -s /usr/local/production/slice/public /var/www/html/slice
 
 ==== Update configuration file
 
@@ -71,13 +71,13 @@ Edit <tt>sudo vi /usr/local/nginx/conf/nginx.conf</tt>
 
 Insert the following in below the line that says <tt>passenger_enabled on;</tt>
 
-  passenger_base_uri /reading;
+  passenger_base_uri /slice;
 
 Restart Nginx
 
   sudo service nginx restart
 
-=== 465 Update Apache Proxy Balancer on sleepepi
+=== 455 Update Apache Proxy Balancer on sleepepi
 
 On *sleepepi*
 
@@ -91,25 +91,25 @@ Edit proxy configuration file
 
 Search for the line that says:
 
-  <Proxy balancer://reading>
-    BalancerMember https://epipro01.dipr.partners.org/reading
-    BalancerMember https://epipro02.dipr.partners.org/reading
+  <Proxy balancer://slice>
+    BalancerMember https://epipro01.dipr.partners.org/slice
+    BalancerMember https://epipro02.dipr.partners.org/slice
     # ...Add new CentOS VMs here
   </Proxy>
 
 Add the following line after the last <tt>BalancerMember</tt> and before the closing <tt></Proxy></tt> tag:
 
-  BalancerMember https://epiproXX.dipr.partners.org/reading
+  BalancerMember https://epiproXX.dipr.partners.org/slice
 
 Restart Apache on sleepepi
 
   sudo service httpd restart
 
-=== 466 Update to Latest Stable version of Reading Center Interface
+=== 456 Update to Latest Stable version of Slice
 
 On *epiproXX*
 
-  cd /usr/local/production/reading
+  cd /usr/local/production/slice
   git pull; bundle update; bundle exec rake db:migrate RAILS_ENV=production; bundle exec rake assets:precompile; touch tmp/restart.txt
 
 That's all!

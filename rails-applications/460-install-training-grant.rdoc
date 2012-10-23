@@ -1,10 +1,10 @@
-== 450 Install Training Grant
+== 460 Install Training Grant
 
-=== 451 Prerequisites
+=== 461 Prerequisites
 
 {Production VM Server Setup}[https://github.com/sleepepi/sleepepi/tree/master/virtual-machines/100-epiproXX.dipr.partners.org.rdoc]
 
-=== 452 Downloading source from Git
+=== 462 Downloading source from Git
 
   cd /usr/local/production
   git clone git://github.com/remomueller/training_grant.git
@@ -14,7 +14,7 @@ NOTE: If you get <tt>fatal: could not create work tree dir 'training_grant'.: Pe
   sudo chgrp rvm /usr/local/production
   sudo chmod 775 /usr/local/production
 
-=== 453 Initialize database and files
+=== 463 Initialize database and files
 
   cd /usr/local/production/training_grant
 
@@ -75,7 +75,7 @@ Remount Directory
 
 This loads the RFA space <tt>/projects/informatics/training_grant/uploads</tt>
 
-=== 454 Update Nginx Configuration
+=== 464 Update Nginx Configuration
 
 ==== Create symbolic link
 
@@ -93,7 +93,7 @@ Restart Nginx
 
   sudo service nginx restart
 
-=== 455 Update Apache Proxy Balancer on sleepepi
+=== 465 Update Apache Proxy Balancer on sleepepi
 
 On *sleepepi*
 
@@ -119,7 +119,7 @@ Restart Apache on sleepepi
 
   sudo service httpd restart
 
-=== 456 Update to Latest Stable version of Training Grant
+=== 466 Update to Latest Stable version of Training Grant
 
 On *epiproXX*
 

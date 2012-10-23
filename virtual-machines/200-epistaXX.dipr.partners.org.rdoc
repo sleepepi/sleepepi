@@ -40,7 +40,7 @@ Proxy Path: /edge/screen
 Proxy Path: /edge/training_grant
 
 
-==== Reading Center Interface
+==== Slice
 
-Proxy Path: /edge/reading
+Proxy Path: /edge/slice
 
