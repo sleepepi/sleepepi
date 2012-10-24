@@ -59,6 +59,22 @@ NOTE: The contents of the following files will need to be copied from *epipro01*
   scp username@epipro01.dipr.partners.org:/usr/local/production/slice/config/initializers/omniauth.rb /usr/local/production/slice/config/intializers/omniauth.rb
   scp username@epipro01.dipr.partners.org:/usr/local/production/slice/config/initializers/secret_token.rb /usr/local/production/slice/config/intializers/secret_token.rb
 
+==== Setup Shared RFA folder for uploads
+
+  cd /usr/local/production/slice/public
+  mkdir uploads
+
+Edit <tt>sudo vi /etc/fstab</tt>
+
+   //rfa01.research.partners.org/bwh-sleepepi/projects/informatics/slice/uploads /usr/local/production/slice/public/uploads cifs noexec      0 0
+
+Remount Directory
+
+  sudo umount -a
+  sudo mount -a
+
+This loads the RFA space <tt>/projects/informatics/slice/uploads</tt>
+
 === 454 Update Nginx Configuration
 
 ==== Create symbolic link
