@@ -36,7 +36,7 @@ NOTE: Remember to reload your shell to have changes to PATH take effect
 === Verify PostgreSQL Version
     psql --version
 should return
-    psql (PostgreSQL) 9.1.4
+    psql (PostgreSQL) 9.1.6
 
 === Next Step
 

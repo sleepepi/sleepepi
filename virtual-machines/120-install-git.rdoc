@@ -15,6 +15,8 @@ Install from source
   make
   sudo make install
 
+<b>Important! Logout and login again to reload bash shell!</b>
+
 Verify Git version
 
   git --version
