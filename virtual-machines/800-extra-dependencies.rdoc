@@ -1,0 +1,45 @@
+== 800 Extra Dependencies
+
+Some Rails applications require extra dependencies that need to be installed for certain portions of the application to run correctly. These dependencies can be installed once per server even with multiple Rails application running on the same machine. While these dependencies are not required for the Rails applications to run, they may be needed to allow certain components of the Rails application to behave correctly.
+
+=== 810 LaTeX
+
+  NOTE: Required for Slice
+
+While the Ruby gem PDFKit allows a Rails application to quickly generate PDF documents directly from HTML, these often lack the quality that can be provided by compiling a PDF directly from LaTeX. Our first application using LaTeX PDF rendering using Embedded Ruby (ERB) is Slice. The Rails application will require the location of the pdflatex binary that is installed so that it can use this to render PDFs. Please note that this location is different depending on the operating system. Also note that TeX uses an {interesting versioning numbering system}[http://en.wikipedia.org/wiki/Software_versioning#TeX] that progressively approaches the Greek letter pi.
+
+==== Download and Install LaTeX (CentOS 5/6)
+
+  sudo yum install tetex tetex-fonts tetex-dvips tetex-latex ghostscript
+
+Verify LaTeX is installed
+
+  which pdflatex
+
+    /usr/bin/pdflatex
+
+  pdflatex --version
+
+    pdfeTeX 3.141592-1.21a-2.2 (Web2C 7.5.4)
+
+==== Download and Install LaTeX (Mac OS X)
+
+Download and install MacTeX pkg (recommended)  (~2.1 Gb)
+
+  http://www.tug.org/mactex/
+
+Verify LaTeX is installed
+
+  which pdflatex
+
+    /usr/texbin/pdflatex
+
+  pdflatex --version
+
+    pdfTeX 3.1415926-2.4-1.40.13 (TeX Live 2012)
+
+==== Download and Install LaTeX (Windows)
+
+Download and install MiKTeX (recommended) (~153 Mb)
+
+  http://miktex.org/download

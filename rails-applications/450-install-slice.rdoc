@@ -4,6 +4,8 @@
 
 {Production VM Server Setup}[https://github.com/sleepepi/sleepepi/tree/master/virtual-machines/100-epiproXX.dipr.partners.org.rdoc]
 
+{LaTeX Installation}[https://github.com/sleepepi/sleepepi/tree/master/virtual-machines/800-extra-dependencies.rdoc]
+
 === 452 Downloading source from Git
 
   cd /usr/local/production
