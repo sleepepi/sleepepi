@@ -98,6 +98,8 @@ If you get the following when attempting to update gem, or installing new gems:
 
 Then make sure you reinstall Ruby using RVM since as follows:
 
+  rvm remove 1.9.3-p327
+
   rvm pkg install libyaml
 
-  rvm reinstall ruby-1.9.3-p327
+  rvm install ruby-1.9.3-p327
