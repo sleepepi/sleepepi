@@ -71,7 +71,7 @@ After this, running the <tt>sudo yum install</tt> should work correctly
 If you get the following error when compiling the pg gem:
   Gem::Installer::ExtensionBuildError: ERROR: Failed to build gem native extension.
 
-  /usr/local/rvm/rubies/ruby-1.9.3-p194/bin/ruby extconf.rb
+  /usr/local/rvm/rubies/ruby-1.9.3-p327/bin/ruby extconf.rb
   checking for pg_config... yes
   Using config values from /usr/bin/pg_config
   checking for libpq-fe.h... yes
@@ -91,3 +91,13 @@ If version is too low, run:
 
 And re-install a more recent PostgreSQL version by following {145 - Install PostgreSQL}[https://github.com/sleepepi/sleepepi/tree/master/virtual-machines/145-install-postgresql.rdoc]
 
+=== 960 Ruby Missing psych (libyaml)
+
+If you get the following when attempting to update gem, or installing new gems:
+  It seems your ruby installation is missing psych (for YAML output). To eliminate this warning, please install libyaml and reinstall your ruby
+
+Then make sure you reinstall Ruby using RVM since as follows:
+
+  rvm pkg install libyaml
+
+  rvm reinstall ruby-1.9.3-p327

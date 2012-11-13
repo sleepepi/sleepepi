@@ -1,22 +1,26 @@
 == 140 Install Ruby
 
+Prerequisite: LibYAML may need to be installed, see {Pitfall 960}[https://github.com/sleepepi/sleepepi/tree/master/virtual-machines/900-pitfalls.rdoc]
+
+  rvm pkg install libyaml
+
 === 141 Install Ruby using RVM
 
-  rvm install 1.9.3-p194
+  rvm install 1.9.3-p327
 
 Set default Ruby
 
-  rvm alias create default ruby-1.9.3-p194
+  rvm alias create default ruby-1.9.3-p327
 
-Activate Ruby 1.9.3-p194
+Activate Ruby 1.9.3-p327
 
-  rvm 1.9.3-p194
+  rvm 1.9.3-p327
 
 Verify Ruby version
 
   ruby -v
 
-  ruby 1.9.3p194 (2012-04-20 revision 35410) [x86_64-linux]
+  ruby 1.9.3p327 (2012-11-10 revision 37606) [x86_64-linux]
 
 === 142 Update Ruby Gems
 
