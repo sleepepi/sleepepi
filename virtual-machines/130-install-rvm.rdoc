@@ -52,6 +52,10 @@ For CentOS >= 5.4
   sudo rpm --import https://fedoraproject.org/static/0608B895.txt
   sudo rpm --import http://packages.atrpms.net/RPM-GPG-KEY.atrpms
 
+=== 139 Upgrading Existing RVM (optional)
+
+  rvm get stable
+
 === Next Step
 
 {140 - Install Ruby}[https://github.com/sleepepi/sleepepi/tree/master/virtual-machines/140-install-ruby.rdoc]
