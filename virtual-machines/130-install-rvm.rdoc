@@ -54,7 +54,7 @@ For CentOS >= 5.4
 
 === 139 Upgrading Existing RVM (optional)
 
-  rvm get stable
+  rvmsudo rvm get stable
 
 === Next Step
 
