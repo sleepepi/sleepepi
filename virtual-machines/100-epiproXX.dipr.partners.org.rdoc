@@ -7,7 +7,7 @@ The only exception to this is that <b>epipro01</b> runs cron jobs for Rails rake
 === 101 Technology
 
   Nginx                   1.0.15
-  Ruby Version Manager    1.10.2
+  Ruby Version Manager    1.16.20
   Ruby                    1.9.3p194 (2012-04-20 revision 35410) [x86_64-linux]
   Passenger               3.0.12
 
