@@ -16,8 +16,8 @@ Nginx is a web router that is coupled with
 Edit <tt>sudo vi /usr/local/nginx/conf/nginx.conf</tt>
 
   http {
-    passenger_root /usr/local/rvm/gems/ruby-1.9.3-p194/gems/passenger-3.0.18;
-    passenger_ruby /usr/local/rvm/wrappers/ruby-1.9.3-p194/ruby;
+    passenger_root /usr/local/rvm/gems/ruby-1.9.3-p327/gems/passenger-3.0.18;
+    passenger_ruby /usr/local/rvm/wrappers/ruby-1.9.3-p327/ruby;
 
     # Allow for up to 10 megabyte uploads
     include       mime.types;
