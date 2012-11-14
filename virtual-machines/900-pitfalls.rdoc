@@ -102,4 +102,4 @@ Then make sure you reinstall Ruby using RVM since as follows:
 
   rvm pkg install libyaml
 
-  rvm install ruby-1.9.3-p327
+  rvm install ruby-1.9.3-p327 --with-libyaml-dir=/usr/local/rvm/usr
