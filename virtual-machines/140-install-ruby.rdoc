@@ -8,10 +8,6 @@ Prerequisite: LibYAML may need to be installed, see {Pitfall 960}[https://github
 
   rvm install 1.9.3-p327 --with-libyaml-dir=/usr/local/rvm/usr
 
-Set default Ruby
-
-  rvm alias create default ruby-1.9.3-p327
-
 Activate Ruby 1.9.3-p327
 
   rvm 1.9.3-p327
@@ -21,6 +17,10 @@ Verify Ruby version
   ruby -v
 
   ruby 1.9.3p327 (2012-11-10 revision 37606) [x86_64-linux]
+
+Set default Ruby
+
+  rvm alias create default ruby-1.9.3-p327
 
 === 142 Update Ruby Gems
 
