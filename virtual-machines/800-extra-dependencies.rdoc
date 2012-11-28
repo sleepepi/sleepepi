@@ -48,7 +48,7 @@ Download and install MiKTeX (recommended) (~153 Mb)
 
   NOTE: Required for CHAT Publications and Slice (will be removed as a dependency though)
 
-Download an install wkhtmltopdf
+Download and install wkhtmltopdf
 
   cd ~/code/source
 
