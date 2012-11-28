@@ -43,3 +43,27 @@ Verify LaTeX is installed
 Download and install MiKTeX (recommended) (~153 Mb)
 
   http://miktex.org/download
+
+=== 820 WKHTMLTOPDF
+
+  NOTE: Required for CHAT Publications and Slice (will be removed as a dependency though)
+
+Download an install wkhtmltopdf
+
+  cd ~/code/source
+
+  wget http://wkhtmltopdf.googlecode.com/files/wkhtmltopdf-0.9.9-static-amd64.tar.bz2
+
+  tar xvjf wkhtmltopdf-0.9.9-static-amd64.tar.bz2
+
+  rm wkhtmltopdf-0.9.9-static-amd64.tar.bz2
+
+  sudo mv ./wkhtmltopdf-amd64 /usr/local/bin/wkhtmltopdf
+
+Verify that the version
+
+  /usr/local/bin/wkhtmltopdf -V
+
+  wkhtmltopdf 0.9.6
+
+NOTE: Later versions (0.11.0) may install but silently fail when rendering PDFs
