@@ -55,9 +55,9 @@ NOTE: The contents of the following files will need to be copied from *epipro01*
       |-- omniauth.rb
       `-- secret_token.rb
 
-  scp username@epipro01.dipr.partners.org:/usr/local/production/tasktracker/config/initializers/devise.rb /usr/local/production/tasktracker/config/intializers/devise.rb
-  scp username@epipro01.dipr.partners.org:/usr/local/production/tasktracker/config/initializers/omniauth.rb /usr/local/production/tasktracker/config/intializers/omniauth.rb
-  scp username@epipro01.dipr.partners.org:/usr/local/production/tasktracker/config/initializers/secret_token.rb /usr/local/production/tasktracker/config/intializers/secret_token.rb
+  scp username@epipro01.dipr.partners.org:/usr/local/production/tasktracker/config/initializers/devise.rb /usr/local/production/tasktracker/config/initializers/devise.rb
+  scp username@epipro01.dipr.partners.org:/usr/local/production/tasktracker/config/initializers/omniauth.rb /usr/local/production/tasktracker/config/initializers/omniauth.rb
+  scp username@epipro01.dipr.partners.org:/usr/local/production/tasktracker/config/initializers/secret_token.rb /usr/local/production/tasktracker/config/initializers/secret_token.rb
 
 === 424 Update Nginx Configuration
 

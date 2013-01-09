@@ -54,9 +54,9 @@ NOTE: The contents of the following files will need to be copied from *epipro01*
       |-- omniauth.rb
       `-- secret_token.rb
 
-  scp username@epipro01.dipr.partners.org:/usr/local/production/rely/config/initializers/devise.rb /usr/local/production/rely/config/intializers/devise.rb
-  scp username@epipro01.dipr.partners.org:/usr/local/production/rely/config/initializers/omniauth.rb /usr/local/production/rely/config/intializers/omniauth.rb
-  scp username@epipro01.dipr.partners.org:/usr/local/production/rely/config/initializers/secret_token.rb /usr/local/production/rely/config/intializers/secret_token.rb
+  scp username@epipro01.dipr.partners.org:/usr/local/production/rely/config/initializers/devise.rb /usr/local/production/rely/config/initializers/devise.rb
+  scp username@epipro01.dipr.partners.org:/usr/local/production/rely/config/initializers/omniauth.rb /usr/local/production/rely/config/initializers/omniauth.rb
+  scp username@epipro01.dipr.partners.org:/usr/local/production/rely/config/initializers/secret_token.rb /usr/local/production/rely/config/initializers/secret_token.rb
 
 === 474 Update Nginx Configuration
 

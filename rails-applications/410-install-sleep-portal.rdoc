@@ -55,9 +55,9 @@ NOTE: The contents of the following files will need to be copied from *epipro01*
       |-- omniauth.rb
       `-- secret_token.rb
 
-  scp username@epipro01.dipr.partners.org:/usr/local/production/hybrid/config/initializers/devise.rb /usr/local/production/hybrid/config/intializers/devise.rb
-  scp username@epipro01.dipr.partners.org:/usr/local/production/hybrid/config/initializers/omniauth.rb /usr/local/production/hybrid/config/intializers/omniauth.rb
-  scp username@epipro01.dipr.partners.org:/usr/local/production/hybrid/config/initializers/secret_token.rb /usr/local/production/hybrid/config/intializers/secret_token.rb
+  scp username@epipro01.dipr.partners.org:/usr/local/production/hybrid/config/initializers/devise.rb /usr/local/production/hybrid/config/initializers/devise.rb
+  scp username@epipro01.dipr.partners.org:/usr/local/production/hybrid/config/initializers/omniauth.rb /usr/local/production/hybrid/config/initializers/omniauth.rb
+  scp username@epipro01.dipr.partners.org:/usr/local/production/hybrid/config/initializers/secret_token.rb /usr/local/production/hybrid/config/initializers/secret_token.rb
 
 ==== Setup Shared RFA folder for uploads
 
