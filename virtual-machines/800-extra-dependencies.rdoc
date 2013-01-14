@@ -32,7 +32,9 @@ Check that pdflatex was installed
 
     pdfTeX 3.1415926-2.4-1.40.13 (TeX Live 2012)
 
-Finally, make sure to update [slice|review]/config/initializers/latex.rb to point to the correct pdflatex binary
+Finally, make sure to modify <tt>[slice|review]/config/initializers/latex.rb</tt> to point to the correct pdflatex binary
+
+  LATEX_LOCATION = "/usr/local/texlive/2012/bin/x86_64-linux/pdflatex"
 
 ==== Download and Install LaTeX (Mac OS X)
 
