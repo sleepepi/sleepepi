@@ -8,6 +8,8 @@
   sudo service nginx status
   sudo service nginx configtest
 
+Note: If Nginx doesn't start, Apache may need to be disabled, see {Pitfall 930}[https://github.com/sleepepi/sleepepi/blob/master/virtual-machines/900-pitfalls.rdoc#930-nginx-will-not-start-automatically]
+
 === Manual Nginx Start Stop Restart
 
 start
