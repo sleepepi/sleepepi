@@ -123,3 +123,14 @@ Then you most likely need to export rvm to the PATH
   # Before this existing line
 
   export PATH # ...
+
+=== 970 FSTAB file Mount not Working
+
+If you get the following when attempting to <tt>sudo mount -a</tt>:
+
+  mount: wrong fs type, bad option, bad superblock on
+
+Then you need to install cifs-utils
+
+  sudo yum install cifs-utils
+
