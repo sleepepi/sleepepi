@@ -108,3 +108,18 @@ Back to {140 - Install Ruby}[https://github.com/sleepepi/sleepepi/tree/master/vi
 
 This is due to different versions of CentOS (or other operating systems) having default versions of libyaml and libyaml-devel. For this version of Ruby, libyaml 0.1.4 is required, and yum only installs up through 0.1.2 on CentOS 5, and 0.1.3 on CentOS 6. This is fixed by allowing RVM to manage libyaml and specifying the libyaml when installing Ruby.
 
+If you get the error:
+
+  sudo: rvm: command not found
+
+Then you most likely need to export rvm to the PATH
+
+  sudo vi /etc/profile
+
+  # Add the following line
+
+  PATH="/usr/local/bin:/usr/local/sbin:$PATH"
+
+  # Before this existing line
+
+  export PATH # ...
