@@ -7,9 +7,7 @@ Git is required for checking out projects from version control.
 Install from source
 
   cd ~/code/source
-  wget http://git-core.googlecode.com/files/git-1.8.0.tar.gz
-  tar xvzf git-1.8.0.tar.gz
-  rm git-1.8.0.tar.gz
+  curl http://git-core.googlecode.com/files/git-1.8.1.1.tar.gz | tar xvz
   cd git-*
   ./configure
   make
@@ -21,7 +19,7 @@ Verify Git version
 
   git --version
 
-  git version 1.8.0
+  git version 1.8.1.1
 
 === Next Step
 
