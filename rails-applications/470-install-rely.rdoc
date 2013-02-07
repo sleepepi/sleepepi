@@ -58,6 +58,24 @@ NOTE: The contents of the following files will need to be copied from *epipro01*
   scp username@epipro01.dipr.partners.org:/usr/local/production/rely/config/initializers/omniauth.rb /usr/local/production/rely/config/initializers/omniauth.rb
   scp username@epipro01.dipr.partners.org:/usr/local/production/rely/config/initializers/secret_token.rb /usr/local/production/rely/config/initializers/secret_token.rb
 
+==== Setup Shared RFA folder for uploads
+
+  cd /usr/local/production/rely
+  mkdir uploads
+
+Edit <tt>sudo vi /etc/fstab</tt>
+
+   //rfa01.research.partners.org/bwh-sleepepi/projects/informatics/rely/uploads /usr/local/production/rely/uploads cifs noexec      0 0
+
+Remount Directory
+
+  sudo umount -a
+  sudo mount -a
+
+Note: If you can't mount you may need to install <tt>cifs-utils</tt>, see {Pitfall 970}[https://github.com/sleepepi/sleepepi/blob/master/virtual-machines/900-pitfalls.rdoc#970-fstab-file-mount-not-working]
+
+This loads the RFA space <tt>/projects/informatics/rely/uploads</tt>
+
 === 474 Update Nginx Configuration
 
 ==== Create symbolic link
