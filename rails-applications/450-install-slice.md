@@ -95,7 +95,7 @@ sudo umount -a
 sudo mount -a
 ```
 
-Note: If you can't mount you may need to install `cifs-utils`, see {Pitfall 970}[https://github.com/sleepepi/sleepepi/blob/master/virtual-machines/900-pitfalls.md#970-fstab-file-mount-not-working]
+Note: If you can't mount you may need to install `cifs-utils`, see [Pitfall 970](https://github.com/sleepepi/sleepepi/blob/master/virtual-machines/900-pitfalls.md#970-fstab-file-mount-not-working)
 
 This loads the RFA space `/projects/informatics/slice/uploads`
 
