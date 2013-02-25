@@ -19,9 +19,9 @@ Documentation providing architecture overview of sleepepi
 
 == Server Responsibilities
 
-Primary Frontend Server - {sleepepi.dipr.partners.org}[https://github.com/sleepepi/sleepepi/tree/master/virtual-machines/000-sleepepi.dipr.partners.org.rdoc]
+Primary Frontend Server - {sleepepi.dipr.partners.org}[https://github.com/sleepepi/sleepepi/tree/master/virtual-machines/000-sleepepi.dipr.partners.org.md]
 
-Production Application Servers - {epiproXX.dipr.partners.org}[https://github.com/sleepepi/sleepepi/tree/master/virtual-machines/100-epiproXX.dipr.partners.org.rdoc]
+Production Application Servers - {epiproXX.dipr.partners.org}[https://github.com/sleepepi/sleepepi/tree/master/virtual-machines/100-epiproXX.dipr.partners.org.md]
 
 Staging Application Servers - {conifer.dipr.partners.org}[https://github.com/sleepepi/sleepepi/tree/master/virtual-machines/200-epistaXX.dipr.partners.org.rdoc]
 

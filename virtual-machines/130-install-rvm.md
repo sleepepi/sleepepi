@@ -1,0 +1,81 @@
+## 130 Install Ruby Version Manager
+
+Ruby Version Manager allows multiple instances of Ruby to exist.  This greatly aids upgrading to newer versions of Ruby without breaking existing Ruby installations.
+
+### 131 Curl needs a new cacert.pem file to work correctly (CentOS 5.x only)
+
+```console
+cd ~/code/source
+mkdir curl-cacert
+cd curl-cacert
+wget http://curl.haxx.se/ca/cacert.pem
+sudo cp /etc/pki/tls/certs/ca-bundle.crt /etc/pki/tls/certs/ca-bundle.crt.old
+cat cacert.pem /etc/pki/tls/certs/ca-bundle.crt >> ca-bundle-new.crt
+sudo cp ca-bundle-new.crt /etc/pki/tls/certs/ca-bundle.crt
+```
+
+### 132 Multi-User install for RVM
+
+```console
+cd ~/code/source
+sudo bash -s stable < <(curl -s https://raw.github.com/wayneeseguin/rvm/master/binscripts/rvm-installer )
+
+sudo vi /etc/group
+```
+
+Find the group rvm at the bottom and add the appropriate users to the group, ex: <i>rsm31</i> and <i>mr447</i> to rvm group
+
+Changed from:
+
+```
+rvm:x:20001:
+```
+
+To
+
+```
+rvm:x:20001:rsm31,mr447
+```
+
+**Important! Logout and login again to reload bash shell!**
+
+Verify RVM version by typing `rvm --version` which should return
+
+```console
+rvm 1.17.9
+```
+
+Install RVM Dependencies (discover by typing: `rvm requirements`)
+
+**NOTE: For centos >= 5.4 iconv-devel is provided by glibc**
+
+Check which version of CentOS using:
+
+```console
+cat /etc/redhat-release
+```
+
+For CentOS >= 5.4
+
+```console
+sudo yum install -y gcc-c++ patch readline readline-devel zlib zlib-devel libyaml-devel libffi-devel openssl-devel make bzip2 autoconf automake libtool bison glibc
+```
+
+**NOTE:** If you get `warning: rpmts_HdrFromFdno: Header V3 RSA/SHA256 Signature, key ID 0608b895: NOKEY` when running, then sign your RPM and rerun yum install above
+
+```console
+sudo rpm --import https://fedoraproject.org/static/0608B895.txt
+sudo rpm --import http://packages.atrpms.net/RPM-GPG-KEY.atrpms
+```
+
+### 139 Upgrading Existing RVM (optional)
+
+```console
+rvmsudo rvm get stable
+
+rvm reload
+```
+
+### Next Step
+
+[140 - Install Ruby](https://github.com/sleepepi/sleepepi/tree/master/virtual-machines/140-install-ruby.md)
