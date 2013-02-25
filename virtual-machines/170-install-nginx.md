@@ -14,7 +14,7 @@ Enter your choice (1 or 2) or press Ctrl-C to abort: 1
 Please specify a prefix directory [/opt/nginx]: /usr/local/nginx
 ```
 
-Edit <tt>sudo vi /usr/local/nginx/conf/nginx.conf</tt>
+Edit `sudo vi /usr/local/nginx/conf/nginx.conf`
 
 ```
 http {

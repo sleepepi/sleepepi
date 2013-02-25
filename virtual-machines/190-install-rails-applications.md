@@ -24,10 +24,10 @@ sudo yum install libxml libxml-devel libxslt libxslt-devel
 
 ### Install individual Ruby on Rails Applications
 
-* [Sleep Portal](https://github.com/sleepepi/sleepepi/tree/master/rails-applications/410-install-sleep-portal.rdoc)
-* [Task Tracker](https://github.com/sleepepi/sleepepi/tree/master/rails-applications/420-install-task-tracker.rdoc)
-* [CHAT Publications](https://github.com/sleepepi/sleepepi/tree/master/rails-applications/430-install-chat-publications.rdoc)
-* [Screen](https://github.com/sleepepi/sleepepi/tree/master/rails-applications/440-install-screen.rdoc)
-* [Slice](https://github.com/sleepepi/sleepepi/tree/master/rails-applications/450-install-slice.rdoc)
-* [Training Grant](https://github.com/sleepepi/sleepepi/tree/master/rails-applications/460-install-training-grant.rdoc)
-* [Rely](https://github.com/sleepepi/sleepepi/tree/master/rails-applications/470-install-rely.rdoc)
+* [Sleep Portal](https://github.com/sleepepi/sleepepi/tree/master/rails-applications/410-install-sleep-portal.md)
+* [Task Tracker](https://github.com/sleepepi/sleepepi/tree/master/rails-applications/420-install-task-tracker.md)
+* [CHAT Publications](https://github.com/sleepepi/sleepepi/tree/master/rails-applications/430-install-chat-publications.md)
+* [Screen](https://github.com/sleepepi/sleepepi/tree/master/rails-applications/440-install-screen.md)
+* [Slice](https://github.com/sleepepi/sleepepi/tree/master/rails-applications/450-install-slice.md)
+* [Training Grant](https://github.com/sleepepi/sleepepi/tree/master/rails-applications/460-install-training-grant.md)
+* [Rely](https://github.com/sleepepi/sleepepi/tree/master/rails-applications/470-install-rely.md)
