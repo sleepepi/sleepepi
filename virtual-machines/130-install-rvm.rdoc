@@ -60,4 +60,4 @@ For CentOS >= 5.4
 
 === Next Step
 
-{140 - Install Ruby}[https://github.com/sleepepi/sleepepi/tree/master/virtual-machines/140-install-ruby.rdoc]
+{140 - Install Ruby}[https://github.com/sleepepi/sleepepi/tree/master/virtual-machines/140-install-ruby.md]

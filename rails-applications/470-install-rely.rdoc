@@ -72,7 +72,7 @@ Remount Directory
   sudo umount -a
   sudo mount -a
 
-Note: If you can't mount you may need to install <tt>cifs-utils</tt>, see {Pitfall 970}[https://github.com/sleepepi/sleepepi/blob/master/virtual-machines/900-pitfalls.rdoc#970-fstab-file-mount-not-working]
+Note: If you can't mount you may need to install <tt>cifs-utils</tt>, see {Pitfall 970}[https://github.com/sleepepi/sleepepi/blob/master/virtual-machines/900-pitfalls.md#970-fstab-file-mount-not-working]
 
 This loads the RFA space <tt>/projects/informatics/rely/uploads</tt>
 
