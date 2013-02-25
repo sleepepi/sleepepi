@@ -73,4 +73,4 @@ http {
 
 ### Next Step
 
-[175 - Configure Nginx](https://github.com/sleepepi/sleepepi/blob/master/virtual-machines/175-configure-nginx-for-automatic-startup.rdoc)
+[175 - Configure Nginx](https://github.com/sleepepi/sleepepi/blob/master/virtual-machines/175-configure-nginx-for-automatic-startup.md)
