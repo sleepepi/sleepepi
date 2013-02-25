@@ -106,7 +106,7 @@ If version is too low, run:
 
 `sudo yum erase postgresql*`
 
-And re-install a more recent PostgreSQL version by following [145 - Install PostgreSQL](https://github.com/sleepepi/sleepepi/tree/master/virtual-machines/145-install-postgresql.rdoc)
+And re-install a more recent PostgreSQL version by following [145 - Install PostgreSQL](https://github.com/sleepepi/sleepepi/tree/master/virtual-machines/145-install-postgresql.md)
 
 ### 960 Ruby Missing psych (libyaml)
 

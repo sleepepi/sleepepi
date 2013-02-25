@@ -21,7 +21,7 @@ NOTE: If you get <tt>Do you wish to trust this .rvmrc file? (/usr/local/producti
 
   bundle install
 
-NOTE: If pg fails to compile, see {PostGreSQL Installation Guide}[https://github.com/sleepepi/sleepepi/tree/master/virtual-machines/145-install-postgresql.rdoc]}
+NOTE: If pg fails to compile, see {PostGreSQL Installation Guide}[https://github.com/sleepepi/sleepepi/tree/master/virtual-machines/145-install-postgresql.md]}
 
   ruby lib/initial_setup.rb
 
