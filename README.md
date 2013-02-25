@@ -7,7 +7,7 @@ Documentation providing architecture overview of sleepepi
 ```
 `-- sleepepi.partners.org
     `-- sleepepi.dipr.partners.org          1GB     CentOS release 5.7 (Final)
-        |-- conifer.dipr.partners.org       512MB   CentOS release 5.8 (Final)
+        |-- epista01.dipr.partners.org      1GB     CentOS release 6.3 (Final)
         |-- ...
         |-- epipro01.dipr.partners.org      1GB     CentOS release 5.8 (Final)
         |-- epipro02.dipr.partners.org      1GB     CentOS release 5.8 (Final)
@@ -31,7 +31,7 @@ Production Application Servers
 
 Staging Application Servers
 
-- [conifer.dipr.partners.org](https://github.com/sleepepi/sleepepi/tree/master/virtual-machines/200-epistaXX.dipr.partners.org.md)
+- [epistaXX.dipr.partners.org](https://github.com/sleepepi/sleepepi/tree/master/virtual-machines/200-epistaXX.dipr.partners.org.md)
 
 Demo Servers
 
