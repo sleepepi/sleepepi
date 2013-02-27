@@ -1,4 +1,4 @@
-## 400 Rails Applications Overview.rdoc
+## 400 Rails Applications Overview
 
 The following instructions are geared towards **production** environments, which means that the applications will be stored in:
 
