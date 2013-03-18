@@ -1,7 +1,7 @@
 ## 160 Install Phusion Passenger
 
 ```console
-gem install passenger --no-ri
+gem install passenger --no-ri --pre
 ```
 
 ### Next Step
