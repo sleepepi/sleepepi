@@ -42,7 +42,7 @@ rvm:x:20001:rsm31,mr447
 Verify RVM version by typing `rvm --version` which should return
 
 ```console
-rvm 1.17.9
+rvm 1.18.21
 ```
 
 Install RVM Dependencies (discover by typing: `rvm requirements`)
@@ -71,7 +71,7 @@ sudo rpm --import http://packages.atrpms.net/RPM-GPG-KEY.atrpms
 ### 139 Upgrading Existing RVM (optional)
 
 ```console
-rvmsudo rvm get stable
+rvm get stable
 
 rvm reload
 ```
