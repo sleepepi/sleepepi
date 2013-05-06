@@ -5,10 +5,10 @@ This server hosts the Task Tracker Demo site available at https://tasktracker.pa
 ### 301 Technology
 
 ```
-Nginx                   1.2.7
+Nginx                   1.4.0
 Ruby Version Manager    1.18.21 (stable)
 Ruby                    ruby 2.0.0p0 (2013-02-24 revision 39474) [x86_64-linux]
-Passenger               4.0.0.rc4
+Passenger               4.0.1
 ```
 
 ### 302 Rails Applications
