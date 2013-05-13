@@ -26,9 +26,7 @@ rm headers-more-nginx-module.tar.gz
 rvmsudo passenger-install-nginx-module
 ```
 
-When prompted type:
-
-`<enter>`
+Type `<enter>`
 
 ```
 2. No: I want to customize my Nginx installation. (for advanced users)
@@ -36,7 +34,7 @@ When prompted type:
 Enter your choice (1 or 2) or press Ctrl-C to abort:
 ```
 
-`2`
+Type `2`
 
 ```
 Where is your Nginx source code located?
@@ -44,7 +42,7 @@ Where is your Nginx source code located?
 Please specify the directory:
 ```
 
-`/tmp/nginxplus/nginx-1.4.1`
+Type `/tmp/nginxplus/nginx-1.4.1`
 
 ```
 Where do you want to install Nginx to?
@@ -52,7 +50,7 @@ Where do you want to install Nginx to?
 Please specify a prefix directory [/opt/nginx]:
 ```
 
-`/usr/local/nginx`
+Type `/usr/local/nginx`
 
 ```
 Extra Nginx configure options
@@ -67,7 +65,7 @@ If you specify nothing then the 'configure' script will be run as follows:
 Extra arguments to pass to configure script:
 ```
 
-`--add-module=/tmp/nginxplus/headers-more-nginx-module-0.20`
+Type `--add-module=/tmp/nginxplus/headers-more-nginx-module-0.20`
 
 ```
 Confirm configure flags
@@ -79,7 +77,7 @@ The Nginx configure script will be run as follows:
 Is this what you want? (yes/no) [default=yes]:
 ```
 
-`<enter>`
+Type `<enter>`
 
 
 ### Next Step
