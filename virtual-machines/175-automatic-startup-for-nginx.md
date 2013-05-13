@@ -1,4 +1,4 @@
-## 175 Configure Nginx for Automatic Startup
+## 175 Automatic Startup for Nginx
 
 ### Automatic startup Nginx at Boot
 
