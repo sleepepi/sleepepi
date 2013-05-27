@@ -1,8 +1,6 @@
 ## 170 Install Nginx
 
-Thes instructions detail a simple installation of nginx. If you want to include an additional security module, or wish to use an alternative version of nginx, you can follow the instructions provided in [171 - Install Nginx With Extra Modules](https://github.com/sleepepi/sleepepi/tree/master/virtual-machines/171-install-nginx-with-extra-modules.md) instead.
-
-Nginx is a web router that is coupled with
+These instructions detail a simple installation of nginx. If you want to include an additional security module, or wish to use an alternative version of nginx, you can follow the instructions provided in [171 - Install Nginx With Extra Modules](https://github.com/sleepepi/sleepepi/tree/master/virtual-machines/171-install-nginx-with-extra-modules.md) instead.
 
 ```console
 rvmsudo passenger-install-nginx-module
