@@ -4,7 +4,7 @@ Ruby Version Manager allows multiple instances of Ruby to exist.  This greatly a
 
 ### 131 Curl needs a new cacert.pem file to work correctly (CentOS 5.x only)
 
-```console
+```
 cd ~/code/source
 mkdir curl-cacert
 cd curl-cacert
@@ -16,14 +16,14 @@ sudo cp ca-bundle-new.crt /etc/pki/tls/certs/ca-bundle.crt
 
 ### 132 Multi-User install for RVM
 
-```console
+```
 cd ~/code/source
-sudo bash -s stable < <(curl -s https://raw.github.com/wayneeseguin/rvm/master/binscripts/rvm-installer )
+\curl -L https://get.rvm.io | sudo bash -s stable
 
 sudo vi /etc/group
 ```
 
-Find the group rvm at the bottom and add the appropriate users to the group, ex: <i>rsm31</i> and <i>mr447</i> to rvm group
+Find the group rvm at the bottom and add the appropriate users to the group, ex: *rsm31* and *mr447* to rvm group
 
 Changed from:
 
@@ -42,7 +42,7 @@ rvm:x:20001:rsm31,mr447
 Verify RVM version by typing `rvm --version` which should return
 
 ```console
-rvm 1.18.21
+rvm 1.20.13 (stable)
 ```
 
 Install RVM Dependencies (discover by typing: `rvm requirements`)
@@ -51,26 +51,26 @@ Install RVM Dependencies (discover by typing: `rvm requirements`)
 
 Check which version of CentOS using:
 
-```console
+```
 cat /etc/redhat-release
 ```
 
 For CentOS >= 5.4
 
-```console
+```
 sudo yum install -y gcc-c++ patch readline readline-devel zlib zlib-devel libyaml-devel libffi-devel openssl-devel make bzip2 autoconf automake libtool bison glibc
 ```
 
 **NOTE:** If you get `warning: rpmts_HdrFromFdno: Header V3 RSA/SHA256 Signature, key ID 0608b895: NOKEY` when running, then sign your RPM and rerun yum install above
 
-```console
+```
 sudo rpm --import https://fedoraproject.org/static/0608B895.txt
 sudo rpm --import http://packages.atrpms.net/RPM-GPG-KEY.atrpms
 ```
 
 ### 139 Upgrading Existing RVM (optional)
 
-```console
+```
 rvm get stable
 
 rvm reload

@@ -13,10 +13,18 @@ rvmsudo passenger-install-nginx-module
 ```console
 1. Yes: download, compile and install Nginx for me. (recommended)
 
-Enter your choice (1 or 2) or press Ctrl-C to abort: 1
-
-Please specify a prefix directory [/opt/nginx]: /usr/local/nginx
+Enter your choice (1 or 2) or press Ctrl-C to abort:
 ```
+
+Type `1`
+
+```console
+Where do you want to install Nginx to?
+
+Please specify a prefix directory [/opt/nginx]:
+```
+
+Type `/usr/local/nginx`
 
 
 ### Next Step
