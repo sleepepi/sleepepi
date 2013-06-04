@@ -2,7 +2,7 @@
 
 ### Available nginx start and stop commands
 
-```console
+```
 sudo service nginx stop
 sudo service nginx start
 sudo service nginx restart
@@ -16,25 +16,25 @@ Note: If Nginx doesn't start, Apache may need to be disabled, see [Pitfall 930](
 
 start
 
-```console
+```
 sudo /usr/local/nginx/sbin/nginx
 ```
 
 stop
 
-```console
+```
 sudo /usr/local/nginx/sbin/nginx -s stop
 ```
 
 stop alternative (graceful)
 
-```console
+```
 kill -QUIT $( cat /usr/local/nginx/logs/nginx.pid )
 ```
 
 restart
 
-```console
+```
 kill -HUP $( cat /usr/local/nginx/logs/nginx.pid )
 ```
 

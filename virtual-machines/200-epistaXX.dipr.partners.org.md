@@ -8,9 +8,9 @@ Each application is available under the `/edge/` root of **sleepepi.dipr.partner
 
 ```
 Nginx                   1.4.1
-Ruby Version Manager    rvm 1.18.21 (stable)
-Ruby                    ruby 2.0.0p0 (2013-02-24 revision 39474) [x86_64-linux]
-Passenger               4.0.2
+Ruby Version Manager    rvm 1.20.13 (stable)
+Ruby                    ruby 2.0.0p195 (2013-05-14 revision 40734) [x86_64-linux]
+Passenger               4.0.5
 ```
 
 ### 202 Rails Applications

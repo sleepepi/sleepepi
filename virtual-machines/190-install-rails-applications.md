@@ -3,7 +3,7 @@
 
 ### Initialize Production Directory and Permissions
 
-```console
+```
 cd /usr/local
 sudo mkdir production
 sudo chgrp rvm production
@@ -12,13 +12,13 @@ sudo chmod 775 production
 
 ### Installing MySQL Library to allow compilation of mysql2 ruby gem
 
-```console
+```
 sudo yum install mysql mysql-devel
 ```
 
 ### Installing libraries to allow compilation of nokogiri gem
 
-```console
+```
 sudo yum install libxml libxml-devel libxslt libxslt-devel
 ```
 

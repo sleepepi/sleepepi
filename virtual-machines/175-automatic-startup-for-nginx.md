@@ -4,7 +4,7 @@
 
 From [centos-adding-an-nginx-init-script](http://articles.slicehost.com/2009/2/2/centos-adding-an-nginx-init-script)
 
-```console
+```
 sudo vi /etc/init.d/nginx
 ```
 
@@ -119,13 +119,13 @@ esac
 
 ### Mark file as executable
 
-```console
+```
 sudo chmod +x /etc/init.d/nginx
 ```
 
 ### Mark Nginx Service for Automatic startup
 
-```console
+```
 sudo /sbin/chkconfig nginx on
 ```
 
