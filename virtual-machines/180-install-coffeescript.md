@@ -29,7 +29,7 @@ v0.6.15
 
 Verify npm installed by typing `which npm` which should return:
 
-```
+```console
 /usr/local/bin/npm
 ```
 
