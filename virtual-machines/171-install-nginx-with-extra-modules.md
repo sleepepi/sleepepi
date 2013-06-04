@@ -28,7 +28,7 @@ rvmsudo passenger-install-nginx-module
 
 Type `<enter>`
 
-```
+```console
 2. No: I want to customize my Nginx installation. (for advanced users)
 
 Enter your choice (1 or 2) or press Ctrl-C to abort:
@@ -36,7 +36,7 @@ Enter your choice (1 or 2) or press Ctrl-C to abort:
 
 Type `2`
 
-```
+```console
 Where is your Nginx source code located?
 
 Please specify the directory:
@@ -44,7 +44,7 @@ Please specify the directory:
 
 Type `/tmp/nginxplus/nginx-1.4.1`
 
-```
+```console
 Where do you want to install Nginx to?
 
 Please specify a prefix directory [/opt/nginx]:
@@ -52,7 +52,7 @@ Please specify a prefix directory [/opt/nginx]:
 
 Type `/usr/local/nginx`
 
-```
+```console
 Extra Nginx configure options
 
 If you want to pass extra arguments to the Nginx 'configure' script, then
@@ -60,19 +60,19 @@ please specify them. If not, then specify nothing and press Enter.
 
 If you specify nothing then the 'configure' script will be run as follows:
 
-  sh ./configure --prefix='/usr/local/nginx' --with-http_ssl_module --with-http_gzip_static_module --with-http_stub_status_module --with-cc-opt='-Wno-error' --with-pcre='/tmp/root-passenger-5898/pcre-8.32' --add-module='/usr/local/rvm/gems/ruby-2.0.0-p0/gems/passenger-4.0.2/ext/nginx'
+  sh ./configure --prefix='/usr/local/nginx' --with-http_ssl_module --with-http_gzip_static_module --with-http_stub_status_module --with-cc-opt='-Wno-error' --with-pcre='/tmp/root-passenger-5898/pcre-8.32' --add-module='/usr/local/rvm/gems/ruby-2.0.0-p195/gems/passenger-4.0.5/ext/nginx'
 
 Extra arguments to pass to configure script:
 ```
 
 Type `--add-module=/tmp/nginxplus/headers-more-nginx-module-0.20`
 
-```
+```console
 Confirm configure flags
 
 The Nginx configure script will be run as follows:
 
-  sh ./configure --prefix='/usr/local/nginx' --with-http_ssl_module --with-http_gzip_static_module --with-http_stub_status_module --with-cc-opt='-Wno-error' --with-pcre='/tmp/root-passenger-5898/pcre-8.32' --add-module='/usr/local/rvm/gems/ruby-2.0.0-p0/gems/passenger-4.0.2/ext/nginx' --add-module=/tmp/nginxplus/headers-more-nginx-module-0.20
+  sh ./configure --prefix='/usr/local/nginx' --with-http_ssl_module --with-http_gzip_static_module --with-http_stub_status_module --with-cc-opt='-Wno-error' --with-pcre='/tmp/root-passenger-5898/pcre-8.32' --add-module='/usr/local/rvm/gems/ruby-2.0.0-p195/gems/passenger-4.0.5/ext/nginx' --add-module=/tmp/nginxplus/headers-more-nginx-module-0.20
 
 Is this what you want? (yes/no) [default=yes]:
 ```
