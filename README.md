@@ -31,10 +31,10 @@ Production Application Servers
 
 Staging Application Servers
 
-- [epistaXX.dipr.partners.org](https://github.com/sleepepi/sleepepi/blob/master/virtual-machines/100-technology-and-application-routes.md#109-epistaXX-dipr-partners-org-rails-applications)
+- [epistaXX.dipr.partners.org](https://github.com/sleepepi/sleepepi/blob/master/virtual-machines/100-technology-and-application-routes.md#109-epistaxxdiprpartnersorg-rails-applications)
 
 Demo Servers
 
-- [tasktracker.dipr.partners.org](https://github.com/sleepepi/sleepepi/blob/master/virtual-machines/100-technology-and-application-routes.md#103-tasktracker-dipr-partners-org-rails-applications)
+- [tasktracker.dipr.partners.org](https://github.com/sleepepi/sleepepi/blob/master/virtual-machines/100-technology-and-application-routes.md#103-tasktrackerdiprpartnersorg-rails-applications)
 
-- [slice.dipr.partners.org](https://github.com/sleepepi/sleepepi/blob/master/virtual-machines/100-technology-and-application-routes.md#104-slice-dipr-partners-org-rails-applications)
+- [slice.dipr.partners.org](https://github.com/sleepepi/sleepepi/blob/master/virtual-machines/100-technology-and-application-routes.md#104-slicediprpartnersorg-rails-applications)

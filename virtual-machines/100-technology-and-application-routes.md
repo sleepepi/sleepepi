@@ -63,7 +63,7 @@ This server hosts the Slice Demo site available at https://slice.partners.org.
 Proxy Path (root): /
 
 
-## 109 epistaXX.dipr.partners.org Rails Applications
+### 109 epistaXX.dipr.partners.org Rails Applications
 
 These servers are load balanced and run the **staging** environments for multiple Rails applications.
 
