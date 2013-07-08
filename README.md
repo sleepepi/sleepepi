@@ -27,14 +27,14 @@ Primary Frontend Server
 
 Production Application Servers
 
-- [epiproXX.dipr.partners.org](https://github.com/sleepepi/sleepepi/tree/master/virtual-machines/100-epiproXX.dipr.partners.org.md)
+- [epiproXX.dipr.partners.org](https://github.com/sleepepi/sleepepi/tree/master/virtual-machines/100-technology-and-application-routes.md)
 
 Staging Application Servers
 
-- [epistaXX.dipr.partners.org](https://github.com/sleepepi/sleepepi/tree/master/virtual-machines/200-epistaXX.dipr.partners.org.md)
+- [epistaXX.dipr.partners.org](https://github.com/sleepepi/sleepepi/blob/master/virtual-machines/100-technology-and-application-routes.md#109-epistaXX-dipr-partners-org-rails-applications)
 
 Demo Servers
 
-- [tasktracker.dipr.partners.org](https://github.com/sleepepi/sleepepi/tree/master/virtual-machines/300-tasktracker.dipr.partners.org.md)
+- [tasktracker.dipr.partners.org](https://github.com/sleepepi/sleepepi/blob/master/virtual-machines/100-technology-and-application-routes.md#103-tasktracker-dipr-partners-org-rails-applications)
 
-- [slice.dipr.partners.org](https://github.com/sleepepi/sleepepi/tree/master/virtual-machines/400-slice.dipr.partners.org.md)
+- [slice.dipr.partners.org](https://github.com/sleepepi/sleepepi/blob/master/virtual-machines/100-technology-and-application-routes.md#104-slice-dipr-partners-org-rails-applications)
