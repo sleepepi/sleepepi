@@ -31,17 +31,17 @@ Enter command: I
 Check that pdflatex was installed
 
 ```console
-/usr/local/texlive/2012/bin/x86_64-linux/pdflatex --version
+/usr/local/texlive/2013/bin/x86_64-linux/pdflatex --version
 ```
 
 ```
-pdfTeX 3.1415926-2.4-1.40.13 (TeX Live 2012)
+pdfTeX 3.1415926-2.5-1.40.14 (TeX Live 2013)
 ```
 
 Finally, make sure to modify `[slice|review]/config/initializers/latex.rb` to point to the correct pdflatex binary
 
 ```ruby
-LATEX_LOCATION = "/usr/local/texlive/2012/bin/x86_64-linux/pdflatex"
+LATEX_LOCATION = "/usr/local/texlive/2013/bin/x86_64-linux/pdflatex"
 ```
 
 #### Download and Install LaTeX (Mac OS X)
