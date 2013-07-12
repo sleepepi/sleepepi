@@ -9,7 +9,7 @@ Locate and edit your distributions .repo file:
 sudo vi /etc/yum.repos.d/CentOS-Base.repo
 ```
 
-append this line to BOTH the [base] and [updates] sections:
+append this line to BOTH the `[base]` and `[updates]` sections:
 
 ```
 exclude=postgresql*
