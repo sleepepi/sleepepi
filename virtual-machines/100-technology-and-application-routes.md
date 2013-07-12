@@ -16,7 +16,7 @@ Passenger               4.0.8
 ### 102 epiproXX.dipr.partners.org Rails Applications
 
 | Proxy         | Path            | Application       |   epipro01   |   epipro02   |   epipro03   |   epipro04   | tasktracker  |    slice     |
-| -----         |:---------------:|:-----------------:|:------------:|:------------:|:------------:|:------------:|:------------:|:------------:|
+| ------------- | --------------- | ----------------- |:------------:|:------------:|:------------:|:------------:|:------------:|:------------:|
 | sleepepi      | /hybrid         | Sleep Portal      |      X       |      X       |      -       |      -       |      -       |      -       |
 | sleepepi      | /rely           | Rely              |      X       |      X       |      -       |      -       |      -       |      -       |
 | sleepepi      | /review         | CHAT Publications |      X       |      X       |      -       |      -       |      -       |      -       |
