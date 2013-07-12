@@ -8,33 +8,33 @@
 
 ### 452 Downloading source from Git
 
-```console
+```
 cd /usr/local/production
 git clone git://github.com/remomueller/slice.git
 ```
 
 NOTE: If you get `fatal: could not create work tree dir 'slice'.: Permission denied` that means you forgot to run:
 
-```console
+```
 sudo chgrp rvm /usr/local/production
 sudo chmod 775 /usr/local/production
 ```
 
 ### 453 Initialize database and files
 
-```console
+```
 cd /usr/local/production/slice
 ```
 
 NOTE: If you get `Do you wish to trust this .rvmrc file? (/usr/local/production/slice/.rvmrc)` then type `yes`
 
-```console
+```
 bundle install
 ```
 
 NOTE: If mysql2 fails to compile, you forgot the step `sudo yum install mysql mysql-devel`
 
-```console
+```
 ruby lib/initial_setup.rb
 
   Database User:      slice
@@ -69,7 +69,7 @@ NOTE: The contents of the following files will need to be copied from *epipro01*
     `-- secret_token.rb
 ```
 
-```console
+```
 scp username@epipro01.dipr.partners.org:/usr/local/production/slice/config/initializers/devise.rb /usr/local/production/slice/config/initializers/devise.rb
 scp username@epipro01.dipr.partners.org:/usr/local/production/slice/config/initializers/omniauth.rb /usr/local/production/slice/config/initializers/omniauth.rb
 scp username@epipro01.dipr.partners.org:/usr/local/production/slice/config/initializers/secret_token.rb /usr/local/production/slice/config/initializers/secret_token.rb
@@ -77,7 +77,7 @@ scp username@epipro01.dipr.partners.org:/usr/local/production/slice/config/initi
 
 #### Setup Shared RFA folder for uploads
 
-```console
+```
 cd /usr/local/production/slice/public
 mkdir uploads
 ```
@@ -90,7 +90,7 @@ Edit `sudo vi /etc/fstab`
 
 Remount Directory
 
-```console
+```
 sudo umount -a
 sudo mount -a
 ```
@@ -103,7 +103,7 @@ This loads the RFA space `/projects/informatics/slice/uploads`
 
 #### Create symbolic link
 
-```console
+```
 sudo ln -s /usr/local/production/slice/public /var/www/html/slice
 ```
 
@@ -119,7 +119,7 @@ passenger_base_uri /slice;
 
 Restart Nginx
 
-```console
+```
 sudo service nginx restart
 ```
 
@@ -129,13 +129,13 @@ On **sleepepi**
 
 Login in to sleepepi:
 
-```console
+```
 ssh username@sleepepi.dipr.partners.org
 ```
 
 Edit proxy configuration file
 
-```console
+```
 sudo vi /etc/httpd/conf.d/proxy.conf
 ```
 
@@ -157,7 +157,7 @@ BalancerMember https://epiproXX.dipr.partners.org/slice
 
 Restart Apache on sleepepi
 
-```console
+```
 sudo service httpd restart
 ```
 
@@ -165,7 +165,7 @@ sudo service httpd restart
 
 On **epiproXX**
 
-```console
+```
 cd /usr/local/production/slice
 git pull; bundle update; bundle exec rake db:migrate RAILS_ENV=production; bundle exec rake assets:precompile; touch tmp/restart.txt
 ```
