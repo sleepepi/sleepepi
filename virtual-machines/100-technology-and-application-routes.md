@@ -60,7 +60,11 @@ Proxy Path: /edge/training_grant
 Proxy Path: /edge/slice
 
 
+#### Front End Server Configuration
 
+Both **sleepepi.dipr.partners.org**, and **sleepclinic.dipr.partners.org** are front end servers that act as routers to the **epiproXX** machines.
+
+Specific nginx configuration for **sleepclinic.dipr.partners.org** can be found here: [500 Front End Server Configuration](https://github.com/sleepepi/sleepepi/blob/master/virtual-machines/500-front-end-server-configuration.md)
 
 
 ### First Step
