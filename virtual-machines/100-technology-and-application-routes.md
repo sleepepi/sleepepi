@@ -13,14 +13,14 @@ Ruby                    ruby 2.0.0p247 (2013-06-27 revision 41674) [x86_64-linux
 Passenger               4.0.8
 ```
 
-### 102 epiproXX.dipr.partners.org Rails Applications
+### 102 Front End Servers to Back End Rails Applications
 
-| Proxy         | Path            | Application       |   epipro01   |   epipro02   |   epipro03   |   epipro04   | tasktracker  |    slice     |
+| F.E.Server    | Path            | Application       |   epipro01   |   epipro02   |   epipro03   |   epipro04   | tasktracker  |    slice     |
 | ------------- | --------------- | ----------------- |:------------:|:------------:|:------------:|:------------:|:------------:|:------------:|
 | sleepepi      | /hybrid         | Sleep Portal      |      X       |      X       |      -       |      -       |      -       |      -       |
 | sleepepi      | /rely           | Rely              |      X       |      X       |      -       |      -       |      -       |      -       |
 | sleepepi      | /review         | CHAT Publications |      X       |      X       |      -       |      -       |      -       |      -       |
-| -             | /screen         | Screen            |      X       |      X       |      -       |      -       |      -       |      -       |
+| -^*           | /screen         | Screen            |      X       |      X       |      -       |      -       |      -       |      -       |
 | sleepepi      | /slice          | Slice             |      X       |      X       |      -       |      -       |      -       |      -       |
 | sleepepi      | /tasktracker    | Task Tracker      |      X       |      X       |      -       |      -       |      -       |      -       |
 | sleepepi      | /training_grant | Training Grant    |      X       |      X       |      -       |      -       |      -       |      -       |
@@ -28,6 +28,7 @@ Passenger               4.0.8
 | tasktracker   | /               | Task Tracker Demo |      -       |      -       |      -       |      -       |      X       |      -       |
 | slice         | /               | Slice Demo        |      -       |      -       |      -       |      -       |      -       |      X       |
 
+* The screen web application is not hosted through a front end server
 
 ### 109 epistaXX.dipr.partners.org Rails Applications
 
