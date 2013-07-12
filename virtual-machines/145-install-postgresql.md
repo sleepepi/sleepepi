@@ -74,7 +74,7 @@ psql --version
 should return
 
 ```console
-psql (PostgreSQL) 9.1.7
+psql (PostgreSQL) 9.1.9
 ```
 
 ### Next Step
