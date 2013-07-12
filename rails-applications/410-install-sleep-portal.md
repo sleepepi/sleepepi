@@ -159,7 +159,7 @@ On **epiproXX**
 
 ```console
 cd /usr/local/production/hybrid
-git pull; bundle update; bundle exec rake db:migrate RAILS_ENV=production; bundle exec rake assets:precompile; touch tmp/restart.txt
+git pull; bundle update; bundle exec rake db:migrate RAILS_ENV=production; bundle exec rake assets:precompile RAILS_ENV=production; touch tmp/restart.txt
 ```
 
 That's all!
