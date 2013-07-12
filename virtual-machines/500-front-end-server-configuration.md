@@ -16,8 +16,8 @@ http {
   # ... other configuration here, see https://github.com/sleepepi/sleepepi/blob/master/virtual-machines/173-nginx-configuration.md
 
   upstream epipros {
-    server epipro03.dipr.partners.org;
-    server epipro04.dipr.partners.org;
+    server epipro03.dipr.partners.org:443;
+    server epipro04.dipr.partners.org:443;
   }
 
   server {
