@@ -20,7 +20,7 @@ Passenger               4.0.8
 | sleepepi      | /hybrid         | Sleep Portal      |      X       |      X       |      -       |      -       |      -       |      -       |
 | sleepepi      | /rely           | Rely              |      X       |      X       |      -       |      -       |      -       |      -       |
 | sleepepi      | /review         | CHAT Publications |      X       |      X       |      -       |      -       |      -       |      -       |
-| -^*           | /screen         | Screen            |      X       |      X       |      -       |      -       |      -       |      -       |
+| -*            | /screen         | Screen            |      X       |      X       |      -       |      -       |      -       |      -       |
 | sleepepi      | /slice          | Slice             |      X       |      X       |      -       |      -       |      -       |      -       |
 | sleepepi      | /tasktracker    | Task Tracker      |      X       |      X       |      -       |      -       |      -       |      -       |
 | sleepepi      | /training_grant | Training Grant    |      X       |      X       |      -       |      -       |      -       |      -       |
@@ -28,7 +28,7 @@ Passenger               4.0.8
 | tasktracker   | /               | Task Tracker Demo |      -       |      -       |      -       |      -       |      X       |      -       |
 | slice         | /               | Slice Demo        |      -       |      -       |      -       |      -       |      -       |      X       |
 
-* The screen web application is not hosted through a front end server
+\* The screen web application is not hosted through a front end server
 
 ### 109 epistaXX.dipr.partners.org Rails Applications
 
