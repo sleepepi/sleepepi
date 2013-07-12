@@ -67,7 +67,9 @@ sudo service nginx start
 
 Make sure Nginx is set to start automatically on restart
 
-  sudo chkconfig nginx on
+```
+sudo chkconfig nginx on
+```
 
 ### 940 Yum Install Issues
 
