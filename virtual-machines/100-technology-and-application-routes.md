@@ -15,34 +15,15 @@ Passenger               4.0.8
 
 ### 102 epiproXX.dipr.partners.org Rails Applications
 
-#### Sleep Portal
-
-Proxy Path: /hybrid
-
-
-#### Task Tracker
-
-Proxy Path: /tasktracker
-
-
-#### CHAT Publications
-
-Proxy Path: /review
-
-
-#### Screen
-
-Proxy Path: /screen
-
-
-#### Slice
-
-Proxy Path: /slice
-
-
-#### Training Grant Manager
-
-Proxy Path: /training_grant
+| **Path**        | **Application**   | **epipro01** | **epipro02** | **epipro03** | **epipro04** |
+| /hybrid         | Sleep Portal      |      X       |      X       |      -       |      -       |
+| /rely           | Rely              |      X       |      X       |      -       |      -       |
+| /review         | CHAT Publications |      X       |      X       |      -       |      -       |
+| /screen         | Screen            |      X       |      X       |      -       |      -       |
+| /slice          | Slice             |      X       |      X       |      -       |      -       |
+| /tasktracker    | Task Tracker      |      X       |      X       |      -       |      -       |
+| /training_grant | Training Grant    |      X       |      X       |      -       |      -       |
+| /clinical-slice | Clinical Slice    |      -       |      -       |      X       |      X       |
 
 
 ### 103 tasktracker.dipr.partners.org Rails Applications
