@@ -15,7 +15,6 @@ Passenger               4.0.8
 
 ### 102 epiproXX.dipr.partners.org Rails Applications
 
-|               |                 |                   |                                     Virtual Machine                                     |
 | Proxy         | Path            | Application       |   epipro01   |   epipro02   |   epipro03   |   epipro04   | tasktracker  |    slice     |
 | -----         |:---------------:|:-----------------:|:------------:|:------------:|:------------:|:------------:|:------------:|:------------:|
 | sleepepi      | /hybrid         | Sleep Portal      |      X       |      X       |      -       |      -       |      -       |      -       |
@@ -28,7 +27,6 @@ Passenger               4.0.8
 | sleepclinic   | /slice          | Clinical Slice    |      -       |      -       |      X       |      X       |      -       |      -       |
 | tasktracker   | /               | Task Tracker Demo |      -       |      -       |      -       |      -       |      X       |      -       |
 | slice         | /               | Slice Demo        |      -       |      -       |      -       |      -       |      -       |      X       |
-
 
 
 ### 109 epistaXX.dipr.partners.org Rails Applications
