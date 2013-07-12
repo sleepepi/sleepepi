@@ -2,13 +2,13 @@
 
 ### 111 Log in using SSH or Putty
 
-```console
+```
 ssh username@epiproXX.dipr.partners.org
 ```
 
 ### 112 Create a Source Folder
 
-```console
+```
 mkdir ~/code
 mkdir ~/code/source
 ```
