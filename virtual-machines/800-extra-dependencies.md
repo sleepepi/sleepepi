@@ -14,7 +14,7 @@ Original url, however doesn't work with wget: http://mirror.ctan.org/systems/tex
 
 ```console
 cd ~/code/source
-wget http://mirrors.med.harvard.edu/ctan/systems/texlive/tlnet/install-tl-unx.tar.gz
+wget http://mirrors.ibiblio.org/CTAN/systems/texlive/tlnet/install-tl-unx.tar.gz
 tar xzvf install-tl-unx.tar.gz
 rm install-tl-unx.tar.gz
 cd install-tl-*
