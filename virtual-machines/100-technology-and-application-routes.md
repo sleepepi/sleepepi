@@ -15,33 +15,20 @@ Passenger               4.0.8
 
 ### 102 epiproXX.dipr.partners.org Rails Applications
 
-| **Path**        | **Application**   | **epipro01** | **epipro02** | **epipro03** | **epipro04** |
-| --------------- |:-----------------:|:------------:|:------------:|:------------:|:------------:|
-| /hybrid         | Sleep Portal      |      X       |      X       |      -       |      -       |
-| /rely           | Rely              |      X       |      X       |      -       |      -       |
-| /review         | CHAT Publications |      X       |      X       |      -       |      -       |
-| /screen         | Screen            |      X       |      X       |      -       |      -       |
-| /slice          | Slice             |      X       |      X       |      -       |      -       |
-| /tasktracker    | Task Tracker      |      X       |      X       |      -       |      -       |
-| /training_grant | Training Grant    |      X       |      X       |      -       |      -       |
-| /clinical-slice | Clinical Slice    |      -       |      -       |      X       |      X       |
+|               |                 |                   |                                     Virtual Machine                                     |
+| Proxy         | Path            | Application       |   epipro01   |   epipro02   |   epipro03   |   epipro04   | tasktracker  |    slice     |
+| -----         |:---------------:|:-----------------:|:------------:|:------------:|:------------:|:------------:|:------------:|:------------:|
+| sleepepi      | /hybrid         | Sleep Portal      |      X       |      X       |      -       |      -       |      -       |      -       |
+| sleepepi      | /rely           | Rely              |      X       |      X       |      -       |      -       |      -       |      -       |
+| sleepepi      | /review         | CHAT Publications |      X       |      X       |      -       |      -       |      -       |      -       |
+| -             | /screen         | Screen            |      X       |      X       |      -       |      -       |      -       |      -       |
+| sleepepi      | /slice          | Slice             |      X       |      X       |      -       |      -       |      -       |      -       |
+| sleepepi      | /tasktracker    | Task Tracker      |      X       |      X       |      -       |      -       |      -       |      -       |
+| sleepepi      | /training_grant | Training Grant    |      X       |      X       |      -       |      -       |      -       |      -       |
+| sleepclinic   | /slice          | Clinical Slice    |      -       |      -       |      X       |      X       |      -       |      -       |
+| tasktracker   | /               | Task Tracker Demo |      -       |      -       |      -       |      -       |      X       |      -       |
+| slice         | /               | Slice Demo        |      -       |      -       |      -       |      -       |      -       |      X       |
 
-### 103 tasktracker.dipr.partners.org Rails Applications
-
-This server hosts the Task Tracker Demo site available at https://tasktracker.partners.org.
-
-#### Task Tracker
-
-Proxy Path (root): /
-
-
-### 104 slice.dipr.partners.org Rails Applications
-
-This server hosts the Slice Demo site available at https://slice.partners.org.
-
-#### Slice
-
-Proxy Path (root): /
 
 
 ### 109 epistaXX.dipr.partners.org Rails Applications
