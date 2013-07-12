@@ -6,7 +6,7 @@ This set of documents will list known pitfalls during the installation process.
 
 Similar rails applications that are load balanced across multiple servers require the following files to be identical:
 
-```console
+```
 <rails_root>/config/initializers/devise.rb
 
 <rails_root>/config/initializers/secret_token.rb
@@ -18,7 +18,7 @@ If these files are not identical, users will have issues with their cookies bein
 
 You can do a secure copy to copy files from **epipro01.dipr.partners.org**, make sure you change *rails_app* to the correct rails application!
 
-```console
+```
 scp username@epipro01.dipr.partners.org:/usr/local/production/rails_app/config/initializers/devise.rb /usr/local/production/rails_app/config/initializers/devise.rb
 scp username@epipro01.dipr.partners.org:/usr/local/production/rails_app/config/initializers/omniauth.rb /usr/local/production/rails_app/config/initializers/omniauth.rb
 scp username@epipro01.dipr.partners.org:/usr/local/production/rails_app/config/initializers/secret_token.rb /usr/local/production/rails_app/config/initializers/secret_token.rb
@@ -30,7 +30,7 @@ Currently if a load-balanced server runs into memory issues, requests to this se
 
 Try reboot on the offending server
 
-```console
+```
 sudo reboot
 ```
 
@@ -54,14 +54,14 @@ Remember to uncomment this line and restart the server on **sleepepi.dipr.partne
 
 Make sure Apache is not running:
 
-```console
+```
 sudo chkconfig httpd off
 sudo service httpd stop
 ```
 
 Start Nginx Manually
 
-```console
+```
 sudo service nginx start
 ```
 
@@ -73,7 +73,7 @@ Make sure Nginx is set to start automatically on restart
 
 If you get `warning: rpmts_HdrFromFdno: Header V3 RSA/SHA256 Signature, key ID 0608b895: NOKEY` when running, then you need to update your GPG keys:
 
-```console
+```
 sudo rpm --import https://fedoraproject.org/static/0608B895.txt
 sudo rpm --import http://packages.atrpms.net/RPM-GPG-KEY.atrpms
 ```
@@ -118,7 +118,7 @@ It seems your ruby installation is missing psych (for YAML output). To eliminate
 
 Then make sure you reinstall Ruby using RVM since as follows:
 
-```console
+```
 rvm remove 2.0.0-p0
 
 rvmsudo rvm pkg install libyaml
@@ -138,7 +138,7 @@ sudo: rvm: command not found
 
 Then you most likely need to export rvm to the PATH
 
-```console
+```
   sudo vi /etc/profile
 
   # Add the following line
@@ -160,6 +160,6 @@ mount: wrong fs type, bad option, bad superblock on
 
 Then you need to install cifs-utils
 
-```console
+```
   sudo yum install cifs-utils
 ```
