@@ -12,7 +12,7 @@ While the Ruby gem PDFKit allows a Rails application to quickly generate PDF doc
 
 Original url, however doesn't work with wget: http://mirror.ctan.org/systems/texlive/tlnet/install-tl-unx.tar.gz
 
-```console
+```
 cd ~/code/source
 wget http://mirrors.ibiblio.org/CTAN/systems/texlive/tlnet/install-tl-unx.tar.gz
 tar xzvf install-tl-unx.tar.gz
@@ -30,11 +30,11 @@ Enter command: I
 
 Check that pdflatex was installed
 
-```console
+```
 /usr/local/texlive/2013/bin/x86_64-linux/pdflatex --version
 ```
 
-```
+```console
 pdfTeX 3.1415926-2.5-1.40.14 (TeX Live 2013)
 ```
 
@@ -52,19 +52,19 @@ Download and install MacTeX pkg (recommended)  (~2.1 Gb)
 
 Verify LaTeX is installed
 
-```console
+```
 which pdflatex
 ```
 
-```
+```console
 /usr/texbin/pdflatex
 ```
 
-```console
+```
 pdflatex --version
 ```
 
-```
+```console
 pdfTeX 3.1415926-2.4-1.40.13 (TeX Live 2012)
 ```
 
