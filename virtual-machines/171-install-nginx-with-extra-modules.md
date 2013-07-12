@@ -4,6 +4,12 @@ This document describes how to install nginx with extra modules in case the simp
 
 Specifically, `headers-more-nginx-module` will be installed in order to remove server and x-powered-by headers for better security using `more_clear_headers`.
 
+### Make sure development headers are installed to be able to compile nginx
+
+```
+sudo yum install curl-devel
+```
+
 ### Download nginx source code
 
 ```
