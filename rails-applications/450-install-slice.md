@@ -26,13 +26,9 @@ sudo chmod 775 /usr/local/production
 cd /usr/local/production/slice
 ```
 
-NOTE: If you get `Do you wish to trust this .rvmrc file? (/usr/local/production/slice/.rvmrc)` then type `yes`
-
 ```
 bundle install
 ```
-
-NOTE: If mysql2 fails to compile, you forgot the step `sudo yum install mysql mysql-devel`
 
 ```
 ruby lib/initial_setup.rb
