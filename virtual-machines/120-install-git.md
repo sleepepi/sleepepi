@@ -2,15 +2,15 @@
 
 Git is required for checking out projects from version control.
 
-```console
+```
 sudo yum -y install zlib-devel openssl-devel cpio expat-devel gettext-devel perl-devel
 ```
 
 Install from source
 
-```console
+```
 cd ~/code/source
-curl http://git-core.googlecode.com/files/git-1.8.1.1.tar.gz | tar xvz
+curl https://git-core.googlecode.com/files/git-1.8.3.2.tar.gz | tar xvz
 cd git-*
 ./configure
 make
@@ -21,10 +21,10 @@ sudo make install
 
 Verify Git version
 
-```console
+```
 git --version
 
-git version 1.8.1.1
+git version 1.8.3.2
 ```
 
 ### Next Step
