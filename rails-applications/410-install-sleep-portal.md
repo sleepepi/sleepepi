@@ -6,54 +6,50 @@
 
 ### 412 Downloading source from Git
 
-```console
+```
 cd /usr/local/production
-git clone git://github.com/sleepepi/hybrid.git
+git clone https://github.com/sleepepi/sleepportal.git
 ```
 
-NOTE: If you get `fatal: could not create work tree dir 'hybrid'.: Permission denied` that means you forgot to run:
+NOTE: If you get `fatal: could not create work tree dir 'sleepportal'.: Permission denied` that means you forgot to run:
 
-```console
+```
 sudo chgrp rvm /usr/local/production
 sudo chmod 775 /usr/local/production
 ```
 
 ### 413 Initialize database and files
 
-```console
-cd /usr/local/production/hybrid
+```
+cd /usr/local/production/sleepportal
 ```
 
-NOTE: If you get `Do you wish to trust this .rvmrc file? (/usr/local/production/hybrid/.rvmrc)` then type `yes`
-
-```console
+```
 bundle install
 ```
 
 NOTE: If mysql2 fails to compile, you forgot the step `sudo yum install mysql mysql-devel`
 
-```console
+```
 ruby lib/initial_setup.rb
 
-  Database User:      hybrid
+  Database User:      sleepportal
   Database Password:  <not in documentation>
   Database Socket:    <hit enter>
-  Database Host:      mysql.dipr.partners.org
+  Database Host:      pgsql.dipr.partners.org
 
-  SMTP Address:       rics.bwh.harvard.edu
+  SMTP Address:       <not in documentation>
   SMTP Port:          <hit enter>
   SMTP Domain:        <hit enter>
   SMTP User Name:     sleepepi@rics.bwh.harvard.edu
   SMTP Password:      <not in documentation>
 
   Default App Name:   <hit enter>
-  Site URL:           https://sleepepi.partners.org/hybrid
+  Site URL:           https://sleepepi.partners.org/sleepportal
 
 bundle exec rake db:migrate RAILS_ENV=production
 
-bundle exec rake assets:precompile
-
-mkdir tmp
+bundle exec rake assets:precompile RAILS_ENV=production
 
 touch tmp/restart.txt
 ```
@@ -61,46 +57,46 @@ touch tmp/restart.txt
 NOTE: The contents of the following files will need to be copied from **epipro01** since they are not in version control and contain pseudo-randomly generated strings
 
 ```
-`-- /usr/local/production/hybrid/config/initializers/
+`-- /usr/local/production/sleepportal/config/initializers/
     |-- devise.rb
     |-- omniauth.rb
     `-- secret_token.rb
 ```
 
-```console
-scp username@epipro01.dipr.partners.org:/usr/local/production/hybrid/config/initializers/devise.rb /usr/local/production/hybrid/config/initializers/devise.rb
-scp username@epipro01.dipr.partners.org:/usr/local/production/hybrid/config/initializers/omniauth.rb /usr/local/production/hybrid/config/initializers/omniauth.rb
-scp username@epipro01.dipr.partners.org:/usr/local/production/hybrid/config/initializers/secret_token.rb /usr/local/production/hybrid/config/initializers/secret_token.rb
+```
+scp username@epipro01.dipr.partners.org:/usr/local/production/sleepportal/config/initializers/devise.rb /usr/local/production/sleepportal/config/initializers/devise.rb
+scp username@epipro01.dipr.partners.org:/usr/local/production/sleepportal/config/initializers/omniauth.rb /usr/local/production/sleepportal/config/initializers/omniauth.rb
+scp username@epipro01.dipr.partners.org:/usr/local/production/sleepportal/config/initializers/secret_token.rb /usr/local/production/sleepportal/config/initializers/secret_token.rb
 ```
 
 #### Setup Shared RFA folder for uploads
 
-```console
-cd /usr/local/production/hybrid/public
+```
+cd /usr/local/production/sleepportal/public
 mkdir forms
 ```
 
 Edit `sudo vi /etc/fstab`
 
 ```
-//rfa01.research.partners.org/bwh-sleepepi/projects/informatics/hybrid/forms /usr/local/production/hybrid/public/forms cifs noexec      0 0
+//rfa01.research.partners.org/bwh-sleepepi/projects/informatics/sleepportal/forms /usr/local/production/sleepportal/public/forms cifs noexec      0 0
 ```
 
 Remount Directory
 
-```console
+```
 sudo umount -a
 sudo mount -a
 ```
 
-This loads the RFA space `/projects/informatics/hybrid/forms`
+This loads the RFA space `/projects/informatics/sleepportal/forms`
 
 ### 414 Update Nginx Configuration
 
 #### Create symbolic link
 
-```console
-sudo ln -s /usr/local/production/hybrid/public /var/www/html/hybrid
+```
+sudo ln -s /usr/local/production/sleepportal/public /var/www/html/sleepportal
 ```
 
 #### Update configuration file
@@ -110,12 +106,12 @@ Edit `sudo vi /usr/local/nginx/conf/nginx.conf`
 Insert the following in below the line that says `passenger_enabled on;`
 
 ```
-passenger_base_uri /hybrid;
+passenger_base_uri /sleepportal;
 ```
 
 Restart Nginx
 
-```console
+```
 sudo service nginx restart
 ```
 
@@ -125,7 +121,7 @@ On **sleepepi**
 
 Login in to sleepepi:
 
-```console
+```
 ssh username@sleepepi.dipr.partners.org
 ```
 
@@ -134,9 +130,9 @@ Edit `sudo vi /etc/httpd/conf.d/proxy.conf`
 Search for the line that says:
 
 ```
-<Proxy balancer://hybrid>
-  BalancerMember https://epipro01.dipr.partners.org/hybrid
-  BalancerMember https://epipro02.dipr.partners.org/hybrid
+<Proxy balancer://sleepportal>
+  BalancerMember https://epipro01.dipr.partners.org/sleepportal
+  BalancerMember https://epipro02.dipr.partners.org/sleepportal
   # ...Add new CentOS VMs here
 </Proxy>
 ```
@@ -144,12 +140,12 @@ Search for the line that says:
 Add the following line after the last `BalancerMember` and before the closing `</Proxy>` tag:
 
 ```
-BalancerMember https://epiproXX.dipr.partners.org/hybrid
+BalancerMember https://epiproXX.dipr.partners.org/sleepportal
 ```
 
 Restart Apache on sleepepi
 
-```console
+```
 sudo service httpd restart
 ```
 
@@ -157,8 +153,8 @@ sudo service httpd restart
 
 On **epiproXX**
 
-```console
-cd /usr/local/production/hybrid
+```
+cd /usr/local/production/sleepportal
 git pull; bundle update; bundle exec rake db:migrate RAILS_ENV=production; bundle exec rake assets:precompile RAILS_ENV=production; touch tmp/restart.txt
 ```
 

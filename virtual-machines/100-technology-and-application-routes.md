@@ -17,7 +17,7 @@ Passenger               4.0.8
 
 | F.E.Server    | Path            | Application       |   epipro01   |   epipro02   |   epipro03   |   epipro04   | tasktracker  |    slice     |
 | ------------- | --------------- | ----------------- |:------------:|:------------:|:------------:|:------------:|:------------:|:------------:|
-| sleepepi      | /hybrid         | Sleep Portal      |      X       |      X       |      -       |      -       |      -       |      -       |
+| sleepepi      | /sleepportal    | Sleep Portal      |      X       |      X       |      -       |      -       |      -       |      -       |
 | sleepepi      | /rely           | Rely              |      X       |      X       |      -       |      -       |      -       |      -       |
 | sleepepi      | /review         | CHAT Publications |      X       |      X       |      -       |      -       |      -       |      -       |
 | -*            | /screen         | Screen            |      X       |      X       |      -       |      -       |      -       |      -       |
@@ -38,7 +38,7 @@ Each application is available under the `/edge/` root of **sleepepi.dipr.partner
 
 #### Sleep Portal
 
-Proxy Path: /edge/hybrid
+Proxy Path: /edge/sleepportal
 
 #### Task Tracker
 
