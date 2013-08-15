@@ -9,8 +9,8 @@ Documentation providing architecture overview of sleepepi
     `-- sleepepi.dipr.partners.org          1GB     CentOS release 5.7 (Final)
         |-- epista01.dipr.partners.org      1GB     CentOS release 6.3 (Final)
         |-- ...
-        |-- epipro01.dipr.partners.org      1GB     CentOS release 5.8 (Final)
-        `-- epipro02.dipr.partners.org      1GB     CentOS release 5.8 (Final)
+        |-- epipro01.dipr.partners.org      2GB     CentOS release 5.8 (Final)
+        `-- epipro02.dipr.partners.org      2GB     CentOS release 5.8 (Final)
 `-- sleepclinic.partners.org
     `-- sleepclinic.dipr.partners.org       1GB     CentOS release 6.4 (Final)
         |-- epipro03.dipr.partners.org      1GB     CentOS release 6.4 (Final)
