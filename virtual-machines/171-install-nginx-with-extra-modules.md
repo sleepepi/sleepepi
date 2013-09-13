@@ -77,7 +77,10 @@ If you specify nothing then the 'configure' script will be run as follows:
 Extra arguments to pass to configure script:
 ```
 
-Type `--with-http_spdy_module --with-openssl=/tmp/nginxplus/openssl-1.0.1e --add-module=/tmp/nginxplus/headers-more-nginx-module-0.20`
+Type
+```
+--with-http_spdy_module --with-openssl=/tmp/nginxplus/openssl-1.0.1e --add-module=/tmp/nginxplus/headers-more-nginx-module-0.20
+```
 
 ```console
 Confirm configure flags
