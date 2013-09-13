@@ -41,6 +41,10 @@ http {
 
   server {
     listen      443;
+    # # Enable SPDY support, only available with extra module installed!
+    # # https://github.com/sleepepi/sleepepi/tree/master/virtual-machines/171-install-nginx-with-extra-modules.md
+    # listen 443 ssl spdy;
+
     server_name _;
 
     ssl                  on;
