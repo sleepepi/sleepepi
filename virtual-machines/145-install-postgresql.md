@@ -79,4 +79,4 @@ psql (PostgreSQL) 9.1.9
 
 ### Next Step
 
-[150 - Install Rails](https://github.com/sleepepi/sleepepi/tree/master/virtual-machines/150-install-rails.md)
+[146 - Install Oracle Instant Client](https://github.com/sleepepi/sleepepi/tree/master/virtual-machines/146-install-oracle-instant-client.md)
