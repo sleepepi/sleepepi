@@ -12,6 +12,8 @@ Specifically, `headers-more-nginx-module` will be installed in order to remove s
 sudo yum install curl-devel
 ```
 
+\* Note: If compiling nginx fails, make sure to run the full yum install mentioned in [130 - Install Ruby Version Manager](https://github.com/sleepepi/sleepepi/tree/master/virtual-machines/130-install-rvm.md)
+
 ### Download nginx source code
 
 ```
