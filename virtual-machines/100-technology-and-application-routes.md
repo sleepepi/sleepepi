@@ -7,10 +7,10 @@ The only exception to this is that **epipro01** runs cron jobs for Rails rake ta
 ### 101 Technology
 
 ```
-Nginx                   1.4.2
-Ruby Version Manager    1.21.8 (stable)
-Ruby                    ruby 2.0.0p247 (2013-06-27 revision 41674) [x86_64-linux]
-Passenger               4.0.20
+Nginx                   1.4.4
+Ruby Version Manager    1.24.7 (stable)
+Ruby                    ruby 2.0.0p353 (2013-11-22 revision 43784) [x86_64-linux]
+Passenger               4.0.27
 ```
 
 ### 102 Front End Servers to Back End Rails Applications

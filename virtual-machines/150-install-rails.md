@@ -1,8 +1,7 @@
 ## 150 Install Rails and Bundler
 
 ```
-gem install rails --no-ri
-gem install bundler --no-ri
+gem install rails bundler --no-ri --no-rdoc
 ```
 
 ### Next Step

@@ -9,13 +9,13 @@ rvm requirements
 ### 141 Install Ruby using RVM
 
 ```
-rvm install 2.0.0-p247
+rvm install 2.0.0-p353
 ```
 
-Activate Ruby 2.0.0-p247
+Activate Ruby 2.0.0-p353
 
 ```
-rvm 2.0.0-p247
+rvm 2.0.0-p353
 ```
 
 Verify Ruby version
@@ -25,13 +25,13 @@ ruby -v
 ```
 
 ```console
-ruby 2.0.0p247 (2013-06-27 revision 41674) [x86_64-linux]
+ruby 2.0.0p353 (2013-11-22 revision 43784) [x86_64-linux]
 ```
 
 Set default Ruby
 
 ```
-rvm alias create default ruby-2.0.0-p247
+rvm alias create default ruby-2.0.0-p353
 ```
 
 ### 142 Update Ruby Gems
