@@ -21,7 +21,7 @@ cd /tmp
 mkdir nginxplus
 cd /tmp/nginxplus
 
-wget -O openssl.tar.gz http://www.openssl.org/source/openssl-1.0.1e.tar.gz
+wget -O openssl.tar.gz http://www.openssl.org/source/openssl-1.0.1g.tar.gz
 tar xzvf openssl.tar.gz
 rm openssl.tar.gz
 
@@ -94,7 +94,7 @@ Extra arguments to pass to configure script:
 
 Type
 ```
---with-http_spdy_module --with-openssl=/tmp/nginxplus/openssl-1.0.1e --add-module=/tmp/nginxplus/headers-more-nginx-module-0.20
+--with-http_spdy_module --with-openssl=/tmp/nginxplus/openssl-1.0.1g --add-module=/tmp/nginxplus/headers-more-nginx-module-0.20
 ```
 
 ```console
