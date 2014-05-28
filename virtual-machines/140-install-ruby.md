@@ -43,3 +43,7 @@ gem update --system
 ### Next Step
 
 [145 - Install PostgreSQL](https://github.com/sleepepi/sleepepi/tree/master/virtual-machines/145-install-postgresql.md)
+
+or skip database (PostgreSQL and Oracle) installations
+
+[150 - Install Rails](https://github.com/sleepepi/sleepepi/tree/master/virtual-machines/150-install-rails.md)
