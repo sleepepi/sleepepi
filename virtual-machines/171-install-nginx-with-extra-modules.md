@@ -25,7 +25,7 @@ wget -O openssl.tar.gz http://www.openssl.org/source/openssl-1.0.1g.tar.gz
 tar xzvf openssl.tar.gz
 rm openssl.tar.gz
 
-wget -O nginx.tar.gz http://www.nginx.org/download/nginx-1.6.0.tar.gz
+wget -O nginx.tar.gz http://www.nginx.org/download/nginx-1.6.1.tar.gz
 tar xzvf nginx.tar.gz
 rm nginx.tar.gz
 
@@ -69,7 +69,7 @@ Where is your Nginx source code located?
 Please specify the directory:
 ```
 
-Type `/tmp/nginxplus/nginx-1.6.0`
+Type `/tmp/nginxplus/nginx-1.6.1`
 
 ```console
 Where do you want to install Nginx to?
