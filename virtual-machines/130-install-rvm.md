@@ -71,11 +71,11 @@ sudo rpm --import http://packages.atrpms.net/RPM-GPG-KEY.atrpms
 ### 139 Upgrading Existing RVM (optional)
 
 ```
-[rvmsudo] rvm get stable
+rvmsudo rvm get stable
 
 rvm reload
 
-[rvmsudo] rvm requirements
+rvmsudo rvm requirements
 ```
 
 ### Next Step
