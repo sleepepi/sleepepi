@@ -10,7 +10,7 @@ Install from source
 
 ```
 cd ~/code/source
-curl https://git-core.googlecode.com/files/git-1.8.3.2.tar.gz | tar xvz
+curl https://git-core.googlecode.com/files/git-1.8.1.1.tar.gz | tar xvz
 cd git-*
 ./configure
 make
@@ -24,7 +24,7 @@ Verify Git version
 ```
 git --version
 
-git version 1.8.3.2
+git version 1.8.1.1
 ```
 
 ### Next Step
