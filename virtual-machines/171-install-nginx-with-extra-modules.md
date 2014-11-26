@@ -37,6 +37,12 @@ rm headers-more-nginx-module.tar.gz
 ### Start the Passenger Installer
 
 ```
+rvmsudo passenger-install-nginx-module --auto --prefix=/usr/local/nginx --nginx-source-dir=/tmp/nginxplus/nginx-1.6.2 --extra-configure-flags="--with-http_spdy_module --with-openssl=/tmp/nginxplus/openssl-1.0.1g --add-module=/tmp/nginxplus/headers-more-nginx-module-0.20" --languages ruby
+```
+
+or manually
+
+```
 rvmsudo passenger-install-nginx-module
 ```
 
