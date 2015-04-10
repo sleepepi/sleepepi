@@ -29,10 +29,11 @@ sudo yum install samba-client samba-common cifs-utils autofs
 ```
 
 Add to bottom of `/etc/auto.master`
-The following are two examples, one for Slice, one for the NSRR
+The following are two examples, one for Slice, one for the NSRR, one for MyApnea
 ```
 /- /etc/auto.sleepdata
 /- /etc/auto.slice
+/- /etc/auto.myapnea
 ```
 
 Create and add to `/etc/auto.secret`, the username and password are for the RFA service account.
@@ -49,6 +50,11 @@ Create and add to `/etc/auto.slice`
 Create and add to `/etc/auto.sleepdata`
 ```
 /usr/local/production/www.sleepdata.org/carrierwave -fstype=cifs,uid=3051303,gid=100001,credentials=/etc/auto.secret ://rfa01.research.partners.org/bwh-sleepepi-nsrr/www.sleepdata.org/carrierwave
+```
+
+Create and add to `/etc/auto.myapnea`
+```
+/usr/local/production/www.myapnea.org/public/uploads -fstype=cifs,uid=3051303,gid=100001,credentials=/etc/auto.secret ://rfa01.research.partners.org/bwh-sleepepi-web/production/www.myapnea.org/uploads
 ```
 
 After adding the folders, restart Automount
