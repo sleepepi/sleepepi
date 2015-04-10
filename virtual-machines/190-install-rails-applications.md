@@ -24,30 +24,44 @@ sudo yum install libxml libxml-devel libxslt libxslt-devel
 
 ### Installing Automount and CIFS to mount folders from the RFA
 
+```
 sudo yum install samba-client samba-common cifs-utils autofs
+```
 
-# Add to bottom of /etc/auto.master
-# The following are two examples, one for Slice, one for the NSRR
+Add to bottom of `/etc/auto.master`
+The following are two examples, one for Slice, one for the NSRR
+```
 /- /etc/auto.sleepdata
 /- /etc/auto.slice
+```
 
-# Create and add to /etc/auto.secret
+Create and add to `/etc/auto.secret`
+```
 username=XXXX
 password=XXXX
+```
 
-# Create and add to /etc/auto.slice
+Create and add to `/etc/auto.slice`
+```
 /usr/local/production/slice/carrierwave -fstype=cifs,uid=3051303,gid=100001,credentials=/etc/auto.secret ://rfa01.research.partners.org/bwh-sleepepi-web/production/slice/carrierwave
+```
 
-# Create and add to /etc/auto.sleepdata
+Create and add to `/etc/auto.sleepdata`
+```
 /usr/local/production/www.sleepdata.org/carrierwave -fstype=cifs,uid=3051303,gid=100001,credentials=/etc/auto.secret ://rfa01.research.partners.org/bwh-sleepepi-nsrr/www.sleepdata.org/carrierwave
+```
 
-# After adding the folders, restart Automount
+After adding the folders, restart Automount
 
+```
 sudo service autofs restart
+```
 
-# You can also assure autofs loads after a reboot by doing:
+You can also assure autofs loads after a reboot by doing:
 
+```
 sudo chkconfig autofs on
+```
 
 ### Install individual Ruby on Rails Applications
 
