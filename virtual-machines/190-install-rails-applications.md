@@ -35,7 +35,7 @@ The following are two examples, one for Slice, one for the NSRR
 /- /etc/auto.slice
 ```
 
-Create and add to `/etc/auto.secret`
+Create and add to `/etc/auto.secret`, the username and password are for the RFA service account.
 ```
 username=XXXX
 password=XXXX
