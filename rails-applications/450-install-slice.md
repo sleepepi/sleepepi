@@ -73,27 +73,25 @@ scp username@epipro01.dipr.partners.org:/usr/local/production/slice/config/initi
 
 #### Setup Shared RFA folder for uploads
 
-```
-cd /usr/local/production/slice/public
-mkdir uploads
-```
+Follow the [Automount Installation Instructions](https://github.com/sleepepi/sleepepi/blob/master/virtual-machines/190-install-rails-applications.md#installing-automount-and-cifs-to-mount-folders-from-the-rfa) that are provided if you haven't installed the required automount libraries.
 
-Edit `sudo vi /etc/fstab`
+Slice requires the following in `auto.master`:
 
 ```
-//rfa01.research.partners.org/bwh-sleepepi/projects/informatics/slice/uploads /usr/local/production/slice/public/uploads cifs noexec      0 0
+/- /etc/auto.slice
 ```
 
-Remount Directory
+Slice also requires the additional file `auto.slice`:
 
 ```
-sudo umount -a
-sudo mount -a
+/usr/local/production/slice/carrierwave -fstype=cifs,uid=3051303,gid=100001,credentials=/etc/auto.secret ://rfa01.research.partners.org/bwh-sleepepi-web/production/slice/carrierwave
 ```
 
-Note: If you can't mount you may need to install `cifs-utils`, see [Pitfall 970](https://github.com/sleepepi/sleepepi/blob/master/virtual-machines/900-pitfalls.md#970-fstab-file-mount-not-working)
+Run the following to activate the new mount:
 
-This loads the RFA space `/projects/informatics/slice/uploads`
+```
+sudo service autofs restart
+```
 
 ### 454 Update Nginx Configuration
 
