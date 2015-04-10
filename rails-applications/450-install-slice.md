@@ -10,10 +10,10 @@
 
 ```
 cd /usr/local/production
-git clone git://github.com/remomueller/slice.git
+git clone git://github.com/remomueller/slice.git www.tryslice.io
 ```
 
-NOTE: If you get `fatal: could not create work tree dir 'slice'.: Permission denied` that means you forgot to run:
+NOTE: If you get `fatal: could not create work tree dir 'www.tryslice.io'.: Permission denied` that means you forgot to run:
 
 ```
 sudo chgrp rvm /usr/local/production
@@ -23,7 +23,7 @@ sudo chmod 775 /usr/local/production
 ### 453 Initialize database and files
 
 ```
-cd /usr/local/production/slice
+cd /usr/local/production/www.tryslice.io
 ```
 
 ```
@@ -38,50 +38,45 @@ ruby lib/initial_setup.rb
   Database Socket:    <hit enter>
   Database Host:      pgsql.dipr.partners.org
 
-  SMTP Address:       rics.bwh.harvard.edu
-  SMTP Port:          <hit enter>
-  SMTP Domain:        <hit enter>
-  SMTP User Name:     sleepepi@rics.bwh.harvard.edu
+  SMTP Address:       mail.hover.com
+  SMTP Port:          587
+  SMTP User Name:     support@tryslice.io
   SMTP Password:      <not in documentation>
 
   Default App Name:   <hit enter>
-  Site URL:           https://sleepepi.partners.org/slice
+  Site URL:           https://tryslice.io
 
 bundle exec rake db:migrate RAILS_ENV=production
 
 bundle exec rake assets:precompile
 
-mkdir tmp
-
 touch tmp/restart.txt
 ```
 
-NOTE: The contents of the following files will need to be copied from *epipro01* since they are not in version control and contain pseudo-randomly generated strings
+NOTE: The contents of the following files will need to be copied from *epipro03* since they are not in version control and contain pseudo-randomly generated strings
 
 ```
-`-- /usr/local/production/slice/config/initializers/
-    |-- devise.rb
-    |-- omniauth.rb
-    `-- secret_token.rb
+`-- /usr/local/production/www.tryslice.io/config/
+    |-- application.yml
+    `-- database.yml
 ```
 
 ```
-scp username@epipro01.dipr.partners.org:/usr/local/production/slice/config/initializers/devise.rb /usr/local/production/slice/config/initializers/devise.rb
-scp username@epipro01.dipr.partners.org:/usr/local/production/slice/config/initializers/omniauth.rb /usr/local/production/slice/config/initializers/omniauth.rb
-scp username@epipro01.dipr.partners.org:/usr/local/production/slice/config/initializers/secret_token.rb /usr/local/production/slice/config/initializers/secret_token.rb
+scp username@epipro03.dipr.partners.org:/usr/local/production/www.tryslice.io/config/application.yml /usr/local/production/www.tryslice.io/config/application.yml
+scp username@epipro03.dipr.partners.org:/usr/local/production/www.tryslice.io/config/database.yml /usr/local/production/www.tryslice.io/config/database.yml
 ```
 
 #### Setup Shared RFA folder for uploads
 
 Follow the [Automount Installation Instructions](https://github.com/sleepepi/sleepepi/blob/master/virtual-machines/190-install-rails-applications.md#installing-automount-and-cifs-to-mount-folders-from-the-rfa) that are provided if you haven't installed the required automount libraries.
 
-Slice requires the following in `auto.master`:
+Slice requires the following in `/etc/auto.master`:
 
 ```
 /- /etc/auto.slice
 ```
 
-Slice also requires the additional file `auto.slice`:
+Slice also requires the additional file `/etc/auto.slice`:
 
 ```
 /usr/local/production/slice/carrierwave -fstype=cifs,uid=3051303,gid=100001,credentials=/etc/auto.secret ://rfa01.research.partners.org/bwh-sleepepi-web/production/slice/carrierwave
@@ -111,48 +106,48 @@ Insert the following in below the line that says `passenger_enabled on;`
 passenger_base_uri /slice;
 ```
 
-Restart Nginx
+Restart nginx
 
 ```
 sudo service nginx restart
 ```
 
-### 455 Update Apache Proxy Balancer on sleepepi
+### 455 Update nginx Configuration on slice
 
-On **sleepepi**
+On **slice**
 
-Login in to sleepepi:
-
-```
-ssh username@sleepepi.dipr.partners.org
-```
-
-Edit proxy configuration file
+Login in to slice:
 
 ```
-sudo vi /etc/httpd/conf.d/proxy.conf
+ssh username@slice.dipr.partners.org
+```
+
+Edit nginx configuration file
+
+```
+sudo vi /usr/local/nginx/conf/nginx.conf
 ```
 
 Search for the line that says:
 
 ```
-<Proxy balancer://slice>
-  BalancerMember https://epipro01.dipr.partners.org/slice
-  BalancerMember https://epipro02.dipr.partners.org/slice
-  # ...Add new CentOS VMs here
-</Proxy>
+upstream epipros {
+  server epipro03.dipr.partners.org:443;
+  server epipro04.dipr.partners.org:443;
+  # Add new CentOS VMs here
+}
 ```
 
-Add the following line after the last `BalancerMember` and before the closing `</Proxy>` tag:
+Add the following line after the last `server` and before the closing `}`:
 
 ```
-BalancerMember https://epiproXX.dipr.partners.org/slice
+  server epiproXX.dipr.partners.org:443;
 ```
 
-Restart Apache on sleepepi
+Restart nginx on slice
 
 ```
-sudo service httpd restart
+sudo service nginx restart
 ```
 
 ### 456 Update to Latest Stable version of Slice
