@@ -43,7 +43,7 @@ password=XXXX
 
 Create and add to `/etc/auto.slice`
 ```
-/usr/local/production/slice/carrierwave -fstype=cifs,uid=3051303,gid=100001,credentials=/etc/auto.secret ://rfa01.research.partners.org/bwh-sleepepi-web/production/slice/carrierwave
+/usr/local/production/www.tryslice.io/carrierwave -fstype=cifs,uid=3051303,gid=100001,credentials=/etc/auto.secret ://rfa01.research.partners.org/bwh-sleepepi-web/production/slice/carrierwave
 ```
 
 Create and add to `/etc/auto.sleepdata`
