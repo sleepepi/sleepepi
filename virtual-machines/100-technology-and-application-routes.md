@@ -33,10 +33,6 @@ These servers are load balanced and run the **staging** environments for multipl
 
 Each application is available under the `/edge/` root of **sleepepi.dipr.partners.org**.
 
-#### Sleep Portal
-
-Proxy Path: /edge/sleepportal
-
 #### Task Tracker
 
 Proxy Path: /edge/tasktracker
@@ -45,17 +41,25 @@ Proxy Path: /edge/tasktracker
 
 Proxy Path: /edge/review
 
-#### Screen
+#### Randomization
 
-Proxy Path: /edge/screen
+Proxy Path: /edge/randomization
 
-#### Training Grant Manager
+#### Train Tracks
 
-Proxy Path: /edge/training_grant
+Proxy Path: /edge/traintracks
 
 #### Slice
 
 Proxy Path: /edge/slice
+
+#### NSRR - Sleep Data
+
+Proxy Path: /edge/sleepdata
+
+#### MyApnea.Org
+
+Proxy Path: /edge/www.myapnea.org
 
 
 #### Front End Server Configuration
