@@ -35,6 +35,7 @@ The following are examples for Slice, the NSRR, MyApnea, and Altamira
 /- /etc/auto.sleepdata
 /- /etc/auto.slice
 /- /etc/auto.myapnea
+/- /etc/auto.traintracks
 ```
 
 Create and add to `/etc/auto.secret`, the username and password are for the RFA service account.
@@ -61,6 +62,11 @@ Create and add to `/etc/auto.myapnea`
 Create and add to `/etc/auto.altamira`
 ```
 /usr/local/production/altamira/datasets -fstype=cifs,uid=3051303,gid=100001,credentials=/etc/auto.secret ://rfa01.research.partners.org/bwh-sleepepi-nsrr/www.sleepdata.org/carrierwave/datasets
+```
+
+Create and add to `/etc/auto.traintracks`
+```
+/usr/local/production/traintracks/public/uploads -fstype=cifs,uid=3051303,gid=100001,credentials=/etc/auto.secret ://rfa01.research.partners.org/bwh-sleepepi-web/production/traintracks/uploads
 ```
 
 After adding the folders, restart Automount
