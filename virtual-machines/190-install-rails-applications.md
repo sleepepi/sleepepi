@@ -29,13 +29,14 @@ sudo yum install samba-client samba-common cifs-utils autofs
 ```
 
 Add to bottom of `/etc/auto.master`
-The following are examples for Slice, the NSRR, MyApnea, and Altamira
+Use one of the following depending on which application is installed.
 ```
 /- /etc/auto.altamira
 /- /etc/auto.sleepdata
 /- /etc/auto.slice
 /- /etc/auto.myapnea
 /- /etc/auto.traintracks
+/- /etc/auto.review
 ```
 
 Create and add to `/etc/auto.secret`, the username and password are for the RFA service account.
@@ -67,6 +68,11 @@ Create and add to `/etc/auto.altamira`
 Create and add to `/etc/auto.traintracks`
 ```
 /usr/local/production/traintracks/public/uploads -fstype=cifs,uid=3051303,gid=100001,credentials=/etc/auto.secret ://rfa01.research.partners.org/bwh-sleepepi-web/production/traintracks/uploads
+```
+
+Create and add to `/etc/auto.review`
+```
+/usr/local/production/review/public/uploads -fstype=cifs,uid=3051303,gid=100001,credentials=/etc/auto.secret ://rfa01.research.partners.org/bwh-sleepepi-web/production/review/uploads
 ```
 
 After adding the folders, restart Automount
