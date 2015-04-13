@@ -15,21 +15,17 @@ Passenger               4.0.33
 
 ### 102 Front End Servers to Back End Rails Applications
 
-| F.E.Server    | Path            | Application       |   epipro01   |   epipro02   |   epipro03   |   epipro04   | tasktracker  |    slice     |  sleepdata   |
-| ------------- | --------------- | ----------------- |:------------:|:------------:|:------------:|:------------:|:------------:|:------------:|:------------:|
-| sleepepi      | /sleepportal    | Sleep Portal      |      X       |      X       |      -       |      -       |      -       |      -       |      -       |
-| sleepepi      | /rely           | Rely              |      X       |      X       |      -       |      -       |      -       |      -       |      -       |
-| sleepepi      | /review         | CHAT Publications |      X       |      X       |      -       |      -       |      -       |      -       |      -       |
-| -*            | /screen         | Screen            |      X       |      X       |      -       |      -       |      -       |      -       |      -       |
-| sleepepi      | /slice          | Slice             |      X       |      X       |      -       |      -       |      -       |      -       |      -       |
-| sleepepi      | /tasktracker    | Task Tracker      |      X       |      X       |      -       |      -       |      -       |      -       |      -       |
-| sleepepi      | /training_grant | Training Grant    |      X       |      X       |      -       |      -       |      -       |      -       |      -       |
-| sleepclinic   | /slice          | Clinical Slice    |      -       |      -       |      X       |      X       |      -       |      -       |      -       |
-| sleepdata     | /               | sleepdata.org     |      -       |      -       |      -       |      -       |      -       |      -       |      X       |
-| tasktracker   | /               | Task Tracker Demo |      -       |      -       |      -       |      -       |      X       |      -       |      -       |
-| slice         | /               | Slice Demo        |      -       |      -       |      -       |      -       |      -       |      X       |      -       |
+| F.E.Server    | Path            | Application       |   epipro01   |   epipro02   |   epipro03   |   epipro04   |   epipro05   |   epipro06   |   epipro07   | tasktracker  |
+| ------------- | --------------- | ----------------- |:------------:|:------------:|:------------:|:------------:|:------------:|:------------:|:------------:|:------------:|
+| sleepepi      | /randomization  | Randomization     |      X       |      X       |      -       |      -       |      -       |      -       |      -       |      -       |
+| sleepepi      | /review         | CHAT Publications |      X       |      X       |      -       |      -       |      -       |      -       |      -       |      -       |
+| sleepepi      | /tasktracker    | Task Tracker      |      X       |      X       |      -       |      -       |      -       |      -       |      -       |      -       |
+| sleepepi      | /traintracks    | Train Tracks      |      X       |      X       |      -       |      -       |      -       |      -       |      -       |      -       |
+| sleepclinic   | /               | Try Slice         |      -       |      -       |      X       |      X       |      -       |      -       |      -       |      -       |
+| slice         | /               | Try Slice         |      -       |      -       |      X       |      X       |      -       |      -       |      -       |      -       |
+| sleepdata     | /               | sleepdata.org     |      -       |      -       |      -       |      -       |      X       |      X       |      X       |      -       |
+| tasktracker   | /               | Task Tracker Demo |      -       |      -       |      -       |      -       |      -       |      -       |      -       |      X       |
 
-\* The screen web application is not hosted through a front end server
 
 ### 109 epistaXX.dipr.partners.org Rails Applications
 
