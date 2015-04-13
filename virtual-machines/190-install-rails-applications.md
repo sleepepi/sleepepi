@@ -29,8 +29,9 @@ sudo yum install samba-client samba-common cifs-utils autofs
 ```
 
 Add to bottom of `/etc/auto.master`
-The following are two examples, one for Slice, one for the NSRR, one for MyApnea
+The following are examples for Slice, the NSRR, MyApnea, and Altamira
 ```
+/- /etc/auto.altamira
 /- /etc/auto.sleepdata
 /- /etc/auto.slice
 /- /etc/auto.myapnea
@@ -55,6 +56,11 @@ Create and add to `/etc/auto.sleepdata`
 Create and add to `/etc/auto.myapnea`
 ```
 /usr/local/production/www.myapnea.org/public/uploads -fstype=cifs,uid=3051303,gid=100001,credentials=/etc/auto.secret ://rfa01.research.partners.org/bwh-sleepepi-web/production/www.myapnea.org/uploads
+```
+
+Create and add to `/etc/auto.altamira`
+```
+/usr/local/production/altamira/datasets -fstype=cifs,uid=3051303,gid=100001,credentials=/etc/auto.secret ://rfa01.research.partners.org/bwh-sleepepi-nsrr/www.sleepdata.org/carrierwave/datasets
 ```
 
 After adding the folders, restart Automount
