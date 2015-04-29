@@ -25,7 +25,7 @@ wget -O openssl.tar.gz http://www.openssl.org/source/openssl-1.0.1m.tar.gz
 tar xzvf openssl.tar.gz
 rm openssl.tar.gz
 
-wget -O nginx.tar.gz http://www.nginx.org/download/nginx-1.6.2.tar.gz
+wget -O nginx.tar.gz http://www.nginx.org/download/nginx-1.8.0.tar.gz
 tar xzvf nginx.tar.gz
 rm nginx.tar.gz
 
@@ -37,7 +37,7 @@ rm headers-more-nginx-module.tar.gz
 ### Start the Passenger Installer
 
 ```
-rvmsudo passenger-install-nginx-module --auto --prefix=/usr/local/nginx --nginx-source-dir=/tmp/nginxplus/nginx-1.6.2 --extra-configure-flags="--with-http_spdy_module --with-openssl=/tmp/nginxplus/openssl-1.0.1m --add-module=/tmp/nginxplus/headers-more-nginx-module-0.20" --languages ruby
+rvmsudo passenger-install-nginx-module --auto --prefix=/usr/local/nginx --nginx-source-dir=/tmp/nginxplus/nginx-1.8.0 --extra-configure-flags="--with-http_spdy_module --with-openssl=/tmp/nginxplus/openssl-1.0.1m --add-module=/tmp/nginxplus/headers-more-nginx-module-0.20" --languages ruby
 ```
 
 or manually
@@ -75,7 +75,7 @@ Where is your Nginx source code located?
 Please specify the directory:
 ```
 
-Type `/tmp/nginxplus/nginx-1.6.2`
+Type `/tmp/nginxplus/nginx-1.8.0`
 
 ```console
 Where do you want to install Nginx to?
