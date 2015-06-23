@@ -20,18 +20,9 @@ sudo yum install curl-devel
 cd /tmp
 mkdir nginxplus
 cd /tmp/nginxplus
-
-wget -O openssl.tar.gz http://www.openssl.org/source/openssl-1.0.1o.tar.gz
-tar xzvf openssl.tar.gz
-rm openssl.tar.gz
-
-wget -O nginx.tar.gz http://www.nginx.org/download/nginx-1.8.0.tar.gz
-tar xzvf nginx.tar.gz
-rm nginx.tar.gz
-
-wget -O headers-more-nginx-module.tar.gz https://github.com/agentzh/headers-more-nginx-module/archive/v0.20.tar.gz --no-check-certificate
-tar xzvf headers-more-nginx-module.tar.gz
-rm headers-more-nginx-module.tar.gz
+curl http://www.openssl.org/source/openssl-1.0.1o.tar.gz | tar xvz
+curl -L http://www.nginx.org/download/nginx-1.8.0.tar.gz | tar xvz
+curl -L https://github.com/agentzh/headers-more-nginx-module/archive/v0.20.tar.gz --insecure | tar xvz
 ```
 
 ### Start the Passenger Installer

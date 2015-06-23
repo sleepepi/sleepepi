@@ -1,4 +1,24 @@
-## 145 Install PostgreSQL
+## 145a Install PostgreSQL - For CentOS 7
+
+These instructions are for CentOS 7+. For prior versions, scroll down
+
+```
+sudo yum -y install postgresql-libs postgresql-devel
+```
+
+### Verify PostgreSQL Version
+
+```
+psql --version
+```
+
+should return
+
+```console
+psql (PostgreSQL) 9.2.10
+```
+
+## 145b Install PostgreSQL - For CentOS 5/6
 These instructions are based on [PostgreSQL YUM Installation](http://wiki.postgresql.org/wiki/YUM_Installation)
 
 ### Configure your YUM repository

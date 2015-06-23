@@ -3,7 +3,7 @@
 Git is required for checking out projects from version control.
 
 ```
-sudo yum -y install zlib-devel openssl-devel cpio expat-devel gettext-devel perl-devel curl-devel
+sudo yum -y install curl-devel gcc-c++ patch readline readline-devel zlib zlib-devel libyaml-devel libffi-devel openssl-devel make bzip2 autoconf automake libtool bison glibc cpio expat-devel gettext-devel perl-devel
 ```
 
 Install from source
