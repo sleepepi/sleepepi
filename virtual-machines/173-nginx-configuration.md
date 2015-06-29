@@ -12,6 +12,8 @@ http {
   default_type  application/octet-stream;
   client_max_body_size 10m;
 
+  server_names_hash_bucket_size 64;
+
   # Enable GZIP compression
   gzip on;
   gzip_http_version 1.0;
@@ -53,9 +55,17 @@ http {
 
     ssl_session_timeout  5m;
 
-    ssl_protocols SSLv3 TLSv1 TLSv1.1 TLSv1.2;
-    ssl_ciphers  HIGH:!aNULL:!MD5;
-    ssl_prefer_server_ciphers   on;
+    ssl_protocols TLSv1 TLSv1.1 TLSv1.2;
+    ssl_ciphers 'ECDHE-RSA-AES128-GCM-SHA256:ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-AES256-GCM-SHA384:DHE-RSA-AES128-GCM-SHA256:DHE-DSS-AES128-GCM-SHA256:kEDH+AESGCM:ECDHE-RSA-AES128-SHA256:ECDHE-ECDSA-AES128-SHA256:ECDHE-RSA-AES128-SHA:ECDHE-ECDSA-AES128-SHA:ECDHE-RSA-AES256-SHA384:ECDHE-ECDSA-AES256-SHA384:ECDHE-RSA-AES256-SHA:ECDHE-ECDSA-AES256-SHA:DHE-RSA-AES128-SHA256:DHE-RSA-AES128-SHA:DHE-DSS-AES128-SHA256:DHE-RSA-AES256-SHA256:DHE-DSS-AES256-SHA:DHE-RSA-AES256-SHA:AES128-GCM-SHA256:AES256-GCM-SHA384:AES128-SHA256:AES256-SHA256:AES128-SHA:AES256-SHA:AES:CAMELLIA:DES-CBC3-SHA:!aNULL:!eNULL:!EXPORT:!DES:!RC4:!MD5:!PSK:!aECDH:!EDH-DSS-DES-CBC3-SHA:!EDH-RSA-DES-CBC3-SHA:!KRB5-DES-CBC3-SHA';
+    ssl_prefer_server_ciphers  on;
+
+    # # Diffie-Hellman parameter for DHE ciphersuites, recommended 2048 bits
+    # # https://weakdh.org/sysadmin.html
+    # # openssl dhparam -out dhparams.pem 2048
+    # ssl_dhparam dhparam.pem;
+
+    # Add HSTS
+    add_header Strict-Transport-Security "max-age=31536000; includeSubdomains";
 
     # rack_env production; # This is the default, could be changed to development and uncommented.
 
