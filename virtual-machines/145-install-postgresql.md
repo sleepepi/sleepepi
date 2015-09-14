@@ -15,7 +15,7 @@ psql --version
 should return
 
 ```console
-psql (PostgreSQL) 9.2.10
+psql (PostgreSQL) 9.2.13
 ```
 
 ## 145b Install PostgreSQL - For CentOS 5/6
