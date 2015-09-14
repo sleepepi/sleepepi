@@ -32,6 +32,8 @@ Documentation providing architecture overview of sleepepi
         `-- myapneapro03.dipr.partners.org  1GB     CentOS release 6.6  (Final)
 `-- bostonsleep.org
     `-- bostonsleep.dipr.partners.org       1GB     CentOS release 6.6  (Final)
+`-- patstrial.org
+    `-- patstrial.dipr.partners.org         1GB     CentOS release 7.1  (Core)
 ```
 
 ## Servers
