@@ -9,9 +9,6 @@ Documentation providing architecture overview of sleepepi
     `-- sleepepi.dipr.partners.org          1GB     CentOS release 5.10 (Final)
         |-- epipro01.dipr.partners.org      1GB     CentOS release 5.10 (Final)
         `-- epipro02.dipr.partners.org      1GB     CentOS release 5.10 (Final)
-`-- staging.partners.org
-    `-- staging.dipr.partners.org           1GB     CentOS release 7.1  (Core)
-        `-- epista01.dipr.partners.org      1GB     CentOS release 6.5  (Final)
 `-- tryslice.io, tryslice.com, tryslice.org, slice.partners.org
     `-- slice.dipr.partners.org             1GB     CentOS release 6.5  (Final)
         |-- epipro03.dipr.partners.org      2GB     CentOS release 6.5  (Final)
@@ -34,6 +31,9 @@ Documentation providing architecture overview of sleepepi
     `-- bostonsleep.dipr.partners.org       1GB     CentOS release 6.6  (Final)
 `-- patstrial.org
     `-- patstrial.dipr.partners.org         1GB     CentOS release 7.1  (Core)
+`-- staging.partners.org
+    `-- staging.dipr.partners.org           1GB     CentOS release 7.1  (Core)
+        `-- epista01.dipr.partners.org      1GB     CentOS release 6.5  (Final)
 ```
 
 ## Servers
