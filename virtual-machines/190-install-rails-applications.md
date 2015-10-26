@@ -35,6 +35,7 @@ Use one of the following depending on which application is installed.
 /- /etc/auto.sleepdata
 /- /etc/auto.slice
 /- /etc/auto.myapnea
+/- /etc/auto.patstrial
 /- /etc/auto.traintracks
 /- /etc/auto.review
 ```
@@ -58,6 +59,11 @@ Create and add to `/etc/auto.sleepdata`
 Create and add to `/etc/auto.myapnea`
 ```
 /usr/local/production/www.myapnea.org/public/uploads -fstype=cifs,uid=3051303,gid=100001,credentials=/etc/auto.secret ://rfa01.research.partners.org/bwh-sleepepi-web/production/www.myapnea.org/uploads
+```
+
+Create and add to `/etc/auto.patstrial`
+```
+/usr/local/production/patstrial.org/public/carrierwave -fstype=cifs,uid=3051303,gid=100001,credentials=/etc/auto.secret ://rfa01.research.partners.org/bwh-sleepepi-web/production/patstrial.org/carrierwave
 ```
 
 Create and add to `/etc/auto.altamira`
