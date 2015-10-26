@@ -63,7 +63,7 @@ Create and add to `/etc/auto.myapnea`
 
 Create and add to `/etc/auto.patstrial`
 ```
-/usr/local/production/patstrial.org/public/carrierwave -fstype=cifs,uid=3051303,gid=100001,credentials=/etc/auto.secret ://rfa01.research.partners.org/bwh-sleepepi-web/production/patstrial.org/carrierwave
+/usr/local/production/patstrial.org/carrierwave -fstype=cifs,uid=3051303,gid=100001,credentials=/etc/auto.secret ://rfa01.research.partners.org/bwh-sleepepi-web/production/patstrial.org/carrierwave
 ```
 
 Create and add to `/etc/auto.altamira`
