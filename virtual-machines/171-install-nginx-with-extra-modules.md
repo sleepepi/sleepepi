@@ -20,7 +20,7 @@ sudo yum install curl-devel
 cd /tmp
 mkdir nginxplus
 cd /tmp/nginxplus
-curl http://www.openssl.org/source/openssl-1.0.1p.tar.gz | tar xvz
+curl http://www.openssl.org/source/openssl-1.0.1q.tar.gz | tar xvz
 curl -L http://www.nginx.org/download/nginx-1.8.0.tar.gz | tar xvz
 curl -L https://github.com/agentzh/headers-more-nginx-module/archive/v0.20.tar.gz --insecure | tar xvz
 ```
@@ -28,7 +28,7 @@ curl -L https://github.com/agentzh/headers-more-nginx-module/archive/v0.20.tar.g
 ### Start the Passenger Installer
 
 ```
-rvmsudo passenger-install-nginx-module --auto --prefix=/usr/local/nginx --nginx-source-dir=/tmp/nginxplus/nginx-1.8.0 --extra-configure-flags="--with-http_spdy_module --with-openssl=/tmp/nginxplus/openssl-1.0.1p --add-module=/tmp/nginxplus/headers-more-nginx-module-0.20" --languages ruby
+rvmsudo passenger-install-nginx-module --auto --prefix=/usr/local/nginx --nginx-source-dir=/tmp/nginxplus/nginx-1.8.0 --extra-configure-flags="--with-http_spdy_module --with-openssl=/tmp/nginxplus/openssl-1.0.1q --add-module=/tmp/nginxplus/headers-more-nginx-module-0.20" --languages ruby
 ```
 
 or manually
@@ -91,7 +91,7 @@ Extra arguments to pass to configure script:
 
 Type
 ```
---with-http_spdy_module --with-openssl=/tmp/nginxplus/openssl-1.0.1p --add-module=/tmp/nginxplus/headers-more-nginx-module-0.20
+--with-http_spdy_module --with-openssl=/tmp/nginxplus/openssl-1.0.1q --add-module=/tmp/nginxplus/headers-more-nginx-module-0.20
 ```
 
 ```console
