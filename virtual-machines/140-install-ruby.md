@@ -9,19 +9,19 @@ rvmsudo rvm requirements
 ### 141 Install Ruby using RVM
 
 ```
-rvm install 2.3.0-preview1
+rvm install 2.3.0-preview2
 ```
 
-Activate Ruby 2.3.0-preview1
+Activate Ruby 2.3.0-preview2
 
 ```
-rvm 2.3.0-preview1
+rvm 2.3.0-preview2
 ```
 
-**NOTE** You may need to create a gemset to switch to 2.3.0-preview1 if it failed during the install.
+**NOTE** You may need to create a gemset to switch to 2.3.0-preview2 if it failed during the install.
 
 ```
-rvm 2.3.0-preview1 --create
+rvm 2.3.0-preview2 --create
 ```
 
 Verify Ruby version
@@ -31,13 +31,13 @@ ruby -v
 ```
 
 ```console
-ruby 2.3.0preview1 (2015-11-11 trunk 52539) [x86_64-linux]
+ruby 2.3.0preview2 (2015-12-11 trunk 53028) [x86_64-linux]
 ```
 
 Set default Ruby
 
 ```
-rvm alias create default ruby-2.3.0-preview1
+rvm alias create default ruby-2.3.0-preview2
 ```
 
 ### 142 Update Ruby Gems
