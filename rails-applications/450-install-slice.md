@@ -10,10 +10,10 @@
 
 ```
 cd /usr/local/production
-git clone git://github.com/remomueller/slice.git www.tryslice.io
+git clone git://github.com/remomueller/slice.git tryslice.io
 ```
 
-NOTE: If you get `fatal: could not create work tree dir 'www.tryslice.io'.: Permission denied` that means you forgot to run:
+NOTE: If you get `fatal: could not create work tree dir 'tryslice.io'.: Permission denied` that means you forgot to run:
 
 ```
 sudo chgrp rvm /usr/local/production
@@ -23,7 +23,7 @@ sudo chmod 775 /usr/local/production
 ### 453 Initialize database and files
 
 ```
-cd /usr/local/production/www.tryslice.io
+cd /usr/local/production/tryslice.io
 ```
 
 ```
@@ -56,14 +56,14 @@ touch tmp/restart.txt
 NOTE: The contents of the following files will need to be copied from *epipro03* since they are not in version control and contain pseudo-randomly generated strings
 
 ```
-`-- /usr/local/production/www.tryslice.io/config/
+`-- /usr/local/production/tryslice.io/config/
     |-- application.yml
     `-- database.yml
 ```
 
 ```
-scp username@epipro03.dipr.partners.org:/usr/local/production/www.tryslice.io/config/application.yml /usr/local/production/www.tryslice.io/config/application.yml
-scp username@epipro03.dipr.partners.org:/usr/local/production/www.tryslice.io/config/database.yml /usr/local/production/www.tryslice.io/config/database.yml
+scp username@epipro03.dipr.partners.org:/usr/local/production/tryslice.io/config/application.yml /usr/local/production/tryslice.io/config/application.yml
+scp username@epipro03.dipr.partners.org:/usr/local/production/tryslice.io/config/database.yml /usr/local/production/tryslice.io/config/database.yml
 ```
 
 #### Setup Shared RFA folder for uploads
@@ -79,7 +79,7 @@ Slice requires the following in `/etc/auto.master`:
 Slice also requires the additional file `/etc/auto.slice`:
 
 ```
-/usr/local/production/slice/carrierwave -fstype=cifs,uid=3051303,gid=100001,credentials=/etc/auto.secret ://rfa01.research.partners.org/bwh-sleepepi-web/production/slice/carrierwave
+/usr/local/production/tryslice.io/carrierwave -fstype=cifs,uid=3051303,gid=100001,credentials=/etc/auto.secret ://rfa01.research.partners.org/bwh-sleepepi-web/production/slice/carrierwave
 ```
 
 Run the following to activate the new mount:
@@ -93,7 +93,7 @@ sudo service autofs restart
 #### Create symbolic link
 
 ```
-sudo ln -s /usr/local/production/slice/public /var/www/html/slice
+sudo ln -s /usr/local/production/tryslice.io/public /var/www/html/slice
 ```
 
 #### Update configuration file
@@ -155,7 +155,7 @@ sudo service nginx restart
 On **epiproXX**
 
 ```
-cd /usr/local/production/slice
+cd /usr/local/production/tryslice.io
 git pull; bundle update; bundle exec rake db:migrate RAILS_ENV=production; bundle exec rake assets:precompile RAILS_ENV=production; touch tmp/restart.txt
 ```
 
