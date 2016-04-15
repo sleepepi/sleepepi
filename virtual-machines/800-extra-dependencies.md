@@ -36,13 +36,13 @@ Check that pdflatex was installed
 ```
 
 ```console
-pdfTeX 3.14159265-2.6-1.40.15 (TeX Live 2014)
+pdfTeX 3.14159265-2.6-1.40.16 (TeX Live 2015)
 ```
 
-Finally, make sure to modify `[slice|review]/config/initializers/latex.rb` to point to the correct pdflatex binary
+Finally, make sure to modify `[review|sleepdata.org|tryslice.io]/config/application.yml` to point to the correct pdflatex binary
 
-```ruby
-LATEX_LOCATION = "/usr/local/texlive/2014/bin/x86_64-linux/pdflatex"
+```yml
+latex_location:       "/usr/local/texlive/2015/bin/x86_64-linux/pdflatex"
 ```
 
 #### Download and Install LaTeX (Mac OS X)
