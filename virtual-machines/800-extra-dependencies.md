@@ -23,6 +23,9 @@ Actions:
  <H> help
  <Q> quit
 
+Enter command: O
+Enter command: D
+Enter command: R
 Enter command: I
 ```
 
