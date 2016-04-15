@@ -32,7 +32,7 @@ Enter command: I
 Check that pdflatex was installed
 
 ```
-/usr/local/texlive/2014/bin/x86_64-linux/pdflatex --version
+/usr/local/texlive/2015/bin/x86_64-linux/pdflatex --version
 ```
 
 ```console
