@@ -43,7 +43,7 @@ rvm alias create default ruby-2.3.1
 ### 142 Update Ruby Gems
 
 ```
-gem update --system
+gem update --system --no-document
 ```
 
 for a specific version of gem
