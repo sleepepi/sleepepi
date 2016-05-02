@@ -42,7 +42,7 @@ http {
   }
 
   server {
-    listen      443;
+    listen      443 ssl;
     server_name _;
 
     ssl                  on;
