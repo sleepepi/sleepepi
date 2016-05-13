@@ -8,6 +8,7 @@ Specifically, `headers-more-nginx-module` will be installed in order to remove s
 
 ```
 sudo yum install curl-devel
+sudo yum install wget
 ```
 
 \* Note: If compiling nginx fails, make sure to rerun the full yum install mentioned in [130 - Install Ruby Version Manager](https://github.com/sleepepi/sleepepi/tree/master/virtual-machines/130-install-rvm.md)
@@ -18,7 +19,9 @@ sudo yum install curl-devel
 cd /tmp
 mkdir nginxplus
 cd /tmp/nginxplus
-curl https://www.openssl.org/source/openssl-1.0.1t.tar.gz --insecure | tar xvz
+wget https://www.openssl.org/source/openssl-1.0.1t.tar.gz
+tar xzvf openssl-1.0.1t.tar.gz
+rm openssl-1.0.1t.tar.gz
 curl -L http://www.nginx.org/download/nginx-1.10.0.tar.gz | tar xvz
 curl -L https://github.com/agentzh/headers-more-nginx-module/archive/v0.20.tar.gz --insecure | tar xvz
 ```
