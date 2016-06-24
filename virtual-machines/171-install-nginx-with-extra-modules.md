@@ -7,8 +7,10 @@ Specifically, `headers-more-nginx-module` will be installed in order to remove s
 ### Make sure development headers are installed to be able to compile nginx
 
 ```
-sudo yum install curl-devel
-sudo yum install wget
+sudo yum -y install curl-devel
+sudo yum -y install wget
+# Optional in case PCRE fails to download or if you get "The PCRE checksum could not be verified" during following passenger installation.
+sudo yum -y install pcre-devel
 ```
 
 \* Note: If compiling nginx fails, make sure to rerun the full yum install mentioned in [130 - Install Ruby Version Manager](https://github.com/sleepepi/sleepepi/tree/master/virtual-machines/130-install-rvm.md)
