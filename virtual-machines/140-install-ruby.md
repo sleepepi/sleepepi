@@ -1,6 +1,6 @@
 ## 140 Install Ruby
 
-Prerequisite: Install may require certain requirements to be installed
+Prerequisite: Install may require certain requirements to be installed.
 
 ```
 rvmsudo rvm requirements
