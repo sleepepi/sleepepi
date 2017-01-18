@@ -13,19 +13,19 @@ sudo chmod 775 production
 ### Installing MySQL Library to allow compilation of mysql2 ruby gem
 
 ```
-sudo yum install mysql mysql-devel
+sudo yum install -y mysql mysql-devel
 ```
 
 ### Installing libraries to allow compilation of nokogiri gem
 
 ```
-sudo yum install libxml libxml-devel libxslt libxslt-devel
+sudo yum install -y libxml libxml-devel libxslt libxslt-devel
 ```
 
 ### Installing Automount and CIFS to mount folders from the RFA
 
 ```
-sudo yum install samba-client samba-common cifs-utils autofs
+sudo yum install -y samba-client samba-common cifs-utils autofs
 ```
 
 Add to bottom of `/etc/auto.master`
