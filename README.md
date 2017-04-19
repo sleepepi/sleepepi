@@ -30,9 +30,9 @@ Documentation providing architecture overview of sleepepi
 `-- bostonsleep.org
     `-- bostonsleep.dipr.partners.org       1GB     CentOS release 6.6  (Final)
 `-- patstrial.org
-    `-- patstrial.dipr.partners.org         1GB     CentOS release 7.1  (Core)
+    `-- patstrial.dipr.partners.org         1GB     CentOS release 7.3  (Core)
 `-- staging.partners.org
-    `-- staging.dipr.partners.org           1GB     CentOS release 7.1  (Core)
+    `-- staging.dipr.partners.org           1GB     CentOS release 7.3  (Core)
         `-- epista01.dipr.partners.org      1GB     CentOS release 6.5  (Final)
 ```
 
