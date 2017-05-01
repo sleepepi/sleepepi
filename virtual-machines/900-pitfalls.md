@@ -71,6 +71,15 @@ Make sure Nginx is set to start automatically on restart
 sudo chkconfig nginx on
 ```
 
+Make sure the Diffie-Hellman key has been generated if it is enabled in the `nginx.conf` file.
+
+```
+# # Diffie-Hellman parameter for DHE ciphersuites, recommended 2048 bits
+# # https://weakdh.org/sysadmin.html
+# # openssl dhparam -out dhparams.pem 2048
+# ssl_dhparam dhparam.pem;
+```
+
 ### 940 Yum Install Issues
 
 If you get `warning: rpmts_HdrFromFdno: Header V3 RSA/SHA256 Signature, key ID 0608b895: NOKEY` when running, then you need to update your GPG keys:
