@@ -13,6 +13,8 @@ While the Ruby gem PDFKit allows a Rails application to quickly generate PDF doc
 Original url, however doesn't work with wget: http://mirror.ctan.org/systems/texlive/tlnet/install-tl-unx.tar.gz
 
 ```
+sudo yum -y install perl-Digest-MD5
+
 cd ~/code/source
 curl -L http://mirrors.ibiblio.org/CTAN/systems/texlive/tlnet/install-tl-unx.tar.gz | tar xvz
 cd install-tl-*
