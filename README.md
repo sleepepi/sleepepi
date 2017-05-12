@@ -9,7 +9,7 @@ Documentation providing architecture overview of sleepepi
     `-- sleepepi.dipr.partners.org          1GB     CentOS release 5.10 (Final)
 `-- tryslice.io, tryslice.com, tryslice.org, slice.partners.org
     `-- slice.dipr.partners.org             1GB     CentOS release 6.5  (Final)
-        |-- epipro03.dipr.partners.org      2GB     CentOS release 6.5  (Final)
+        |-- epipro03.dipr.partners.org      2GB     CentOS release 7.3  (Core)
         `-- epipro04.dipr.partners.org      2GB     CentOS release 6.5  (Final)
 `-- sleepdata.org
     `-- sleepdata.dipr.partners.org         1GB     CentOS release 6.5  (Final)
