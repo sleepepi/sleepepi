@@ -33,7 +33,7 @@ Documentation providing architecture overview of sleepepi
     `-- patstrial.dipr.partners.org         1GB     CentOS release 7.3  (Core)
 `-- staging.partners.org
     `-- staging.dipr.partners.org           1GB     CentOS release 7.3  (Core)
-        `-- epista01.dipr.partners.org      1GB     CentOS release 7.3  (Core)
+        `-- epista01.dipr.partners.org      2GB     CentOS release 7.3  (Core)
 ```
 
 ## Servers
