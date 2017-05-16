@@ -10,7 +10,7 @@ Documentation providing architecture overview of sleepepi
 `-- tryslice.io, tryslice.com, tryslice.org, slice.partners.org
     `-- slice.dipr.partners.org             1GB     CentOS release 6.5  (Final)
         |-- epipro03.dipr.partners.org      2GB     CentOS release 7.3  (Core)
-        `-- epipro04.dipr.partners.org      2GB     CentOS release 6.5  (Final)
+        `-- epipro04.dipr.partners.org      2GB     CentOS release 7.3  (Core)
 `-- sleepdata.org
     `-- sleepdata.dipr.partners.org         1GB     CentOS release 6.5  (Final)
         |-- epipro05.dipr.partners.org      1GB     CentOS release 6.5  (Final)
@@ -24,9 +24,9 @@ Documentation providing architecture overview of sleepepi
     `-- traintracks.dipr.partners.org       1GB     CentOS release 7.3  (Core)
 `-- myapnea.org, myapnea.net
     `-- myapnea.dipr.partners.org           1GB     CentOS release 6.5  (Final)
-        |-- myapneapro01.dipr.partners.org  1GB     CentOS release 7.3  (Core)
-        |-- myapneapro02.dipr.partners.org  1GB     CentOS release 6.6  (Final)
-        `-- myapneapro03.dipr.partners.org  1GB     CentOS release 6.6  (Final)
+        |-- myapneapro01.dipr.partners.org  2GB     CentOS release 7.3  (Core)
+        |-- myapneapro02.dipr.partners.org  2GB     CentOS release 7.3  (Core)
+        `-- myapneapro03.dipr.partners.org  2GB     CentOS release 7.3  (Core)
 `-- bostonsleep.org
     `-- bostonsleep.dipr.partners.org       1GB     CentOS release 6.6  (Final)
 `-- patstrial.org
