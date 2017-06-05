@@ -34,17 +34,17 @@ Enter command: I
 Check that pdflatex was installed
 
 ```
-/usr/local/texlive/2016/bin/x86_64-linux/pdflatex --version
+/usr/local/texlive/2017/bin/x86_64-linux/pdflatex --version
 ```
 
 ```console
-pdfTeX 3.14159265-2.6-1.40.17 (TeX Live 2016)
+pdfTeX 3.14159265-2.6-1.40.18 (TeX Live 2017)
 ```
 
 Finally, make sure to modify `[sleepdata.org|tryslice.io]/config/application.yml` to point to the correct pdflatex binary
 
 ```yml
-latex_location:       "/usr/local/texlive/2016/bin/x86_64-linux/pdflatex"
+latex_location:       "/usr/local/texlive/2017/bin/x86_64-linux/pdflatex"
 ```
 
 #### Download and Install LaTeX (Mac OS X)
