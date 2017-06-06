@@ -47,9 +47,9 @@ Finally, make sure to modify `[sleepdata.org|tryslice.io]/config/application.yml
 latex_location:       "/usr/local/texlive/2017/bin/x86_64-linux/pdflatex"
 ```
 
-#### Download and Install LaTeX (Mac OS X)
+#### Download and Install LaTeX (macOS)
 
-Download and install MacTeX pkg (recommended)  (~2.1 Gb)
+Download and install MacTeX pkg (recommended)  (~3.14 Gb)
 
   http://www.tug.org/mactex/
 
@@ -60,7 +60,7 @@ which pdflatex
 ```
 
 ```console
-/usr/texbin/pdflatex
+/Library/TeX/texbin/pdflatex
 ```
 
 ```
@@ -68,7 +68,7 @@ pdflatex --version
 ```
 
 ```console
-pdfTeX 3.1415926-2.4-1.40.13 (TeX Live 2012)
+pdfTeX 3.14159265-2.6-1.40.18 (TeX Live 2017)
 ```
 
 #### Download and Install LaTeX (Windows)
