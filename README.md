@@ -8,22 +8,22 @@ Documentation providing architecture overview of sleepepi
 `-- sleepepi.partners.org
     `-- sleepepi.dipr.partners.org          1GB     CentOS release 5.10 (Final)
 `-- tryslice.io, tryslice.com, tryslice.org, slice.partners.org
-    `-- slice.dipr.partners.org             1GB     CentOS release 6.5  (Final)
+    `-- slice.dipr.partners.org             1GB     CentOS release 6.9  (Final)
         |-- epipro03.dipr.partners.org      2GB     CentOS release 7.3  (Core)
         `-- epipro04.dipr.partners.org      2GB     CentOS release 7.3  (Core)
 `-- sleepdata.org
-    `-- sleepdata.dipr.partners.org         1GB     CentOS release 6.5  (Final)
+    `-- sleepdata.dipr.partners.org         1GB     CentOS release 6.9  (Final)
         |-- epipro05.dipr.partners.org      2GB     CentOS release 7.3  (Core)
         |-- epipro06.dipr.partners.org      2GB     CentOS release 7.3  (Final)
         `-- epipro07.dipr.partners.org      2GB     CentOS release 7.3  (Final)
 `-- sleepclinic.partners.org
     `-- sleepclinic.dipr.partners.org       1GB     CentOS release 6.9  (Final)
 `-- tasktracker.partners.org
-    `-- tasktracker.dipr.partners.org       1GB     CentOS release 6.5  (Final)
+    `-- tasktracker.dipr.partners.org       1GB     CentOS release 6.9  (Final)
 `-- traintracks.partners.org
     `-- traintracks.dipr.partners.org       2GB     CentOS release 7.3  (Core)
 `-- myapnea.org, myapnea.net
-    `-- myapnea.dipr.partners.org           1GB     CentOS release 6.5  (Final)
+    `-- myapnea.dipr.partners.org           1GB     CentOS release 6.9  (Final)
         |-- myapneapro01.dipr.partners.org  2GB     CentOS release 7.3  (Core)
         |-- myapneapro02.dipr.partners.org  2GB     CentOS release 7.3  (Core)
         `-- myapneapro03.dipr.partners.org  2GB     CentOS release 7.3  (Core)
