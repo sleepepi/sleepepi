@@ -17,7 +17,7 @@ Documentation providing architecture overview of sleepepi
         |-- epipro06.dipr.partners.org      2GB     CentOS release 7.3  (Final)
         `-- epipro07.dipr.partners.org      2GB     CentOS release 7.3  (Final)
 `-- sleepclinic.partners.org
-    `-- sleepclinic.dipr.partners.org       1GB     CentOS release 6.5  (Final)
+    `-- sleepclinic.dipr.partners.org       1GB     CentOS release 6.9  (Final)
 `-- tasktracker.partners.org
     `-- tasktracker.dipr.partners.org       1GB     CentOS release 6.5  (Final)
 `-- traintracks.partners.org
