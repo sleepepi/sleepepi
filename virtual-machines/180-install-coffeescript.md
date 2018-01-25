@@ -2,14 +2,34 @@
 
 Tools required by server to compile CoffeeScript files into JavaScript
 
+The following requires that gcc 4.9.4 or higher is installled:
+
+```
+$ sudo yum -y install centos-release-scl
+$ sudo yum -y install devtoolset-4-toolchain
+```
+
+`vi ~/.bashrc`
+```
+# Enable gcc 5.3.1
+source /opt/rh/devtoolset-4/enable
+```
+
+Restart shell
+
+```
+$ gcc --version
+gcc (GCC) 5.3.1 20160406 (Red Hat 5.3.1-6)
+```
+
 ### 181 Node.js and Node Package Manager
 
 Download and compile node.js and Node Package Manager
 
 ```
 cd ~/code/source
-curl -L https://nodejs.org/dist/v6.10.3/node-v6.10.3.tar.gz | tar xvz
-cd node-v6.10.3/
+curl -L https://nodejs.org/dist/v8.9.4/node-v8.9.4.tar.gz | tar xvz
+cd node-v8.9.4/
 ./configure
 make
 sudo make install
@@ -24,7 +44,7 @@ Verify Node.js installed by typing `which node` which should return:
 Verify Node.js version by typing `node -v` which should return:
 
 ```console
-v6.10.3
+v8.9.4
 ```
 
 Verify npm installed by typing `which npm` which should return:
@@ -36,7 +56,7 @@ Verify npm installed by typing `which npm` which should return:
 Verify npm version by typing `npm -v` which should return:
 
 ```console
-3.10.10
+5.6.0
 ```
 
 Make symbolic links for node and npm
@@ -69,7 +89,7 @@ sudo ln -s /usr/local/bin/coffee /usr/bin/coffee
 Verify CoffeeScript version by typing `coffee -v` which should return:
 
 ```console
-CoffeeScript version 1.12.6
+CoffeeScript version 1.12.7
 ```
 
 ### Next Step
