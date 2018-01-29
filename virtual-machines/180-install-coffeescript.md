@@ -5,8 +5,8 @@ Tools required by server to compile CoffeeScript files into JavaScript
 The following requires that gcc 4.9.4 or higher is installled:
 
 ```
-$ sudo yum -y install centos-release-scl
-$ sudo yum -y install devtoolset-4-toolchain
+sudo yum -y install centos-release-scl
+sudo yum -y install devtoolset-4-toolchain
 ```
 
 `vi ~/.bashrc`
@@ -18,7 +18,7 @@ source /opt/rh/devtoolset-4/enable
 Restart shell
 
 ```
-$ gcc --version
+gcc --version
 gcc (GCC) 5.3.1 20160406 (Red Hat 5.3.1-6)
 ```
 
