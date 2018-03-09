@@ -2,7 +2,7 @@
 
 Tools required by server to compile CoffeeScript files into JavaScript
 
-The following requires that [gcc 4.9.4 or higher is installed](https://github.com/sleepepi/sleepepi/blob/master/virtual-machines/910-gcc.md).
+The following requires that [gcc 4.9.4 or higher is installed](https://github.com/sleepepi/sleepepi/blob/master/virtual-machines/910-gcc.md), install Node.js v6.13.1 if gcc cannot be updated.
 
 ### 181 Node.js and Node Package Manager
 
