@@ -6,6 +6,8 @@ Prerequisite: Install may require certain requirements to be installed.
 rvmsudo rvm requirements
 ```
 
+[Install GCC 4.9.2 or higher](https://github.com/sleepepi/sleepepi/blob/master/virtual-machines/910-gcc.md)
+
 ### 141 Install Ruby using RVM
 
 ```
