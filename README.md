@@ -13,7 +13,7 @@ Documentation providing architecture overview of sleepepi
         |-- epipro04.dipr.partners.org      2GB     CentOS release 7.3  (Core)
         `-- epijob01.dipr.partners.org      2GB     CentOS release 7.4  (Core)
 `-- sleepdata.org
-    `-- sleepdata.dipr.partners.org         1GB     CentOS release 6.9  (Final)
+    `-- sleepdata.dipr.partners.org         2GB     CentOS release 7.4  (Core)
         |-- epipro05.dipr.partners.org      2GB     CentOS release 7.3  (Core)
         |-- epipro06.dipr.partners.org      2GB     CentOS release 7.3  (Final)
         `-- epipro07.dipr.partners.org      2GB     CentOS release 7.3  (Final)
