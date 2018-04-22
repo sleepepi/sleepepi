@@ -29,7 +29,7 @@ Documentation providing architecture overview of sleepepi
         |-- myapneapro02.dipr.partners.org  2GB     CentOS release 7.3  (Core)
         `-- myapneapro03.dipr.partners.org  2GB     CentOS release 7.3  (Core)
 `-- bostonsleep.org
-    `-- bostonsleep.dipr.partners.org       1GB     CentOS release 6.9  (Final)
+    `-- bostonsleep.dipr.partners.org       2GB     CentOS release 7.4  (Core)
 `-- patstrial.org
     `-- patstrial.dipr.partners.org         1GB     CentOS release 7.3  (Core)
 `-- sleepinnovate.org
