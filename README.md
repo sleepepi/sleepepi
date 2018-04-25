@@ -31,7 +31,7 @@ Documentation providing architecture overview of sleepepi
 `-- bostonsleep.org
     `-- bostonsleep.dipr.partners.org       2GB     CentOS release 7.4  (Core)
 `-- patstrial.org
-    `-- patstrial.dipr.partners.org         1GB     CentOS release 7.4  (Core)
+    `-- patstrial.dipr.partners.org         2GB     CentOS release 7.4  (Core)
 `-- sleepinnovate.org
     `-- sleepinnovate.dipr.partners.org     2GB     CentOS release 7.3  (Core)
 `-- staging.partners.org
