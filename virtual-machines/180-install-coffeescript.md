@@ -10,8 +10,8 @@ Download and compile node.js and Node Package Manager
 
 ```
 cd ~/code/source
-curl -L https://nodejs.org/dist/v8.11.1/node-v8.11.1.tar.gz | tar xvz
-cd node-v8.11.1/
+curl -L https://nodejs.org/dist/v8.11.2/node-v8.11.2.tar.gz | tar xvz
+cd node-v8.11.2/
 ./configure
 make
 sudo make install
@@ -26,7 +26,7 @@ Verify Node.js installed by typing `which node` which should return:
 Verify Node.js version by typing `node -v` which should return:
 
 ```console
-v8.11.1
+v8.11.2
 ```
 
 Verify npm installed by typing `which npm` which should return:
