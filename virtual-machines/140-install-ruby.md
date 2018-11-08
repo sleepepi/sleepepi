@@ -11,19 +11,19 @@ rvmsudo rvm requirements
 ### 141 Install Ruby using RVM
 
 ```
-rvm install 2.5.3
+rvm install 2.6.0-preview3
 ```
 
-Activate Ruby 2.5.3
+Activate Ruby 2.6.0-preview3
 
 ```
-rvm 2.5.3
+rvm 2.6.0-preview3
 ```
 
-**NOTE** You may need to create a gemset to switch to 2.5.3 if it failed during the install.
+**NOTE** You may need to create a gemset to switch to 2.6.0-preview3 if it failed during the install.
 
 ```
-rvm 2.5.3 --create
+rvm 2.6.0-preview3 --create
 ```
 
 Verify Ruby version
@@ -33,13 +33,13 @@ ruby -v
 ```
 
 ```console
-ruby 2.5.3p105 (2018-10-18 revision 65156) [x86_64-linux]
+ruby 2.6.0preview3 (2018-11-06 trunk 65578) [x86_64-linux]
 ```
 
 Set default Ruby
 
 ```
-rvm alias create default ruby-2.5.3
+rvm alias create default ruby-2.6.0-preview3
 ```
 
 Remove default alias (in case default alias interferes with system tasks that require the default system Ruby)
