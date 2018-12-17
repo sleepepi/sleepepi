@@ -29,9 +29,6 @@ curl -L https://github.com/openresty/headers-more-nginx-module/archive/v0.33.tar
 ### Start the Passenger Installer
 
 ```
-gem install gem-wrappers --no-document
-rvmsudo rvm wrapper ruby-2.6.0-rc1
-
 rvmsudo passenger-install-nginx-module --auto --prefix=/usr/local/nginx --nginx-source-dir=/tmp/nginxplus/nginx-1.15.7 --extra-configure-flags="--with-openssl=/tmp/nginxplus/openssl-1.0.2q --add-module=/tmp/nginxplus/headers-more-nginx-module-0.33" --languages ruby
 ```
 
