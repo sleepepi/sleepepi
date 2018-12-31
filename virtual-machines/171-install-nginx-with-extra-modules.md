@@ -22,14 +22,14 @@ cd /tmp
 mkdir nginxplus
 cd /tmp/nginxplus
 curl -L https://www.openssl.org/source/openssl-1.0.2q.tar.gz --insecure | tar xvz
-curl -L http://www.nginx.org/download/nginx-1.15.7.tar.gz | tar xvz
+curl -L http://www.nginx.org/download/nginx-1.15.8.tar.gz | tar xvz
 curl -L https://github.com/openresty/headers-more-nginx-module/archive/v0.33.tar.gz --insecure | tar xvz
 ```
 
 ### Start the Passenger Installer
 
 ```
-rvmsudo passenger-install-nginx-module --auto --prefix=/usr/local/nginx --nginx-source-dir=/tmp/nginxplus/nginx-1.15.7 --extra-configure-flags="--with-openssl=/tmp/nginxplus/openssl-1.0.2q --add-module=/tmp/nginxplus/headers-more-nginx-module-0.33" --languages ruby
+rvmsudo passenger-install-nginx-module --auto --prefix=/usr/local/nginx --nginx-source-dir=/tmp/nginxplus/nginx-1.15.8 --extra-configure-flags="--with-openssl=/tmp/nginxplus/openssl-1.0.2q --add-module=/tmp/nginxplus/headers-more-nginx-module-0.33" --languages ruby
 ```
 
 or manually
@@ -67,7 +67,7 @@ Where is your Nginx source code located?
 Please specify the directory:
 ```
 
-Type `/tmp/nginxplus/nginx-1.15.7`
+Type `/tmp/nginxplus/nginx-1.15.8`
 
 ```console
 Where do you want to install Nginx to?
