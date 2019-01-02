@@ -29,6 +29,12 @@ Verify Node.js version by typing `node -v` which should return:
 v10.15.0
 ```
 
+Update npm:
+
+```console
+sudo npm install -g npm
+```
+
 Verify npm installed by typing `which npm` which should return:
 
 ```console
