@@ -26,7 +26,7 @@ Verify Node.js installed by typing `which node` which should return:
 Verify Node.js version by typing `node -v` which should return:
 
 ```console
-v8.11.2
+v10.15.0
 ```
 
 Verify npm installed by typing `which npm` which should return:
@@ -38,7 +38,7 @@ Verify npm installed by typing `which npm` which should return:
 Verify npm version by typing `npm -v` which should return:
 
 ```console
-5.6.0
+6.5.0
 ```
 
 Make symbolic links for node and npm
