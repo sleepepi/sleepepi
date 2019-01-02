@@ -10,8 +10,8 @@ Download and compile node.js and Node Package Manager
 
 ```
 cd ~/code/source
-curl -L https://nodejs.org/dist/v8.11.2/node-v8.11.2.tar.gz | tar xvz
-cd node-v8.11.2/
+curl -L https://nodejs.org/dist/v10.15.0/node-v10.15.0.tar.gz | tar xvz
+cd node-v10.15.0/
 ./configure
 make
 sudo make install
