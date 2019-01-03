@@ -59,7 +59,7 @@ sudo ln -s /usr/local/bin/npm /usr/bin/npm
 Download and compile CoffeeScript
 
 ```
-sudo npm install -g coffee-script
+sudo npm install -g coffeescript
 ```
 
 Verify CoffeeScript installed by typing `which coffee` which should return:
@@ -77,7 +77,7 @@ sudo ln -s /usr/local/bin/coffee /usr/bin/coffee
 Verify CoffeeScript version by typing `coffee -v` which should return:
 
 ```console
-CoffeeScript version 1.12.7
+CoffeeScript version 2.3.2
 ```
 
 ### Next Step
