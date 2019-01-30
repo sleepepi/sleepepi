@@ -48,7 +48,6 @@ http {
     listen      443 ssl;
     server_name _;
 
-    ssl                  on;
     ssl_certificate      cert.pem;
     ssl_certificate_key  cert.key;
 
