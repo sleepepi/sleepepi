@@ -33,7 +33,6 @@ Use one of the following depending on which application is installed.
 ```
 /- /etc/auto.altamira
 /- /etc/auto.sleepdata
-/- /etc/auto.slice
 /- /etc/auto.myapnea
 /- /etc/auto.patstrial
 /- /etc/auto.traintracks
@@ -44,11 +43,6 @@ Create and add to `/etc/auto.secret`, the username and password are for the RFA 
 ```
 username=XXXX
 password=XXXX
-```
-
-Create and add to `/etc/auto.slice`
-```
-/usr/local/production/www.tryslice.io/carrierwave -fstype=cifs,uid=3051303,gid=100001,file_mode=0770,dir_mode=0770,credentials=/etc/auto.secret ://rfa01.research.partners.org/bwh-sleepepi-web/production/slice/carrierwave
 ```
 
 Create and add to `/etc/auto.sleepdata`
@@ -74,11 +68,6 @@ Create and add to `/etc/auto.altamira`
 Create and add to `/etc/auto.traintracks`
 ```
 /usr/local/production/traintracks/public/uploads -fstype=cifs,uid=3051303,gid=100001,file_mode=0770,dir_mode=0770,credentials=/etc/auto.secret ://rfa01.research.partners.org/bwh-sleepepi-web/production/traintracks/uploads
-```
-
-Create and add to `/etc/auto.review`
-```
-/usr/local/production/review/public/uploads -fstype=cifs,uid=3051303,gid=100001,file_mode=0770,dir_mode=0770,credentials=/etc/auto.secret ://rfa01.research.partners.org/bwh-sleepepi-web/production/review/uploads
 ```
 
 
@@ -109,6 +98,30 @@ Create and add to `/etc/auto.brains`
 /usr/local/production/sleepinnovate.org/brains -fstype=cifs,uid=3051303,gid=100001,file_mode=0770,dir_mode=0770,credentials=/etc/auto.secret ://rfawin.partners.org/bwh-sleepepi-r35/Data/TMB
 ```
 
+
+# Slice
+
+Edit `/etc/auto.master`
+
+```
++auto.master
+
+/- /etc/auto.slice
+/- /etc/auto.patstrial
+```
+
+
+Create and add to `/etc/auto.slice`
+```
+/usr/local/production/tryslice.io/carrierwave -fstype=cifs,uid=3051303,gid=100001,file_mode=0770,dir_mode=0770,credentials=/etc/auto.secret ://rfawin.partners.org/bwh-sleepepi-web/production/slice/carrierwave
+```
+
+Create and add to `/etc/auto.patstrial`
+```
+/usr/local/production/tryslice.io/pats -fstype=cifs,uid=3051303,gid=100001,file_mode=0770,dir_mode=0770,credentials=/etc/auto.secret ://rfawin.partners.org/bwh-sleepepi-web/production/patstrial.org/carrierwave
+```
+
+# For all applications
 
 After adding the folders, restart Automount
 
