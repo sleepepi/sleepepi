@@ -47,27 +47,27 @@ password=XXXX
 
 Create and add to `/etc/auto.sleepdata`
 ```
-/usr/local/production/www.sleepdata.org/carrierwave -fstype=cifs,uid=3051303,gid=100001,file_mode=0770,dir_mode=0770,credentials=/etc/auto.secret ://rfa01.research.partners.org/bwh-sleepepi-nsrr/www.sleepdata.org/carrierwave
+/usr/local/production/www.sleepdata.org/carrierwave -fstype=cifs,uid=3051303,gid=100001,file_mode=0775,dir_mode=0775,credentials=/etc/auto.secret ://rfa01.research.partners.org/bwh-sleepepi-nsrr/www.sleepdata.org/carrierwave
 ```
 
 Create and add to `/etc/auto.myapnea`
 ```
-/usr/local/production/www.myapnea.org/public/uploads -fstype=cifs,uid=3051303,gid=100001,file_mode=0770,dir_mode=0770,credentials=/etc/auto.secret ://rfa01.research.partners.org/bwh-sleepepi-web/production/www.myapnea.org/uploads
+/usr/local/production/www.myapnea.org/public/uploads -fstype=cifs,uid=3051303,gid=100001,file_mode=0775,dir_mode=0775,credentials=/etc/auto.secret ://rfa01.research.partners.org/bwh-sleepepi-web/production/www.myapnea.org/uploads
 ```
 
 Create and add to `/etc/auto.patstrial`
 ```
-/usr/local/production/patstrial.org/carrierwave -fstype=cifs,uid=3051303,gid=100001,file_mode=0770,dir_mode=0770,credentials=/etc/auto.secret ://rfa01.research.partners.org/bwh-sleepepi-web/production/patstrial.org/carrierwave
+/usr/local/production/patstrial.org/carrierwave -fstype=cifs,uid=3051303,gid=100001,file_mode=0775,dir_mode=0775,credentials=/etc/auto.secret ://rfa01.research.partners.org/bwh-sleepepi-web/production/patstrial.org/carrierwave
 ```
 
 Create and add to `/etc/auto.altamira`
 ```
-/usr/local/production/altamira/datasets -fstype=cifs,uid=3051303,gid=100001,file_mode=0770,dir_mode=0770,credentials=/etc/auto.secret ://rfa01.research.partners.org/bwh-sleepepi-nsrr/www.sleepdata.org/carrierwave/datasets
+/usr/local/production/altamira/datasets -fstype=cifs,uid=3051303,gid=100001,file_mode=0775,dir_mode=0775,credentials=/etc/auto.secret ://rfa01.research.partners.org/bwh-sleepepi-nsrr/www.sleepdata.org/carrierwave/datasets
 ```
 
 Create and add to `/etc/auto.traintracks`
 ```
-/usr/local/production/traintracks/public/uploads -fstype=cifs,uid=3051303,gid=100001,file_mode=0770,dir_mode=0770,credentials=/etc/auto.secret ://rfa01.research.partners.org/bwh-sleepepi-web/production/traintracks/uploads
+/usr/local/production/traintracks/public/uploads -fstype=cifs,uid=3051303,gid=100001,file_mode=0775,dir_mode=0775,credentials=/etc/auto.secret ://rfa01.research.partners.org/bwh-sleepepi-web/production/traintracks/uploads
 ```
 
 
@@ -85,17 +85,17 @@ Edit `/etc/auto.master`
 
 Create and add to `/etc/auto.sleepinnovate`
 ```
-/usr/local/production/sleepinnovate.org/carrierwave -fstype=cifs,uid=3051303,gid=100001,file_mode=0770,dir_mode=0770,credentials=/etc/auto.secret ://rfawin.partners.org/bwh-sleepepi-web/production/sleepinnovate.org/carrierwave
+/usr/local/production/sleepinnovate.org/carrierwave -fstype=cifs,uid=3051303,gid=100001,file_mode=0775,dir_mode=0775,credentials=/etc/auto.secret ://rfawin.partners.org/bwh-sleepepi-web/production/sleepinnovate.org/carrierwave
 ```
 
 Create and add to `/etc/auto.admin`
 ```
-/usr/local/production/sleepinnovate.org/admin -fstype=cifs,uid=3051303,gid=100001,file_mode=0770,dir_mode=0770,credentials=/etc/auto.secret ://rfawin.partners.org/bwh-sleepepi-r35/Data/sleepinnovate.org
+/usr/local/production/sleepinnovate.org/admin -fstype=cifs,uid=3051303,gid=100001,file_mode=0775,dir_mode=0775,credentials=/etc/auto.secret ://rfawin.partners.org/bwh-sleepepi-r35/Data/sleepinnovate.org
 ```
 
 Create and add to `/etc/auto.brains`
 ```
-/usr/local/production/sleepinnovate.org/brains -fstype=cifs,uid=3051303,gid=100001,file_mode=0770,dir_mode=0770,credentials=/etc/auto.secret ://rfawin.partners.org/bwh-sleepepi-r35/Data/TMB
+/usr/local/production/sleepinnovate.org/brains -fstype=cifs,uid=3051303,gid=100001,file_mode=0775,dir_mode=0775,credentials=/etc/auto.secret ://rfawin.partners.org/bwh-sleepepi-r35/Data/TMB
 ```
 
 
@@ -113,12 +113,12 @@ Edit `/etc/auto.master`
 
 Create and add to `/etc/auto.slice`
 ```
-/usr/local/production/tryslice.io/carrierwave -fstype=cifs,uid=3051303,gid=100001,file_mode=0770,dir_mode=0770,credentials=/etc/auto.secret ://rfawin.partners.org/bwh-sleepepi-web/production/slice/carrierwave
+/usr/local/production/tryslice.io/carrierwave -fstype=cifs,uid=3051303,gid=100001,file_mode=0775,dir_mode=0775,credentials=/etc/auto.secret ://rfawin.partners.org/bwh-sleepepi-web/production/slice/carrierwave
 ```
 
 Create and add to `/etc/auto.patstrial`
 ```
-/usr/local/production/tryslice.io/pats -fstype=cifs,uid=3051303,gid=100001,file_mode=0770,dir_mode=0770,credentials=/etc/auto.secret ://rfawin.partners.org/bwh-sleepepi-web/production/patstrial.org/carrierwave
+/usr/local/production/tryslice.io/pats -fstype=cifs,uid=3051303,gid=100001,file_mode=0775,dir_mode=0775,credentials=/etc/auto.secret ://rfawin.partners.org/bwh-sleepepi-web/production/patstrial.org/carrierwave
 ```
 
 # For all applications
