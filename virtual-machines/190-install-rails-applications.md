@@ -33,10 +33,7 @@ Use one of the following depending on which application is installed.
 ```
 /- /etc/auto.altamira
 /- /etc/auto.sleepdata
-/- /etc/auto.myapnea
 /- /etc/auto.patstrial
-/- /etc/auto.traintracks
-/- /etc/auto.review
 ```
 
 Create and add to `/etc/auto.secret`, the username and password are for the RFA service account.
@@ -50,11 +47,6 @@ Create and add to `/etc/auto.sleepdata`
 /usr/local/production/www.sleepdata.org/carrierwave -fstype=cifs,uid=3051303,gid=100001,file_mode=0775,dir_mode=0775,credentials=/etc/auto.secret ://rfa01.research.partners.org/bwh-sleepepi-nsrr/www.sleepdata.org/carrierwave
 ```
 
-Create and add to `/etc/auto.myapnea`
-```
-/usr/local/production/www.myapnea.org/public/uploads -fstype=cifs,uid=3051303,gid=100001,file_mode=0775,dir_mode=0775,credentials=/etc/auto.secret ://rfa01.research.partners.org/bwh-sleepepi-web/production/www.myapnea.org/uploads
-```
-
 Create and add to `/etc/auto.patstrial`
 ```
 /usr/local/production/patstrial.org/carrierwave -fstype=cifs,uid=3051303,gid=100001,file_mode=0775,dir_mode=0775,credentials=/etc/auto.secret ://rfa01.research.partners.org/bwh-sleepepi-web/production/patstrial.org/carrierwave
@@ -65,9 +57,20 @@ Create and add to `/etc/auto.altamira`
 /usr/local/production/altamira/datasets -fstype=cifs,uid=3051303,gid=100001,file_mode=0775,dir_mode=0775,credentials=/etc/auto.secret ://rfa01.research.partners.org/bwh-sleepepi-nsrr/www.sleepdata.org/carrierwave/datasets
 ```
 
-Create and add to `/etc/auto.traintracks`
+
+# MyApnea
+
+Edit `/etc/auto.master`
+
 ```
-/usr/local/production/traintracks/public/uploads -fstype=cifs,uid=3051303,gid=100001,file_mode=0775,dir_mode=0775,credentials=/etc/auto.secret ://rfa01.research.partners.org/bwh-sleepepi-web/production/traintracks/uploads
++auto.master
+
+/- /etc/auto.myapnea
+```
+
+Create and add to `/etc/auto.myapnea`
+```
+/usr/local/production/myapnea.org/carrierwave -fstype=cifs,uid=3051303,gid=100001,file_mode=0775,dir_mode=0775,credentials=/etc/auto.secret ://rfawin.partners.org/bwh-sleepepi-web/production/myapnea.org/carrierwave
 ```
 
 
@@ -120,6 +123,22 @@ Create and add to `/etc/auto.patstrial`
 ```
 /usr/local/production/tryslice.io/pats -fstype=cifs,uid=3051303,gid=100001,file_mode=0775,dir_mode=0775,credentials=/etc/auto.secret ://rfawin.partners.org/bwh-sleepepi-web/production/patstrial.org/carrierwave
 ```
+
+# Train Tracks
+
+Edit `/etc/auto.master`
+
+```
++auto.master
+
+/- /etc/auto.traintracks
+```
+
+Create and add to `/etc/auto.traintracks`
+```
+/usr/local/production/traintracks/public/uploads -fstype=cifs,uid=3051303,gid=100001,file_mode=0775,dir_mode=0775,credentials=/etc/auto.secret ://rfawin.partners.org/bwh-sleepepi-web/production/traintracks/uploads
+```
+
 
 # For all applications
 
