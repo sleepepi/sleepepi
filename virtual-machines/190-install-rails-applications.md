@@ -33,7 +33,6 @@ Use one of the following depending on which application is installed.
 ```
 /- /etc/auto.altamira
 /- /etc/auto.sleepdata
-/- /etc/auto.patstrial
 ```
 
 Create and add to `/etc/auto.secret`, the username and password are for the RFA service account.
@@ -45,11 +44,6 @@ password=XXXX
 Create and add to `/etc/auto.sleepdata`
 ```
 /usr/local/production/www.sleepdata.org/carrierwave -fstype=cifs,uid=3051303,gid=100001,file_mode=0775,dir_mode=0775,credentials=/etc/auto.secret ://rfa01.research.partners.org/bwh-sleepepi-nsrr/www.sleepdata.org/carrierwave
-```
-
-Create and add to `/etc/auto.patstrial`
-```
-/usr/local/production/patstrial.org/carrierwave -fstype=cifs,uid=3051303,gid=100001,file_mode=0775,dir_mode=0775,credentials=/etc/auto.secret ://rfa01.research.partners.org/bwh-sleepepi-web/production/patstrial.org/carrierwave
 ```
 
 Create and add to `/etc/auto.altamira`
@@ -99,6 +93,21 @@ Create and add to `/etc/auto.admin`
 Create and add to `/etc/auto.brains`
 ```
 /usr/local/production/sleepinnovate.org/brains -fstype=cifs,uid=3051303,gid=100001,file_mode=0775,dir_mode=0775,credentials=/etc/auto.secret ://rfawin.partners.org/bwh-sleepepi-r35/Data/TMB
+```
+
+# PATS Trial
+
+Edit `/etc/auto.master`
+
+```
++auto.master
+
+/- /etc/auto.patstrial
+```
+
+Create and add to `/etc/auto.patstrial`
+```
+/usr/local/production/patstrial.org/carrierwave -fstype=cifs,uid=3051303,gid=100001,file_mode=0775,dir_mode=0775,credentials=/etc/auto.secret ://rfawin.partners.org/bwh-sleepepi-web/production/patstrial.org/carrierwave
 ```
 
 
