@@ -28,29 +28,26 @@ sudo yum install -y libxml libxml-devel libxslt libxslt-devel
 sudo yum install -y samba-client samba-common cifs-utils autofs
 ```
 
-Add to bottom of `/etc/auto.master`
-Use one of the following depending on which application is installed.
-```
-/- /etc/auto.altamira
-/- /etc/auto.sleepdata
-```
-
 Create and add to `/etc/auto.secret`, the username and password are for the RFA service account.
 ```
 username=XXXX
 password=XXXX
 ```
 
-Create and add to `/etc/auto.sleepdata`
+# Altamira
+
+Edit `/etc/auto.master`
+
 ```
-/usr/local/production/www.sleepdata.org/carrierwave -fstype=cifs,uid=3051303,gid=100001,file_mode=0775,dir_mode=0775,credentials=/etc/auto.secret ://rfa01.research.partners.org/bwh-sleepepi-nsrr/www.sleepdata.org/carrierwave
++auto.master
+
+/- /etc/auto.altamira
 ```
 
 Create and add to `/etc/auto.altamira`
 ```
-/usr/local/production/altamira/datasets -fstype=cifs,uid=3051303,gid=100001,file_mode=0775,dir_mode=0775,credentials=/etc/auto.secret ://rfa01.research.partners.org/bwh-sleepepi-nsrr/www.sleepdata.org/carrierwave/datasets
+/usr/local/production/altamira/datasets -fstype=cifs,uid=3051303,gid=100001,file_mode=0775,dir_mode=0775,credentials=/etc/auto.secret ://rfawin.partners.org/bwh-sleepepi-nsrr/sleepdata.org/carrierwave/datasets
 ```
-
 
 # MyApnea
 
@@ -67,6 +64,20 @@ Create and add to `/etc/auto.myapnea`
 /usr/local/production/myapnea.org/carrierwave -fstype=cifs,uid=3051303,gid=100001,file_mode=0775,dir_mode=0775,credentials=/etc/auto.secret ://rfawin.partners.org/bwh-sleepepi-web/production/myapnea.org/carrierwave
 ```
 
+# NSRR
+
+Edit `/etc/auto.master`
+
+```
++auto.master
+
+/- /etc/auto.sleepdata
+```
+
+Create and add to `/etc/auto.sleepdata`
+```
+/usr/local/production/sleepdata.org/carrierwave -fstype=cifs,uid=3051303,gid=100001,file_mode=0775,dir_mode=0775,credentials=/etc/auto.secret ://rfawin.partners.org/bwh-sleepepi-nsrr/sleepdata.org/carrierwave
+```
 
 # SleepINNOVATE
 
@@ -110,7 +121,6 @@ Create and add to `/etc/auto.patstrial`
 /usr/local/production/patstrial.org/carrierwave -fstype=cifs,uid=3051303,gid=100001,file_mode=0775,dir_mode=0775,credentials=/etc/auto.secret ://rfawin.partners.org/bwh-sleepepi-web/production/patstrial.org/carrierwave
 ```
 
-
 # Slice
 
 Edit `/etc/auto.master`
@@ -121,7 +131,6 @@ Edit `/etc/auto.master`
 /- /etc/auto.slice
 /- /etc/auto.patstrial
 ```
-
 
 Create and add to `/etc/auto.slice`
 ```
