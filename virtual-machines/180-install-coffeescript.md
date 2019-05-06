@@ -77,7 +77,7 @@ sudo ln -s /usr/local/bin/coffee /usr/bin/coffee
 Verify CoffeeScript version by typing `coffee -v` which should return:
 
 ```console
-CoffeeScript version 2.3.2
+CoffeeScript version 2.4.1
 ```
 
 ### Next Step
