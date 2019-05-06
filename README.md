@@ -17,10 +17,6 @@ Documentation providing architecture overview of sleepepi
         |-- epipro05.dipr.partners.org      2GB     CentOS release 7.3  (Core)
         |-- epipro06.dipr.partners.org      2GB     CentOS release 7.3  (Core)
         `-- epipro07.dipr.partners.org      2GB     CentOS release 7.3  (Core)
-`-- sleepclinic.partners.org
-    `-- sleepclinic.dipr.partners.org       1GB     CentOS release 6.9  (Final)
-`-- tasktracker.partners.org
-    `-- tasktracker.dipr.partners.org       1GB     CentOS release 6.9  (Final)
 `-- traintracks.partners.org
     `-- traintracks.dipr.partners.org       2GB     CentOS release 7.3  (Core)
 `-- myapnea.org, myapnea.net
@@ -44,7 +40,6 @@ Documentation providing architecture overview of sleepepi
 Front End Servers
 
 - [sleepepi.dipr.partners.org](https://github.com/sleepepi/sleepepi/tree/master/virtual-machines/000-sleepepi.dipr.partners.org.md)
-- [sleepclinic.dipr.partners.org](https://github.com/sleepepi/sleepepi/tree/master/virtual-machines/100-technology-and-application-routes.md)
 
 Back End Production Servers
 
@@ -53,8 +48,3 @@ Back End Production Servers
 Back End Staging Servers
 
 - [epistaXX.dipr.partners.org](https://github.com/sleepepi/sleepepi/blob/master/virtual-machines/100-technology-and-application-routes.md)
-
-Demo Servers
-
-- [tasktracker.dipr.partners.org](https://github.com/sleepepi/sleepepi/blob/master/virtual-machines/100-technology-and-application-routes.md)
-- [slice.dipr.partners.org](https://github.com/sleepepi/sleepepi/blob/master/virtual-machines/100-technology-and-application-routes.md)
