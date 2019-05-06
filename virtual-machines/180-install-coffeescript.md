@@ -44,7 +44,7 @@ Verify npm installed by typing `which npm` which should return:
 Verify npm version by typing `npm -v` which should return:
 
 ```console
-6.5.0
+6.9.0
 ```
 
 Make symbolic links for node and npm
