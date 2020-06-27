@@ -42,7 +42,7 @@ rvm:x:20001:rsm31,mr447
 Verify RVM version by typing `rvm --version` which should return
 
 ```console
-rvm 1.29.7 (stable)
+rvm 1.29.10 (stable)
 ```
 
 Install RVM Dependencies (discover by typing: `rvm requirements`)
