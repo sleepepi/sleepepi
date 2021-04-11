@@ -21,15 +21,15 @@ sudo yum -y install pcre-devel
 cd /tmp
 mkdir nginxplus
 cd /tmp/nginxplus
-curl -L https://www.openssl.org/source/openssl-1.1.1g.tar.gz --insecure | tar xvz
-curl -L http://www.nginx.org/download/nginx-1.17.10.tar.gz | tar xvz
+curl -L https://www.openssl.org/source/openssl-1.1.1k.tar.gz --insecure | tar xvz
+curl -L http://www.nginx.org/download/nginx-1.19.9.tar.gz | tar xvz
 curl -L https://github.com/openresty/headers-more-nginx-module/archive/v0.33.tar.gz --insecure | tar xvz
 ```
 
 ### Start the Passenger Installer
 
 ```
-rvmsudo passenger-install-nginx-module --auto --prefix=/usr/local/nginx --nginx-source-dir=/tmp/nginxplus/nginx-1.17.10 --extra-configure-flags="--with-openssl=/tmp/nginxplus/openssl-1.1.1g --add-module=/tmp/nginxplus/headers-more-nginx-module-0.33" --languages ruby
+rvmsudo passenger-install-nginx-module --auto --prefix=/usr/local/nginx --nginx-source-dir=/tmp/nginxplus/nginx-1.19.9 --extra-configure-flags="--with-openssl=/tmp/nginxplus/openssl-1.1.1k --add-module=/tmp/nginxplus/headers-more-nginx-module-0.33" --languages ruby
 ```
 
 or manually
@@ -92,7 +92,7 @@ Extra arguments to pass to configure script:
 
 Type
 ```
---with-openssl=/tmp/nginxplus/openssl-1.1.1g --add-module=/tmp/nginxplus/headers-more-nginx-module-0.33
+--with-openssl=/tmp/nginxplus/openssl-1.1.1k --add-module=/tmp/nginxplus/headers-more-nginx-module-0.33
 ```
 
 ```console
