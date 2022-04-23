@@ -11,19 +11,19 @@ rvmsudo rvm requirements
 ### 141 Install Ruby using RVM
 
 ```
-rvm install 3.0.1
+rvm install 3.1.2
 ```
 
-Activate Ruby 3.0.1
+Activate Ruby 3.1.2
 
 ```
-rvm 3.0.1
+rvm 3.1.2
 ```
 
-**NOTE** You may need to create a gemset to switch to 3.0.1 if it failed during the install.
+**NOTE** You may need to create a gemset to switch to 3.1.2 if it failed during the install.
 
 ```
-rvm 3.0.1 --create
+rvm 3.1.2 --create
 ```
 
 Verify Ruby version
@@ -33,13 +33,13 @@ ruby -v
 ```
 
 ```console
-ruby 3.0.1p64 (2021-04-05 revision 0fb782ee38) [x86_64-linux]
+ruby 3.1.2p20 (2022-04-12 revision 4491bb740a) [x86_64-linux]
 ```
 
 Set default Ruby
 
 ```
-rvm alias create default ruby-3.0.1
+rvm alias create default ruby-3.1.2
 ```
 
 Remove default alias (in case default alias interferes with system tasks that require the default system Ruby)
